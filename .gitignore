@@ -2,7 +2,6 @@
 _cache_tmp_/
 
 # Original CEF source directory
-cef/
 
 # Original Chromium source directory
 chromium/src/
@@ -22,3 +21,25 @@ artifacts/
 
 # macOS
 .DS_Store
+
+
+# CEF
+cef/.github/
+cef/cmake/
+cef/include/
+cef/*libcef*
+cef/patch/
+cef/tests/
+cef/tools/
+cef/.gitignore
+cef/*.style.*
+cef/AUTHORS.txt
+cef/BUILD.gn
+cef/*cef*
+cef/*CHROMIUM*
+cef/*CMake*
+cef/DEPS
+cef/Doxyfile
+cef/*LICENSE*
+cef/*README*
+cef/*VERSION*

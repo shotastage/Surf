@@ -16,3 +16,10 @@ if __name__ == "__main__":
     rm('target')
     rm('chromium/.cipd/')
     rm('chromium/.gclient')
+    rm('cef')
+    os.mkdir('cef')
+    try:
+        with open("cef/.gitkeep", 'w') as file:
+            pass
+    except IOError as e:
+        print(f"Failed to recover keep file: {e}")
