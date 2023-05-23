@@ -8,6 +8,6 @@ edition = "2021"
 [lib]
 name = "surflib"
 crate-type = [ "staticlib" ]
-path = "surfcore/lib.rs"
+path = "scm/lib.rs"
 
 [dependencies]
