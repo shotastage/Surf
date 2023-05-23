@@ -11,3 +11,8 @@ chromium/.cipd/
 # Archive
 *.zip
 *.gz
+
+*target/
+/Cargo.lock
+*.a
+artifacts/
