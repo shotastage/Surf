@@ -1,1 +1,9 @@
+# Build tools temporary directory
 _cache_tmp_/
+
+# Original Chromium source directory
+chromium/src/
+chromium/.cipd/
+.gclient
+.gclient_entries
+.gclient_previous_sync_commits
