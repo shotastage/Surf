@@ -1,12 +1,15 @@
 # Build tools temporary directory
 _cache_tmp_/
 
+# Original CEF source directory
+cef/
+
 # Original Chromium source directory
 chromium/src/
 chromium/.cipd/
-.gclient
-.gclient_entries
-.gclient_previous_sync_commits
+#.gclient
+#.gclient_entries
+#.gclient_previous_sync_commits
 
 # Archive
 *.zip
@@ -16,3 +19,6 @@ chromium/.cipd/
 /Cargo.lock
 *.a
 artifacts/
+
+# macOS
+.DS_Store
