@@ -44,3 +44,11 @@ cef/Doxyfile
 cef/*LICENSE*
 cef/*README*
 cef/*VERSION*
+
+
+## User settings
+xcuserdata/
+
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
