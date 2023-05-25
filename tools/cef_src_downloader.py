@@ -15,3 +15,6 @@ if __name__ == "__main__":
             pass
     except IOError as e:
         print(f"Failed to recover keep file: {e}")
+
+    shutil.rmtree("cef/.git/")
+    
