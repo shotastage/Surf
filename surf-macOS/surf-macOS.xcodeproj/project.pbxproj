@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		257CEC712B975BB7000139FA /* surf_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC702B975BB7000139FA /* surf_macOSApp.swift */; };
+		257CEC732B975BB7000139FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC722B975BB7000139FA /* ContentView.swift */; };
+		257CEC752B975BB8000139FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257CEC742B975BB8000139FA /* Assets.xcassets */; };
+		257CEC782B975BB8000139FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257CEC772B975BB8000139FA /* Preview Assets.xcassets */; };
+		257CEC832B975BB9000139FA /* surf_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC822B975BB9000139FA /* surf_macOSTests.swift */; };
+		257CEC8D2B975BB9000139FA /* surf_macOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC8C2B975BB9000139FA /* surf_macOSUITests.swift */; };
+		257CEC8F2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC8E2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		257CEC7F2B975BB9000139FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 257CEC652B975BB7000139FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 257CEC6C2B975BB7000139FA;
+			remoteInfo = "surf-macOS";
+		};
+		257CEC892B975BB9000139FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 257CEC652B975BB7000139FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 257CEC6C2B975BB7000139FA;
+			remoteInfo = "surf-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		257CEC6D2B975BB7000139FA /* surf-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "surf-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		257CEC702B975BB7000139FA /* surf_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSApp.swift; sourceTree = "<group>"; };
+		257CEC722B975BB7000139FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		257CEC742B975BB8000139FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		257CEC772B975BB8000139FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		257CEC792B975BB8000139FA /* surf_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = surf_macOS.entitlements; sourceTree = "<group>"; };
+		257CEC7E2B975BB9000139FA /* surf-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "surf-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		257CEC822B975BB9000139FA /* surf_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSTests.swift; sourceTree = "<group>"; };
+		257CEC882B975BB9000139FA /* surf-macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "surf-macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		257CEC8C2B975BB9000139FA /* surf_macOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSUITests.swift; sourceTree = "<group>"; };
+		257CEC8E2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		257CEC6A2B975BB7000139FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257CEC7B2B975BB9000139FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257CEC852B975BB9000139FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		257CEC642B975BB7000139FA = {
+			isa = PBXGroup;
+			children = (
+				257CEC6F2B975BB7000139FA /* surf-macOS */,
+				257CEC812B975BB9000139FA /* surf-macOSTests */,
+				257CEC8B2B975BB9000139FA /* surf-macOSUITests */,
+				257CEC6E2B975BB7000139FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		257CEC6E2B975BB7000139FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				257CEC6D2B975BB7000139FA /* surf-macOS.app */,
+				257CEC7E2B975BB9000139FA /* surf-macOSTests.xctest */,
+				257CEC882B975BB9000139FA /* surf-macOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		257CEC6F2B975BB7000139FA /* surf-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				257CEC702B975BB7000139FA /* surf_macOSApp.swift */,
+				257CEC722B975BB7000139FA /* ContentView.swift */,
+				257CEC742B975BB8000139FA /* Assets.xcassets */,
+				257CEC792B975BB8000139FA /* surf_macOS.entitlements */,
+				257CEC762B975BB8000139FA /* Preview Content */,
+			);
+			path = "surf-macOS";
+			sourceTree = "<group>";
+		};
+		257CEC762B975BB8000139FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				257CEC772B975BB8000139FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		257CEC812B975BB9000139FA /* surf-macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				257CEC822B975BB9000139FA /* surf_macOSTests.swift */,
+			);
+			path = "surf-macOSTests";
+			sourceTree = "<group>";
+		};
+		257CEC8B2B975BB9000139FA /* surf-macOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				257CEC8C2B975BB9000139FA /* surf_macOSUITests.swift */,
+				257CEC8E2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift */,
+			);
+			path = "surf-macOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		257CEC6C2B975BB7000139FA /* surf-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257CEC922B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOS" */;
+			buildPhases = (
+				257CEC692B975BB7000139FA /* Sources */,
+				257CEC6A2B975BB7000139FA /* Frameworks */,
+				257CEC6B2B975BB7000139FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "surf-macOS";
+			productName = "surf-macOS";
+			productReference = 257CEC6D2B975BB7000139FA /* surf-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		257CEC7D2B975BB9000139FA /* surf-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257CEC952B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSTests" */;
+			buildPhases = (
+				257CEC7A2B975BB9000139FA /* Sources */,
+				257CEC7B2B975BB9000139FA /* Frameworks */,
+				257CEC7C2B975BB9000139FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				257CEC802B975BB9000139FA /* PBXTargetDependency */,
+			);
+			name = "surf-macOSTests";
+			productName = "surf-macOSTests";
+			productReference = 257CEC7E2B975BB9000139FA /* surf-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		257CEC872B975BB9000139FA /* surf-macOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257CEC982B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSUITests" */;
+			buildPhases = (
+				257CEC842B975BB9000139FA /* Sources */,
+				257CEC852B975BB9000139FA /* Frameworks */,
+				257CEC862B975BB9000139FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				257CEC8A2B975BB9000139FA /* PBXTargetDependency */,
+			);
+			name = "surf-macOSUITests";
+			productName = "surf-macOSUITests";
+			productReference = 257CEC882B975BB9000139FA /* surf-macOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		257CEC652B975BB7000139FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					257CEC6C2B975BB7000139FA = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					257CEC7D2B975BB9000139FA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 257CEC6C2B975BB7000139FA;
+					};
+					257CEC872B975BB9000139FA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 257CEC6C2B975BB7000139FA;
+					};
+				};
+			};
+			buildConfigurationList = 257CEC682B975BB7000139FA /* Build configuration list for PBXProject "surf-macOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 257CEC642B975BB7000139FA;
+			productRefGroup = 257CEC6E2B975BB7000139FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				257CEC6C2B975BB7000139FA /* surf-macOS */,
+				257CEC7D2B975BB9000139FA /* surf-macOSTests */,
+				257CEC872B975BB9000139FA /* surf-macOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		257CEC6B2B975BB7000139FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257CEC782B975BB8000139FA /* Preview Assets.xcassets in Resources */,
+				257CEC752B975BB8000139FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257CEC7C2B975BB9000139FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257CEC862B975BB9000139FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		257CEC692B975BB7000139FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257CEC732B975BB7000139FA /* ContentView.swift in Sources */,
+				257CEC712B975BB7000139FA /* surf_macOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257CEC7A2B975BB9000139FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257CEC832B975BB9000139FA /* surf_macOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257CEC842B975BB9000139FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257CEC8F2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift in Sources */,
+				257CEC8D2B975BB9000139FA /* surf_macOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		257CEC802B975BB9000139FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 257CEC6C2B975BB7000139FA /* surf-macOS */;
+			targetProxy = 257CEC7F2B975BB9000139FA /* PBXContainerItemProxy */;
+		};
+		257CEC8A2B975BB9000139FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 257CEC6C2B975BB7000139FA /* surf-macOS */;
+			targetProxy = 257CEC892B975BB9000139FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		257CEC902B975BB9000139FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		257CEC912B975BB9000139FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		257CEC932B975BB9000139FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "surf-macOS/surf_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"surf-macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 8T4P9D4TB2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		257CEC942B975BB9000139FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "surf-macOS/surf_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"surf-macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 8T4P9D4TB2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		257CEC962B975BB9000139FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T4P9D4TB2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/surf-macOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/surf-macOS";
+			};
+			name = Debug;
+		};
+		257CEC972B975BB9000139FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T4P9D4TB2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/surf-macOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/surf-macOS";
+			};
+			name = Release;
+		};
+		257CEC992B975BB9000139FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T4P9D4TB2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "surf-macOS";
+			};
+			name = Debug;
+		};
+		257CEC9A2B975BB9000139FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8T4P9D4TB2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "surf-macOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		257CEC682B975BB7000139FA /* Build configuration list for PBXProject "surf-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257CEC902B975BB9000139FA /* Debug */,
+				257CEC912B975BB9000139FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		257CEC922B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257CEC932B975BB9000139FA /* Debug */,
+				257CEC942B975BB9000139FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		257CEC952B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257CEC962B975BB9000139FA /* Debug */,
+				257CEC972B975BB9000139FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		257CEC982B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257CEC992B975BB9000139FA /* Debug */,
+				257CEC9A2B975BB9000139FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 257CEC652B975BB7000139FA /* Project object */;
+}
