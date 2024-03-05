@@ -1,6 +1,6 @@
 //
-//  surf_macOSApp.swift
-//  surf-macOS
+//  SurfApp.swift
+//  Surf
 //
 //  Created by Shota Shimazu on 2024/03/05.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct surf_macOSApp: App {
+struct SurfApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

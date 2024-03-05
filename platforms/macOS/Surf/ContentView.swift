@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  surf-macOS
+//  Surf
 //
 //  Created by Shota Shimazu on 2024/03/05.
 //

@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		257CEC712B975BB7000139FA /* surf_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC702B975BB7000139FA /* surf_macOSApp.swift */; };
-		257CEC732B975BB7000139FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC722B975BB7000139FA /* ContentView.swift */; };
-		257CEC752B975BB8000139FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257CEC742B975BB8000139FA /* Assets.xcassets */; };
-		257CEC782B975BB8000139FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257CEC772B975BB8000139FA /* Preview Assets.xcassets */; };
-		257CEC832B975BB9000139FA /* surf_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC822B975BB9000139FA /* surf_macOSTests.swift */; };
-		257CEC8D2B975BB9000139FA /* surf_macOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC8C2B975BB9000139FA /* surf_macOSUITests.swift */; };
-		257CEC8F2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CEC8E2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift */; };
+		2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFA82B9760A0006326D9 /* SurfApp.swift */; };
+		2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFAA2B9760A0006326D9 /* ContentView.swift */; };
+		2501EFAD2B9760A1006326D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2501EFAC2B9760A1006326D9 /* Assets.xcassets */; };
+		2501EFB02B9760A1006326D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2501EFAF2B9760A1006326D9 /* Preview Assets.xcassets */; };
+		2501EFBB2B9760A1006326D9 /* SurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFBA2B9760A1006326D9 /* SurfTests.swift */; };
+		2501EFC52B9760A1006326D9 /* SurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFC42B9760A1006326D9 /* SurfUITests.swift */; };
+		2501EFC72B9760A1006326D9 /* SurfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		257CEC7F2B975BB9000139FA /* PBXContainerItemProxy */ = {
+		2501EFB72B9760A1006326D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 257CEC652B975BB7000139FA /* Project object */;
+			containerPortal = 2501EF9D2B9760A0006326D9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 257CEC6C2B975BB7000139FA;
-			remoteInfo = "surf-macOS";
+			remoteGlobalIDString = 2501EFA42B9760A0006326D9;
+			remoteInfo = Surf;
 		};
-		257CEC892B975BB9000139FA /* PBXContainerItemProxy */ = {
+		2501EFC12B9760A1006326D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 257CEC652B975BB7000139FA /* Project object */;
+			containerPortal = 2501EF9D2B9760A0006326D9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 257CEC6C2B975BB7000139FA;
-			remoteInfo = "surf-macOS";
+			remoteGlobalIDString = 2501EFA42B9760A0006326D9;
+			remoteInfo = Surf;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		257CEC6D2B975BB7000139FA /* surf-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "surf-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		257CEC702B975BB7000139FA /* surf_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSApp.swift; sourceTree = "<group>"; };
-		257CEC722B975BB7000139FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		257CEC742B975BB8000139FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		257CEC772B975BB8000139FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		257CEC792B975BB8000139FA /* surf_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = surf_macOS.entitlements; sourceTree = "<group>"; };
-		257CEC7E2B975BB9000139FA /* surf-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "surf-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		257CEC822B975BB9000139FA /* surf_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSTests.swift; sourceTree = "<group>"; };
-		257CEC882B975BB9000139FA /* surf-macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "surf-macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		257CEC8C2B975BB9000139FA /* surf_macOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSUITests.swift; sourceTree = "<group>"; };
-		257CEC8E2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surf_macOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2501EFA52B9760A0006326D9 /* Surf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501EFA82B9760A0006326D9 /* SurfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfApp.swift; sourceTree = "<group>"; };
+		2501EFAA2B9760A0006326D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2501EFAC2B9760A1006326D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2501EFAF2B9760A1006326D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2501EFB12B9760A1006326D9 /* Surf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Surf.entitlements; sourceTree = "<group>"; };
+		2501EFB62B9760A1006326D9 /* SurfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501EFBA2B9760A1006326D9 /* SurfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTests.swift; sourceTree = "<group>"; };
+		2501EFC02B9760A1006326D9 /* SurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501EFC42B9760A1006326D9 /* SurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITests.swift; sourceTree = "<group>"; };
+		2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		257CEC6A2B975BB7000139FA /* Frameworks */ = {
+		2501EFA22B9760A0006326D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		257CEC7B2B975BB9000139FA /* Frameworks */ = {
+		2501EFB32B9760A1006326D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		257CEC852B975BB9000139FA /* Frameworks */ = {
+		2501EFBD2B9760A1006326D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,143 +72,143 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		257CEC642B975BB7000139FA = {
+		2501EF9C2B9760A0006326D9 = {
 			isa = PBXGroup;
 			children = (
-				257CEC6F2B975BB7000139FA /* surf-macOS */,
-				257CEC812B975BB9000139FA /* surf-macOSTests */,
-				257CEC8B2B975BB9000139FA /* surf-macOSUITests */,
-				257CEC6E2B975BB7000139FA /* Products */,
+				2501EFA72B9760A0006326D9 /* Surf */,
+				2501EFB92B9760A1006326D9 /* SurfTests */,
+				2501EFC32B9760A1006326D9 /* SurfUITests */,
+				2501EFA62B9760A0006326D9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		257CEC6E2B975BB7000139FA /* Products */ = {
+		2501EFA62B9760A0006326D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				257CEC6D2B975BB7000139FA /* surf-macOS.app */,
-				257CEC7E2B975BB9000139FA /* surf-macOSTests.xctest */,
-				257CEC882B975BB9000139FA /* surf-macOSUITests.xctest */,
+				2501EFA52B9760A0006326D9 /* Surf.app */,
+				2501EFB62B9760A1006326D9 /* SurfTests.xctest */,
+				2501EFC02B9760A1006326D9 /* SurfUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		257CEC6F2B975BB7000139FA /* surf-macOS */ = {
+		2501EFA72B9760A0006326D9 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
-				257CEC702B975BB7000139FA /* surf_macOSApp.swift */,
-				257CEC722B975BB7000139FA /* ContentView.swift */,
-				257CEC742B975BB8000139FA /* Assets.xcassets */,
-				257CEC792B975BB8000139FA /* surf_macOS.entitlements */,
-				257CEC762B975BB8000139FA /* Preview Content */,
+				2501EFA82B9760A0006326D9 /* SurfApp.swift */,
+				2501EFAA2B9760A0006326D9 /* ContentView.swift */,
+				2501EFAC2B9760A1006326D9 /* Assets.xcassets */,
+				2501EFB12B9760A1006326D9 /* Surf.entitlements */,
+				2501EFAE2B9760A1006326D9 /* Preview Content */,
 			);
-			path = "surf-macOS";
+			path = Surf;
 			sourceTree = "<group>";
 		};
-		257CEC762B975BB8000139FA /* Preview Content */ = {
+		2501EFAE2B9760A1006326D9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				257CEC772B975BB8000139FA /* Preview Assets.xcassets */,
+				2501EFAF2B9760A1006326D9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		257CEC812B975BB9000139FA /* surf-macOSTests */ = {
+		2501EFB92B9760A1006326D9 /* SurfTests */ = {
 			isa = PBXGroup;
 			children = (
-				257CEC822B975BB9000139FA /* surf_macOSTests.swift */,
+				2501EFBA2B9760A1006326D9 /* SurfTests.swift */,
 			);
-			path = "surf-macOSTests";
+			path = SurfTests;
 			sourceTree = "<group>";
 		};
-		257CEC8B2B975BB9000139FA /* surf-macOSUITests */ = {
+		2501EFC32B9760A1006326D9 /* SurfUITests */ = {
 			isa = PBXGroup;
 			children = (
-				257CEC8C2B975BB9000139FA /* surf_macOSUITests.swift */,
-				257CEC8E2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift */,
+				2501EFC42B9760A1006326D9 /* SurfUITests.swift */,
+				2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */,
 			);
-			path = "surf-macOSUITests";
+			path = SurfUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		257CEC6C2B975BB7000139FA /* surf-macOS */ = {
+		2501EFA42B9760A0006326D9 /* Surf */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 257CEC922B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOS" */;
+			buildConfigurationList = 2501EFCA2B9760A1006326D9 /* Build configuration list for PBXNativeTarget "Surf" */;
 			buildPhases = (
-				257CEC692B975BB7000139FA /* Sources */,
-				257CEC6A2B975BB7000139FA /* Frameworks */,
-				257CEC6B2B975BB7000139FA /* Resources */,
+				2501EFA12B9760A0006326D9 /* Sources */,
+				2501EFA22B9760A0006326D9 /* Frameworks */,
+				2501EFA32B9760A0006326D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "surf-macOS";
-			productName = "surf-macOS";
-			productReference = 257CEC6D2B975BB7000139FA /* surf-macOS.app */;
+			name = Surf;
+			productName = Surf;
+			productReference = 2501EFA52B9760A0006326D9 /* Surf.app */;
 			productType = "com.apple.product-type.application";
 		};
-		257CEC7D2B975BB9000139FA /* surf-macOSTests */ = {
+		2501EFB52B9760A1006326D9 /* SurfTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 257CEC952B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSTests" */;
+			buildConfigurationList = 2501EFCD2B9760A1006326D9 /* Build configuration list for PBXNativeTarget "SurfTests" */;
 			buildPhases = (
-				257CEC7A2B975BB9000139FA /* Sources */,
-				257CEC7B2B975BB9000139FA /* Frameworks */,
-				257CEC7C2B975BB9000139FA /* Resources */,
+				2501EFB22B9760A1006326D9 /* Sources */,
+				2501EFB32B9760A1006326D9 /* Frameworks */,
+				2501EFB42B9760A1006326D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				257CEC802B975BB9000139FA /* PBXTargetDependency */,
+				2501EFB82B9760A1006326D9 /* PBXTargetDependency */,
 			);
-			name = "surf-macOSTests";
-			productName = "surf-macOSTests";
-			productReference = 257CEC7E2B975BB9000139FA /* surf-macOSTests.xctest */;
+			name = SurfTests;
+			productName = SurfTests;
+			productReference = 2501EFB62B9760A1006326D9 /* SurfTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		257CEC872B975BB9000139FA /* surf-macOSUITests */ = {
+		2501EFBF2B9760A1006326D9 /* SurfUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 257CEC982B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSUITests" */;
+			buildConfigurationList = 2501EFD02B9760A1006326D9 /* Build configuration list for PBXNativeTarget "SurfUITests" */;
 			buildPhases = (
-				257CEC842B975BB9000139FA /* Sources */,
-				257CEC852B975BB9000139FA /* Frameworks */,
-				257CEC862B975BB9000139FA /* Resources */,
+				2501EFBC2B9760A1006326D9 /* Sources */,
+				2501EFBD2B9760A1006326D9 /* Frameworks */,
+				2501EFBE2B9760A1006326D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				257CEC8A2B975BB9000139FA /* PBXTargetDependency */,
+				2501EFC22B9760A1006326D9 /* PBXTargetDependency */,
 			);
-			name = "surf-macOSUITests";
-			productName = "surf-macOSUITests";
-			productReference = 257CEC882B975BB9000139FA /* surf-macOSUITests.xctest */;
+			name = SurfUITests;
+			productName = SurfUITests;
+			productReference = 2501EFC02B9760A1006326D9 /* SurfUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		257CEC652B975BB7000139FA /* Project object */ = {
+		2501EF9D2B9760A0006326D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					257CEC6C2B975BB7000139FA = {
+					2501EFA42B9760A0006326D9 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					257CEC7D2B975BB9000139FA = {
+					2501EFB52B9760A1006326D9 = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 257CEC6C2B975BB7000139FA;
+						TestTargetID = 2501EFA42B9760A0006326D9;
 					};
-					257CEC872B975BB9000139FA = {
+					2501EFBF2B9760A1006326D9 = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 257CEC6C2B975BB7000139FA;
+						TestTargetID = 2501EFA42B9760A0006326D9;
 					};
 				};
 			};
-			buildConfigurationList = 257CEC682B975BB7000139FA /* Build configuration list for PBXProject "surf-macOS" */;
+			buildConfigurationList = 2501EFA02B9760A0006326D9 /* Build configuration list for PBXProject "Surf" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,36 +216,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 257CEC642B975BB7000139FA;
-			productRefGroup = 257CEC6E2B975BB7000139FA /* Products */;
+			mainGroup = 2501EF9C2B9760A0006326D9;
+			productRefGroup = 2501EFA62B9760A0006326D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				257CEC6C2B975BB7000139FA /* surf-macOS */,
-				257CEC7D2B975BB9000139FA /* surf-macOSTests */,
-				257CEC872B975BB9000139FA /* surf-macOSUITests */,
+				2501EFA42B9760A0006326D9 /* Surf */,
+				2501EFB52B9760A1006326D9 /* SurfTests */,
+				2501EFBF2B9760A1006326D9 /* SurfUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		257CEC6B2B975BB7000139FA /* Resources */ = {
+		2501EFA32B9760A0006326D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257CEC782B975BB8000139FA /* Preview Assets.xcassets in Resources */,
-				257CEC752B975BB8000139FA /* Assets.xcassets in Resources */,
+				2501EFB02B9760A1006326D9 /* Preview Assets.xcassets in Resources */,
+				2501EFAD2B9760A1006326D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		257CEC7C2B975BB9000139FA /* Resources */ = {
+		2501EFB42B9760A1006326D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		257CEC862B975BB9000139FA /* Resources */ = {
+		2501EFBE2B9760A1006326D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,49 +255,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		257CEC692B975BB7000139FA /* Sources */ = {
+		2501EFA12B9760A0006326D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257CEC732B975BB7000139FA /* ContentView.swift in Sources */,
-				257CEC712B975BB7000139FA /* surf_macOSApp.swift in Sources */,
+				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
+				2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		257CEC7A2B975BB9000139FA /* Sources */ = {
+		2501EFB22B9760A1006326D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257CEC832B975BB9000139FA /* surf_macOSTests.swift in Sources */,
+				2501EFBB2B9760A1006326D9 /* SurfTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		257CEC842B975BB9000139FA /* Sources */ = {
+		2501EFBC2B9760A1006326D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257CEC8F2B975BB9000139FA /* surf_macOSUITestsLaunchTests.swift in Sources */,
-				257CEC8D2B975BB9000139FA /* surf_macOSUITests.swift in Sources */,
+				2501EFC72B9760A1006326D9 /* SurfUITestsLaunchTests.swift in Sources */,
+				2501EFC52B9760A1006326D9 /* SurfUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		257CEC802B975BB9000139FA /* PBXTargetDependency */ = {
+		2501EFB82B9760A1006326D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 257CEC6C2B975BB7000139FA /* surf-macOS */;
-			targetProxy = 257CEC7F2B975BB9000139FA /* PBXContainerItemProxy */;
+			target = 2501EFA42B9760A0006326D9 /* Surf */;
+			targetProxy = 2501EFB72B9760A1006326D9 /* PBXContainerItemProxy */;
 		};
-		257CEC8A2B975BB9000139FA /* PBXTargetDependency */ = {
+		2501EFC22B9760A1006326D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 257CEC6C2B975BB7000139FA /* surf-macOS */;
-			targetProxy = 257CEC892B975BB9000139FA /* PBXContainerItemProxy */;
+			target = 2501EFA42B9760A0006326D9 /* Surf */;
+			targetProxy = 2501EFC12B9760A1006326D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		257CEC902B975BB9000139FA /* Debug */ = {
+		2501EFC82B9760A1006326D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,7 +360,7 @@
 			};
 			name = Debug;
 		};
-		257CEC912B975BB9000139FA /* Release */ = {
+		2501EFC92B9760A1006326D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,16 +415,16 @@
 			};
 			name = Release;
 		};
-		257CEC932B975BB9000139FA /* Debug */ = {
+		2501EFCB2B9760A1006326D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "surf-macOS/surf_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Surf/Surf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"surf-macOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Surf/Preview Content\"";
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -435,23 +435,23 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.Surf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		257CEC942B975BB9000139FA /* Release */ = {
+		2501EFCC2B9760A1006326D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "surf-macOS/surf_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Surf/Surf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"surf-macOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Surf/Preview Content\"";
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -462,14 +462,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.Surf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		257CEC962B975BB9000139FA /* Debug */ = {
+		2501EFCE2B9760A1006326D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -480,15 +480,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.SurfTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/surf-macOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/surf-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surf.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Surf";
 			};
 			name = Debug;
 		};
-		257CEC972B975BB9000139FA /* Release */ = {
+		2501EFCF2B9760A1006326D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -499,15 +499,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.SurfTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/surf-macOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/surf-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surf.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Surf";
 			};
 			name = Release;
 		};
-		257CEC992B975BB9000139FA /* Debug */ = {
+		2501EFD12B9760A1006326D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -516,15 +516,15 @@
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.SurfUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "surf-macOS";
+				TEST_TARGET_NAME = Surf;
 			};
 			name = Debug;
 		};
-		257CEC9A2B975BB9000139FA /* Release */ = {
+		2501EFD22B9760A1006326D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -533,54 +533,54 @@
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shotach.surf-macOSUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.SurfUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "surf-macOS";
+				TEST_TARGET_NAME = Surf;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		257CEC682B975BB7000139FA /* Build configuration list for PBXProject "surf-macOS" */ = {
+		2501EFA02B9760A0006326D9 /* Build configuration list for PBXProject "Surf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				257CEC902B975BB9000139FA /* Debug */,
-				257CEC912B975BB9000139FA /* Release */,
+				2501EFC82B9760A1006326D9 /* Debug */,
+				2501EFC92B9760A1006326D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		257CEC922B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOS" */ = {
+		2501EFCA2B9760A1006326D9 /* Build configuration list for PBXNativeTarget "Surf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				257CEC932B975BB9000139FA /* Debug */,
-				257CEC942B975BB9000139FA /* Release */,
+				2501EFCB2B9760A1006326D9 /* Debug */,
+				2501EFCC2B9760A1006326D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		257CEC952B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSTests" */ = {
+		2501EFCD2B9760A1006326D9 /* Build configuration list for PBXNativeTarget "SurfTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				257CEC962B975BB9000139FA /* Debug */,
-				257CEC972B975BB9000139FA /* Release */,
+				2501EFCE2B9760A1006326D9 /* Debug */,
+				2501EFCF2B9760A1006326D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		257CEC982B975BB9000139FA /* Build configuration list for PBXNativeTarget "surf-macOSUITests" */ = {
+		2501EFD02B9760A1006326D9 /* Build configuration list for PBXNativeTarget "SurfUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				257CEC992B975BB9000139FA /* Debug */,
-				257CEC9A2B975BB9000139FA /* Release */,
+				2501EFD12B9760A1006326D9 /* Debug */,
+				2501EFD22B9760A1006326D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 257CEC652B975BB7000139FA /* Project object */;
+	rootObject = 2501EF9D2B9760A0006326D9 /* Project object */;
 }

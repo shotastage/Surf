@@ -1,13 +1,13 @@
 //
-//  surf_macOSUITests.swift
-//  surf-macOSUITests
+//  SurfUITests.swift
+//  SurfUITests
 //
 //  Created by Shota Shimazu on 2024/03/05.
 //
 
 import XCTest
 
-final class surf_macOSUITests: XCTestCase {
+final class SurfUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

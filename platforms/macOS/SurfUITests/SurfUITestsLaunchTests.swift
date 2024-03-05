@@ -1,13 +1,13 @@
 //
-//  surf_macOSUITestsLaunchTests.swift
-//  surf-macOSUITests
+//  SurfUITestsLaunchTests.swift
+//  SurfUITests
 //
 //  Created by Shota Shimazu on 2024/03/05.
 //
 
 import XCTest
 
-final class surf_macOSUITestsLaunchTests: XCTestCase {
+final class SurfUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
