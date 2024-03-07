@@ -6,16 +6,12 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        SFWebKitView(url: URL(string: "https://magicalsfot.app")!)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
