@@ -11,9 +11,9 @@ if __name__ == "__main__":
     shutil.rmtree("cef")
     os.system("git clone https://shotastage@bitbucket.org/chromiumembedded/cef.git")
     try:
-        with open("cef/.gitkeep", 'w') as file:
+        with open("Vendor/cef/.gitkeep", 'w') as file:
             pass
     except IOError as e:
         print(f"Failed to recover keep file: {e}")
 
-    shutil.rmtree("cef/.git/")
+    shutil.rmtree("Vendor/cef/.git/")
