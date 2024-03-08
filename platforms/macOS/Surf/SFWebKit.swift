@@ -8,20 +8,89 @@
 import SwiftUI
 import WebKit
 
-struct SFWebKitView: NSViewRepresentable {
-    let url: URL
+class WebViewModel: ObservableObject {
+    @Published var link: String
+    @Published var didFinishLoading: Bool = false
+    @Published var pageTitle: String = ""
 
-    func makeNSView(context: Context) -> WKWebView {
-        return WKWebView()
-    }
-
-    func updateNSView(_ nsView: WKWebView, context: Context) {
-        let request = URLRequest(url: url)
-        nsView.load(request)
+    init(link: String) {
+        self.link = link
     }
 }
 
+struct WebView: NSViewRepresentable {
+    typealias NSViewType = WKWebView
+
+    @ObservedObject var viewModel: WebViewModel
+
+    func makeNSView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
+        webView.uiDelegate = context.coordinator as? WKUIDelegate
+        if let url = URL(string: viewModel.link) {
+            webView.load(URLRequest(url: url))
+        }
+        return webView
+    }
+
+    func updateNSView(_ nsView: WKWebView, context _: Context) {
+        if let url = URL(string: viewModel.link), nsView.url != url {
+            nsView.load(URLRequest(url: url))
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(viewModel)
+    }
+
+    class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate {
+        var viewModel: WebViewModel
+
+        init(_ viewModel: WebViewModel) {
+            self.viewModel = viewModel
+        }
+
+        func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
+            // Handle failure
+        }
+
+        func webView(_: WKWebView, didFailProvisionalNavigation _: WKNavigation!, withError _: Error) {
+            // Handle provisional failure
+        }
+
+        func webView(_ web: WKWebView, didFinish _: WKNavigation!) {
+            if let title = web.title {
+                viewModel.pageTitle = title
+            }
+            if let urlString = web.url?.absoluteString {
+                viewModel.link = urlString
+            }
+            viewModel.didFinishLoading = true
+        }
+
+        func webView(_: WKWebView, didStartProvisionalNavigation _: WKNavigation!) {
+            // Handle start of navigation
+        }
+
+        func webView(_: WKWebView, decidePolicyFor _: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            decisionHandler(.allow)
+        }
+    }
+}
+
+struct SafariWebView: View {
+    @StateObject var model: WebViewModel
+
+    init(mesgURL: String) {
+        _model = StateObject(wrappedValue: WebViewModel(link: mesgURL))
+    }
+
+    var body: some View {
+        WebView(viewModel: model)
+    }
+}
+
+// Preview Provider if needed
 #Preview {
-    SFWebKitView(url: URL(string: "https://magicalsoft.app")!)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    SafariWebView(mesgURL: "https://magicalsoft.app/")
 }
