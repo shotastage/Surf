@@ -1,0 +1,55 @@
+excluded {
+  "Carthage"
+  "fastlane"
+  "Tools"
+  "ThirdParty"
+  "Makefile.swift"
+}
+
+disabled_rules {
+  "identifier_name"
+  "function_body_length"
+  "file_header"
+  "todo"
+}
+
+opt_in_rules {
+  "empty_count"
+  "file_header"
+  "explicit_init"
+  "closure_spacing"
+  "overridden_super_call"
+  "prohibited_super_call"
+  "redundant_nil_coalescing"
+  "attributes"
+  "operator_usage_whitespace"
+  "closure_end_indentation"
+  "first_where"
+  "object_literal"
+  "fatal_error_message"
+  "function_body_length"
+}
+
+file_header {
+  forbidden_pattern = ".*?"
+}
+
+trailing_comma {
+  mandatory_comma = true
+}
+
+identifier_name {
+  min_length = 2
+  allowed_symbols = "_"
+  validates_start_with_lowercase = false
+}
+
+line_length {
+  warning = 161
+  error = 200
+}
+
+function_body_length {
+  100
+  200
+}

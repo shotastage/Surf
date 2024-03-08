@@ -14,6 +14,7 @@
 		2501EFBB2B9760A1006326D9 /* SurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFBA2B9760A1006326D9 /* SurfTests.swift */; };
 		2501EFC52B9760A1006326D9 /* SurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFC42B9760A1006326D9 /* SurfUITests.swift */; };
 		2501EFC72B9760A1006326D9 /* SurfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */; };
+		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		2501EFC02B9760A1006326D9 /* SurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2501EFC42B9760A1006326D9 /* SurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITests.swift; sourceTree = "<group>"; };
 		2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
+		259A472E2B9AC6160062BCE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 				2501EFB92B9760A1006326D9 /* SurfTests */,
 				2501EFC32B9760A1006326D9 /* SurfUITests */,
 				2501EFA62B9760A0006326D9 /* Products */,
+				259A472D2B9AC6160062BCE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +104,7 @@
 				2501EFAC2B9760A1006326D9 /* Assets.xcassets */,
 				2501EFB12B9760A1006326D9 /* Surf.entitlements */,
 				2501EFAE2B9760A1006326D9 /* Preview Content */,
+				259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */,
 			);
 			path = Surf;
 			sourceTree = "<group>";
@@ -127,6 +132,14 @@
 				2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */,
 			);
 			path = SurfUITests;
+			sourceTree = "<group>";
+		};
+		259A472D2B9AC6160062BCE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				259A472E2B9AC6160062BCE8 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
+				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
 				2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +443,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +471,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
