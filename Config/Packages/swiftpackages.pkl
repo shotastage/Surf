@@ -1,0 +1,135 @@
+// Swift Package Dependencies
+// ------------------------------------------
+dependencies = new {
+  DataLogic {
+    url = "https://github.com/shotastage/DataLogic.swift.git"
+    branch = "main"
+  }
+  CoreSecurity {
+    url = "https://github.com/shotastage/CoreSecurity.git"
+    branch = "main"
+  }
+  KeychainAccess {
+    url = "https://github.com/kishikawakatsumi/KeychainAccess.git"
+    exactVersion = "4.2.2"
+  }
+  SimpleDefaults {
+    url = "https://github.com/shotastage/SimpleDefaults.git"
+    branch = "main"
+  }
+}
+
+// Dependencies for iOS / iPadOS
+// ------------------------------------------
+iosdeps = new Listing {
+  new {
+    target = "BMSUI"
+  }
+  new {
+    target = "BMSKit"
+  }
+  new {
+    target = "BhaaWidget"
+    codeSign = false
+    embed = true
+  }
+  new {
+    sdk = "MapKit.framework"
+  }
+  new {
+    package = "SwiftUIKit"
+  }
+  new {
+    package = "CoreSecurity"
+  }
+  new {
+    package = "Pttrns"
+  }
+  new {
+    package = "Alamofire"
+  }
+  new {
+    package = "KeychainAccess"
+  }
+  new {
+    package = "Lottie"
+  }
+  new {
+    package = "ReSwift"
+  }
+  new {
+    package = "SimpleDefaults"
+  }
+  new {
+    package = "Starscream"
+  }
+  new {
+    package = "GRDB"
+  }
+  new {
+    package = "OpenAISwift"
+  }
+  new {
+    package = "DataLogic"
+  }
+  new {
+    package = "DeepLinkRouter"
+  }
+}
+
+
+// Dependencies for VisionOS
+// ------------------------------------------
+visiondeps = new Listing {
+  //new {
+  //  target = "BMSUI"
+  //}
+  //new {
+  //  target = "BMSKit"
+  //}
+  new {
+    package = "RealityKitContent"
+  }
+  new {
+    sdk = "MapKit.framework"
+  }
+  new {
+    package = "SwiftUIKit"
+  }
+  new {
+    package = "CoreSecurity"
+  }
+  new {
+    package = "Pttrns"
+  }
+  new {
+    package = "Alamofire"
+  }
+  new {
+    package = "KeychainAccess"
+  }
+  new {
+    package = "Lottie"
+  }
+  new {
+    package = "ReSwift"
+  }
+  new {
+    package = "SimpleDefaults"
+  }
+  new {
+    package = "Starscream"
+  }
+  new {
+    package = "GRDB"
+  }
+  new {
+    package = "OpenAISwift"
+  }
+  new {
+    package = "DataLogic"
+  }
+  new {
+    package = "DeepLinkRouter"
+  }
+}

@@ -1,0 +1,123 @@
+import "Packages/swiftpackages.pkl"
+
+name = "Surf"
+
+options {
+  bundleIdPrefix = "app.magicalsoft"
+  deploymentTarget {
+    macOS = "14.0"
+  }
+  xcodeVersion = "15.0"
+}
+
+settings {
+  base {
+    MARKETING_VERSION = "0.4.9"
+    CURRENT_PROJECT_VERSION = 1
+    CLANG_CXX_LANGUAGE_STANDARD = "gnu++17"
+    INFOPLIST_KEY_CFBundleDisplayName = name
+    INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking"
+  }
+}
+
+packages = swiftpackages.dependencies
+
+attributes {
+  ORGANIZATIONNAME = "Shota Shimazu"
+}
+
+targets {
+  Surf {
+    type = "application"
+    platform = "macOS"
+    sources = name
+    configFiles {
+      Debug = "Surf/Configs/Debug.xcconfig"
+      Release = "Surf/Configs/Release.xcconfig"
+    }
+    settings {
+      base {
+        ENABLE_PREVIEWS = true
+        DEVELOPMENT_ASSET_PATHS = "\"Surf/Preview Content\""
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "AccentColor"
+      }
+    }
+    info {
+      path = "Surf/Info.plist"
+      properties {
+        CFBundleVersion = "$(CURRENT_PROJECT_VERSION)"
+        CFBundleShortVersionString = "$(MARKETING_VERSION)"
+        CFBundleURLTypes {
+          new {
+            CFBundleTypeRole = "Editor"
+            CFBundleURLName = "app.magicalsoft.surf"
+            CFBundleURLSchemes {
+              "surf"
+            }
+          }
+        }
+        CFBundleDisplayName = "Surf"
+        LSRequiresIPhoneOS = true
+        LSSupportsOpeningDocumentsInPlace = true
+        MKDirectionsApplicationSupportedModes = List()
+        LSApplicationCategoryType = "public.app-category.social-networking"
+        UILaunchStoryboardName = "LaunchScreen.storyboard"
+        UIApplicationSupportsIndirectInputEvents = true
+        UIApplicationSceneManifest {
+          UIApplicationSupportsMultipleScenes = true
+        }
+        `UISupportedInterfaceOrientations~iphone` {
+          "UIInterfaceOrientationPortrait"
+          "UIInterfaceOrientationPortraitUpsideDown"
+          "UIInterfaceOrientationLandscapeLeft"
+          "UIInterfaceOrientationLandscapeRight"
+        }
+        `UISupportedInterfaceOrientations~ipad` {
+          "UIInterfaceOrientationPortrait"
+          "UIInterfaceOrientationPortraitUpsideDown"
+          "UIInterfaceOrientationLandscapeLeft"
+          "UIInterfaceOrientationLandscapeRight"
+        }
+        NSBluetoothAlwaysUsageDescription = "Surf uses Bluetooth to notify when your friend closes nearby."
+        NSBluetoothPeripheralUsageDescription = "Surf uses Bluetooth to find friends nearby."
+        NSCameraUsageDescription = "Surf uses camera to take a best shot and use for AR."
+        NSLocationAlwaysAndWhenInUseUsageDescription = "Surf share your real-time with connected friends."
+        NSLocationWhenInUseUsageDescription = "Surf requires location service to position your location on map."
+        NSPhotoLibraryAddUsageDescription = "Get photos from photo library"
+        NSPhotoLibraryUsageDescription = "Get photos from photo library"
+        UIAppFonts = fonts.embeded_fonts
+      }
+    }
+    scheme {
+      testTargets {
+        "Tests"
+        "UITests"
+      }
+    }
+    dependencies = swiftpackages.iosdeps
+    entitlements {
+      path = "Surf/Surf.entitlements"
+    }
+  }
+  Tests {
+    type = "bundle.unit-test"
+    platform = "iOS"
+    sources = "Tests"
+    dependencies = new Listing {
+      new { target = "Surf" }
+    }
+  }
+  UITests {
+    type = "bundle.ui-testing"
+    platform = "iOS"
+    sources = "UITests"
+    dependencies = new Listing {
+      new {
+        target = "Surf"
+      }
+      new {
+        package = "GRDB"
+      }
+    }
+  }
+}
