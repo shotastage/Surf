@@ -85,7 +85,6 @@ targets {
         NSLocationWhenInUseUsageDescription = "Surf requires location service to position your location on map."
         NSPhotoLibraryAddUsageDescription = "Get photos from photo library"
         NSPhotoLibraryUsageDescription = "Get photos from photo library"
-        UIAppFonts = fonts.embeded_fonts
       }
     }
     scheme {

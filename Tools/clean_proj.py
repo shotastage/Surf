@@ -12,10 +12,25 @@ def rm(path):
     except OSError as e:
         pass
 
+
+def clean_generated_config():
+    print("Cleaning generated config files...")
+
+    targets = [
+        "./App/macOS/project.yml",
+        ""
+    ]
+
+    for target in targets:
+        rm(target)
+
+
 if __name__ == "__main__":
     rm('target')
-    rm('Vendor/chromium/.cipd/')
-    rm('Vendor/chromium/.gclient')
+    rm('Vendor/Chromium/.cipd/')
+    rm('Vendor/Chromium/.gclient')
+    rm('Vendor/cef')
+
     rm('Vendor/cef')
     os.mkdir('Vendor/cef')
     try:
@@ -23,3 +38,5 @@ if __name__ == "__main__":
             pass
     except IOError as e:
         print(f"Failed to recover keep file: {e}")
+
+    clean_generated_config()
