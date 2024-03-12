@@ -52,3 +52,7 @@ xcuserdata/
 ## Xcode 8 and earlier
 *.xcscmblueprint
 *.xccheckout
+
+
+## Project Specific
+.proj_backup/

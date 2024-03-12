@@ -1,0 +1,100 @@
+name: Surf
+options:
+  bundleIdPrefix: app.magicalsoft
+  deploymentTarget:
+    macOS: '14.0'
+  xcodeVersion: '15.0'
+settings:
+  base:
+    MARKETING_VERSION: 0.0.1
+    CURRENT_PROJECT_VERSION: 1
+    INFOPLIST_KEY_CFBundleDisplayName: Surf
+    INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.social-networking
+packages:
+  DataLogic:
+    url: https://github.com/shotastage/DataLogic.swift.git
+    branch: main
+  CoreSecurity:
+    url: https://github.com/shotastage/CoreSecurity.git
+    branch: main
+  KeychainAccess:
+    url: https://github.com/kishikawakatsumi/KeychainAccess.git
+    exactVersion: 4.2.2
+  SimpleDefaults:
+    url: https://github.com/shotastage/SimpleDefaults.git
+    branch: main
+attributes:
+  ORGANIZATIONNAME: Shota Shimazu
+targets:
+  Surf:
+    type: application
+    platform: macOS
+    sources: Surf
+    settings:
+      base:
+        ENABLE_PREVIEWS: true
+        DEVELOPMENT_ASSET_PATHS: '"Surf/Preview Content"'
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    info:
+      path: Surf/Info.plist
+      properties:
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleURLTypes:
+        - CFBundleTypeRole: Editor
+          CFBundleURLName: app.magicalsoft.surf
+          CFBundleURLSchemes:
+          - surf
+        CFBundleDisplayName: Surf
+        LSRequiresIPhoneOS: true
+        LSSupportsOpeningDocumentsInPlace: true
+        MKDirectionsApplicationSupportedModes: []
+        LSApplicationCategoryType: public.app-category.social-networking
+        UIApplicationSupportsIndirectInputEvents: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+        NSBluetoothAlwaysUsageDescription: Surf uses Bluetooth to notify when your friend closes nearby.
+        NSBluetoothPeripheralUsageDescription: Surf uses Bluetooth to find friends nearby.
+        NSCameraUsageDescription: Surf uses camera to take a best shot and use for AR.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Surf share your real-time with connected friends.
+        NSLocationWhenInUseUsageDescription: Surf requires location service to position your location on map.
+        NSPhotoLibraryAddUsageDescription: Get photos from photo library
+        NSPhotoLibraryUsageDescription: Get photos from photo library
+    scheme:
+      testTargets:
+      - Tests
+      - UITests
+    dependencies:
+    - target: BMSUI
+    - target: BMSKit
+    - target: BhaaWidget
+      codeSign: false
+      embed: true
+    - sdk: MapKit.framework
+    - package: SwiftUIKit
+    - package: CoreSecurity
+    - package: Pttrns
+    - package: Alamofire
+    - package: KeychainAccess
+    - package: Lottie
+    - package: ReSwift
+    - package: SimpleDefaults
+    - package: Starscream
+    - package: GRDB
+    - package: OpenAISwift
+    - package: DataLogic
+    - package: DeepLinkRouter
+    entitlements:
+      path: Surf/Surf.entitlements
+  Tests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: Tests
+    dependencies:
+    - target: Surf
+  UITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: UITests
+    dependencies:
+    - target: Surf

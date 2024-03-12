@@ -12,9 +12,9 @@ options {
 
 settings {
   base {
-    MARKETING_VERSION = "0.4.9"
+    MARKETING_VERSION = "0.0.1"
     CURRENT_PROJECT_VERSION = 1
-    CLANG_CXX_LANGUAGE_STANDARD = "gnu++17"
+    //- CLANG_CXX_LANGUAGE_STANDARD = "gnu++17"
     INFOPLIST_KEY_CFBundleDisplayName = name
     INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking"
   }
@@ -31,10 +31,6 @@ targets {
     type = "application"
     platform = "macOS"
     sources = name
-    configFiles {
-      Debug = "Surf/Configs/Debug.xcconfig"
-      Release = "Surf/Configs/Release.xcconfig"
-    }
     settings {
       base {
         ENABLE_PREVIEWS = true
@@ -61,22 +57,10 @@ targets {
         LSSupportsOpeningDocumentsInPlace = true
         MKDirectionsApplicationSupportedModes = List()
         LSApplicationCategoryType = "public.app-category.social-networking"
-        UILaunchStoryboardName = "LaunchScreen.storyboard"
+        //- UILaunchStoryboardName = "LaunchScreen.storyboard"
         UIApplicationSupportsIndirectInputEvents = true
         UIApplicationSceneManifest {
           UIApplicationSupportsMultipleScenes = true
-        }
-        `UISupportedInterfaceOrientations~iphone` {
-          "UIInterfaceOrientationPortrait"
-          "UIInterfaceOrientationPortraitUpsideDown"
-          "UIInterfaceOrientationLandscapeLeft"
-          "UIInterfaceOrientationLandscapeRight"
-        }
-        `UISupportedInterfaceOrientations~ipad` {
-          "UIInterfaceOrientationPortrait"
-          "UIInterfaceOrientationPortraitUpsideDown"
-          "UIInterfaceOrientationLandscapeLeft"
-          "UIInterfaceOrientationLandscapeRight"
         }
         NSBluetoothAlwaysUsageDescription = "Surf uses Bluetooth to notify when your friend closes nearby."
         NSBluetoothPeripheralUsageDescription = "Surf uses Bluetooth to find friends nearby."
@@ -113,9 +97,6 @@ targets {
     dependencies = new Listing {
       new {
         target = "Surf"
-      }
-      new {
-        package = "GRDB"
       }
     }
   }
