@@ -1,0 +1,9 @@
+def build():
+    upfm.mkdir("build")
+    upfm.cd("build")
+    upcmd("cmake ..")
+    upcmd("cmake --build .")
+
+
+def clean():
+    upfm.rmdir("build")
