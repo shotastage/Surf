@@ -34,4 +34,16 @@ fi
 # Set global Python version to 3.12.2
 pyenv global 3.12.2
 
-~/.pyenv/versions/3.12.2/bin/python -V
+# Set the expected Python version
+EXPECTED_VERSION="Python 3.12.2"
+
+# Check the Python version
+ACTUAL_VERSION=$(/Users/$(whoami)/.pyenv/versions/3.12.2/bin/python -V 2>&1)
+
+if [ "$ACTUAL_VERSION" == "$EXPECTED_VERSION" ]; then
+    echo "Python version mismatch. Expected: $EXPECTED_VERSION, but got: $ACTUAL_VERSION"
+
+    echo "✅ Python installation is OK!"
+else
+    echo "Python version mismatch. Expected: $EXPECTED_VERSION, but got: $ACTUAL_VERSION"
+fi
