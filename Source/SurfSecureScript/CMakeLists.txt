@@ -1,14 +1,14 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.28)
 
-project(LexerProject VERSION 1.0)
+project(SurfSecureScriptProject VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 set(SOURCE_FILES
     src/main.cpp
-    src/Lexer.cpp
-    src/Lexar.hpp
+    #src/LexerAbs.cpp
+    #src/LexerAbs.hpp
 )
 
 # Executable
