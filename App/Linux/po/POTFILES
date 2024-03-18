@@ -1,0 +1,6 @@
+data/app.magicalsoft.Surf.desktop.in
+data/app.magicalsoft.Surf.metainfo.xml.in
+data/app.magicalsoft.Surf.gschema.xml
+src/main.vala
+src/window.vala
+src/window.ui
