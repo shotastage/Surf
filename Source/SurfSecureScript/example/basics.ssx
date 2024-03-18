@@ -1,0 +1,12 @@
+// Comment line
+
+// Define variables
+var variables: Int = 10
+
+// Define constant
+let variables: String = "This is constant"
+
+// Define function
+func exampleFunc(message: String): Void {
+    print("Greet to \(message)")
+}
