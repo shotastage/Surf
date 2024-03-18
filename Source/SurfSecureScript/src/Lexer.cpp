@@ -33,7 +33,7 @@ std::vector<Token> Lexer::tokenize() {
             tokens.push_back({TokenType::RBRACE, "}"});
             pos++;
         } else if (std::isalpha(current)) {
-            std::string identifier = readWhile(std::isalnum);
+            std::string identifier = readWhile([](unsigned char c) { return std::isalnum(c); });
             if (identifier == "func") {
                 tokens.push_back({TokenType::FUNC, identifier});
             } else if (identifier == "Int64") {
