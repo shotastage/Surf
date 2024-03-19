@@ -1,0 +1,15 @@
+{
+  "originHash" : "5e865a220364bd3903dae0719255b0af413ac96b7d4ee64c95d5ac0083343569",
+  "pins" : [
+    {
+      "identity" : "swiftui-windowmanagement",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shotastage/SwiftUI-WindowManagement.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "adbebf5d7df325f3d7bf07dc832e5e162a9003f5"
+      }
+    }
+  ],
+  "version" : 3
+}

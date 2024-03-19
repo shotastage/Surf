@@ -14,7 +14,11 @@
 		2501EFBB2B9760A1006326D9 /* SurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFBA2B9760A1006326D9 /* SurfTests.swift */; };
 		2501EFC52B9760A1006326D9 /* SurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFC42B9760A1006326D9 /* SurfUITests.swift */; };
 		2501EFC72B9760A1006326D9 /* SurfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */; };
+		250217102BA9DF62006FE025 /* WindowManagement in Frameworks */ = {isa = PBXBuildFile; productRef = 2502170F2BA9DF62006FE025 /* WindowManagement */; };
+		250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217112BA9DF97006FE025 /* BrowserWindowView.swift */; };
+		250217142BA9DFED006FE025 /* SceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217132BA9DFED006FE025 /* SceneID.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
+		25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B101952BA9DEDC00263E35 /* BrowserWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +50,11 @@
 		2501EFC02B9760A1006326D9 /* SurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2501EFC42B9760A1006326D9 /* SurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITests.swift; sourceTree = "<group>"; };
 		2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		250217112BA9DF97006FE025 /* BrowserWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowView.swift; sourceTree = "<group>"; };
+		250217132BA9DFED006FE025 /* SceneID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneID.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
 		259A472E2B9AC6160062BCE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		25B101952BA9DEDC00263E35 /* BrowserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250217102BA9DF62006FE025 /* WindowManagement in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +107,14 @@
 		2501EFA72B9760A0006326D9 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
+				25B101932BA9DEB700263E35 /* Windows */,
 				2501EFA82B9760A0006326D9 /* SurfApp.swift */,
 				2501EFAA2B9760A0006326D9 /* ContentView.swift */,
 				2501EFAC2B9760A1006326D9 /* Assets.xcassets */,
 				2501EFB12B9760A1006326D9 /* Surf.entitlements */,
 				2501EFAE2B9760A1006326D9 /* Preview Content */,
 				259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */,
+				250217132BA9DFED006FE025 /* SceneID.swift */,
 			);
 			path = Surf;
 			sourceTree = "<group>";
@@ -142,6 +152,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		25B101932BA9DEB700263E35 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				25B101942BA9DEC500263E35 /* Browser */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		25B101942BA9DEC500263E35 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				25B101952BA9DEDC00263E35 /* BrowserWindow.swift */,
+				250217112BA9DF97006FE025 /* BrowserWindowView.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +185,9 @@
 			dependencies = (
 			);
 			name = Surf;
+			packageProductDependencies = (
+				2502170F2BA9DF62006FE025 /* WindowManagement */,
+			);
 			productName = Surf;
 			productReference = 2501EFA52B9760A0006326D9 /* Surf.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 2501EF9C2B9760A0006326D9;
+			packageReferences = (
+				25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */,
+			);
 			productRefGroup = 2501EFA62B9760A0006326D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,9 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */,
 				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
 				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
+				25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */,
 				2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */,
+				250217142BA9DFED006FE025 /* SceneID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shotastage/SwiftUI-WindowManagement.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2502170F2BA9DF62006FE025 /* WindowManagement */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */;
+			productName = WindowManagement;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2501EF9D2B9760A0006326D9 /* Project object */;
 }
