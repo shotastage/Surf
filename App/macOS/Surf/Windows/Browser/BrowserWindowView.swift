@@ -13,14 +13,13 @@ import WindowManagement
 struct BrowserWindowView: View {
     @Environment(\.window) var window
 
-    @State private var data = Array(repeating: Array(repeating: "", count: 10), count: 20)
+    @State private var currentURL = "https://github.com/shotastage/Surf"
 
     var body: some View {
-        ZStack {
-            VStack {
-                Text("<<Browser area>>")
-            }
-            .padding(.horizontal, 0.0)
+        VStack {
+            TextField("Paste URL here...", text: $currentURL)
+            SafariWebView(mesgURL: currentURL)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }

@@ -1,6 +1,15 @@
 {
-  "originHash" : "5e865a220364bd3903dae0719255b0af413ac96b7d4ee64c95d5ac0083343569",
+  "originHash" : "8d65a667381dda09631c73807367e0e5df08d58b3b428c79e1ad7caa508a180e",
   "pins" : [
+    {
+      "identity" : "datalogic.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shotastage/DataLogic.swift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "464e7c92edb00384a66e8e944196b9be1c46474a"
+      }
+    },
     {
       "identity" : "swiftui-windowmanagement",
       "kind" : "remoteSourceControl",
