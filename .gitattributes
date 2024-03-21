@@ -1,0 +1,4 @@
+# Visual Studio Based Config
+*.sln eol=crlf
+*.vcproj eol=crlf
+*.vsprops eol=crlf
