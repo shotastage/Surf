@@ -1,0 +1,6 @@
+import platform
+
+def before_build():
+    if not platform.system() == 'Windows':
+        print('Current OS does not support target for macOS.')
+        mps.abort()
