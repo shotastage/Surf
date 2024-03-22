@@ -26,7 +26,7 @@ struct WebView: NSViewRepresentable {
     func makeNSView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
-        webView.uiDelegate = context.coordinator as? WKUIDelegate
+        webView.uiDelegate = context.coordinator
         if let url = URL(string: viewModel.link) {
             webView.load(URLRequest(url: url))
         }
@@ -91,6 +91,6 @@ struct SafariWebView: View {
 }
 
 // Preview Provider if needed
-#Preview {
+#Preview("SFWebView") {
     SafariWebView(mesgURL: "https://magicalsoft.app/")
 }

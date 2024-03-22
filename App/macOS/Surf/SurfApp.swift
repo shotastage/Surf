@@ -11,7 +11,6 @@ import WindowManagement
 
 @main
 struct SurfApp: App {
-
     @NSApplicationDelegateAdaptor var delegate: AppDelegate
 
     init() {

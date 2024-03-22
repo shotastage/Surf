@@ -19,7 +19,7 @@ struct BrowserWindowView: View {
     var body: some View {
         VStack {
             TextField("Paste URL here...", text: $urlStr)
-                .onChange(of: urlStr) { oldValue, newValue in
+                .onChange(of: urlStr) { _, newValue in
                     print("Url bar string changed: \(newValue)")
                 }
                 .onSubmit {
