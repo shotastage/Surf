@@ -9,7 +9,8 @@ HOMEBREW_DEPS = [
     "cmake",
     "swiftlint",
     "swiftformat",
-    "swift-protobuf"
+    "swift-protobuf",
+    "rust"
 ]
 
 if __name__ == "__main__":
