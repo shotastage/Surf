@@ -18,15 +18,23 @@ struct BrowserWindowView: View {
 
     var body: some View {
         VStack {
-            TextField("Paste URL here...", text: $urlStr)
-                .onChange(of: urlStr) { _, newValue in
-                    print("Url bar string changed: \(newValue)")
+            HStack {
+                Button("Back") {
+                    print("__BACK__")
                 }
-                .onSubmit {
-                    print("PressReturn Key")
-                    currentURL = urlStr
+                Button("Prev") {
+                    print("__PREV__")
                 }
-            SafariWebView(mesgURL: currentURL)
+                TextField("Paste URL here...", text: $urlStr)
+                    .onChange(of: urlStr) { _, newValue in
+                        print("Url bar string changed: \(newValue)")
+                    }
+                    .onSubmit {
+                        print("PressReturn Key")
+                        currentURL = urlStr
+                    }
+            }
+            WebKitBridgeView(currentPage: $currentURL)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
