@@ -17,6 +17,15 @@
 		250217102BA9DF62006FE025 /* WindowManagement in Frameworks */ = {isa = PBXBuildFile; productRef = 2502170F2BA9DF62006FE025 /* WindowManagement */; };
 		250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217112BA9DF97006FE025 /* BrowserWindowView.swift */; };
 		250217142BA9DFED006FE025 /* SceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217132BA9DFED006FE025 /* SceneID.swift */; };
+		250217162BAAE6DB006FE025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217152BAAE6DB006FE025 /* AppDelegate.swift */; };
+		250217192BAAECC7006FE025 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217182BAAECC7006FE025 /* Logger.swift */; };
+		2502171C2BAB346F006FE025 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502171B2BAB346F006FE025 /* DataTypes.swift */; };
+		2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502171D2BAB3484006FE025 /* FXAdoptor.swift */; };
+		250217212BAB34AD006FE025 /* Rand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217202BAB34AD006FE025 /* Rand.swift */; };
+		250217242BAB34E1006FE025 /* DataLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 250217232BAB34E1006FE025 /* DataLogic */; };
+		250217262BAB34F4006FE025 /* RandSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217252BAB34F4006FE025 /* RandSecure.swift */; };
+		250217282BAB3524006FE025 /* SUM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217272BAB3524006FE025 /* SUM.swift */; };
+		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
 		25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B101952BA9DEDC00263E35 /* BrowserWindow.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +61,14 @@
 		2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		250217112BA9DF97006FE025 /* BrowserWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowView.swift; sourceTree = "<group>"; };
 		250217132BA9DFED006FE025 /* SceneID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneID.swift; sourceTree = "<group>"; };
+		250217152BAAE6DB006FE025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		250217182BAAECC7006FE025 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		2502171B2BAB346F006FE025 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
+		2502171D2BAB3484006FE025 /* FXAdoptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXAdoptor.swift; sourceTree = "<group>"; };
+		250217202BAB34AD006FE025 /* Rand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rand.swift; sourceTree = "<group>"; };
+		250217252BAB34F4006FE025 /* RandSecure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandSecure.swift; sourceTree = "<group>"; };
+		250217272BAB3524006FE025 /* SUM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUM.swift; sourceTree = "<group>"; };
+		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
 		259A472E2B9AC6160062BCE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		25B101952BA9DEDC00263E35 /* BrowserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindow.swift; sourceTree = "<group>"; };
@@ -63,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				250217102BA9DF62006FE025 /* WindowManagement in Frameworks */,
+				250217242BAB34E1006FE025 /* DataLogic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +104,8 @@
 		2501EF9C2B9760A0006326D9 = {
 			isa = PBXGroup;
 			children = (
+				2502171A2BAB3451006FE025 /* Tensorl */,
+				250217172BAAE7E7006FE025 /* SurfCore */,
 				2501EFA72B9760A0006326D9 /* Surf */,
 				2501EFB92B9760A1006326D9 /* SurfTests */,
 				2501EFC32B9760A1006326D9 /* SurfUITests */,
@@ -107,14 +127,15 @@
 		2501EFA72B9760A0006326D9 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
+				250217292BAC384F006FE025 /* Views */,
 				25B101932BA9DEB700263E35 /* Windows */,
 				2501EFA82B9760A0006326D9 /* SurfApp.swift */,
 				2501EFAA2B9760A0006326D9 /* ContentView.swift */,
 				2501EFAC2B9760A1006326D9 /* Assets.xcassets */,
 				2501EFB12B9760A1006326D9 /* Surf.entitlements */,
 				2501EFAE2B9760A1006326D9 /* Preview Content */,
-				259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */,
 				250217132BA9DFED006FE025 /* SceneID.swift */,
+				250217152BAAE6DB006FE025 /* AppDelegate.swift */,
 			);
 			path = Surf;
 			sourceTree = "<group>";
@@ -142,6 +163,43 @@
 				2501EFC62B9760A1006326D9 /* SurfUITestsLaunchTests.swift */,
 			);
 			path = SurfUITests;
+			sourceTree = "<group>";
+		};
+		250217172BAAE7E7006FE025 /* SurfCore */ = {
+			isa = PBXGroup;
+			children = (
+				250217182BAAECC7006FE025 /* Logger.swift */,
+			);
+			path = SurfCore;
+			sourceTree = "<group>";
+		};
+		2502171A2BAB3451006FE025 /* Tensorl */ = {
+			isa = PBXGroup;
+			children = (
+				2502171F2BAB3497006FE025 /* Functions */,
+				2502171B2BAB346F006FE025 /* DataTypes.swift */,
+				2502171D2BAB3484006FE025 /* FXAdoptor.swift */,
+			);
+			path = Tensorl;
+			sourceTree = "<group>";
+		};
+		2502171F2BAB3497006FE025 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				250217202BAB34AD006FE025 /* Rand.swift */,
+				250217252BAB34F4006FE025 /* RandSecure.swift */,
+				250217272BAB3524006FE025 /* SUM.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		250217292BAC384F006FE025 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */,
+				2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		259A472D2B9AC6160062BCE8 /* Frameworks */ = {
@@ -187,6 +245,7 @@
 			name = Surf;
 			packageProductDependencies = (
 				2502170F2BA9DF62006FE025 /* WindowManagement */,
+				250217232BAB34E1006FE025 /* DataLogic */,
 			);
 			productName = Surf;
 			productReference = 2501EFA52B9760A0006326D9 /* Surf.app */;
@@ -262,6 +321,7 @@
 			mainGroup = 2501EF9C2B9760A0006326D9;
 			packageReferences = (
 				25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */,
+				250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */,
 			);
 			productRefGroup = 2501EFA62B9760A0006326D9 /* Products */;
 			projectDirPath = "";
@@ -306,11 +366,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */,
+				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
+				250217282BAB3524006FE025 /* SUM.swift in Sources */,
+				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
 				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
+				250217262BAB34F4006FE025 /* RandSecure.swift in Sources */,
 				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
+				2502171C2BAB346F006FE025 /* DataTypes.swift in Sources */,
+				250217212BAB34AD006FE025 /* Rand.swift in Sources */,
 				25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */,
+				250217162BAAE6DB006FE025 /* AppDelegate.swift in Sources */,
 				2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */,
 				250217142BA9DFED006FE025 /* SceneID.swift in Sources */,
+				250217192BAAECC7006FE025 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +703,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shotastage/DataLogic.swift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/shotastage/SwiftUI-WindowManagement.git";
@@ -650,6 +726,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */;
 			productName = WindowManagement;
+		};
+		250217232BAB34E1006FE025 /* DataLogic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */;
+			productName = DataLogic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
