@@ -29,7 +29,7 @@ struct WebKitBridgeView: NSViewRepresentable {
 
     private func loadRequest(in webView: WKWebView) {
         guard let url = URL(string: currentPage) else {
-            print("Invalid URL")
+            SFLogger.info("Invalid URL")
             return
         }
 
@@ -53,7 +53,7 @@ struct WebKitBridgeView: NSViewRepresentable {
 
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             // Error handler
-            print("Failed to load with error: \(error.localizedDescription)")
+            SFLogger.info("Failed to load with error: \(error.localizedDescription)")
         }
     }
 }

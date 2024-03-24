@@ -28,10 +28,10 @@ struct FXRandSecure: FXAdaptor {
                         case let .double(doubleValue):
                             result = doubleValue
                         default:
-                            print("RandomValue is not Double type.")
+                            SFLogger.info("RandomValue is not Double type.")
                     }
                 case .void:
-                    print("Value does not exist!")
+                    SFLogger.info("Value does not exist!")
             }
         }
     }

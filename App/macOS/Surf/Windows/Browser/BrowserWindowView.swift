@@ -20,17 +20,17 @@ struct BrowserWindowView: View {
         VStack {
             HStack {
                 Button("Back") {
-                    print("__BACK__")
+                    SFLogger.info("__BACK__")
                 }
                 Button("Prev") {
-                    print("__PREV__")
+                    SFLogger.info("__PREV__")
                 }
                 TextField("Paste URL here...", text: $urlStr)
                     .onChange(of: urlStr) { _, newValue in
-                        print("Url bar string changed: \(newValue)")
+                        SFLogger.info("Url bar string changed: \(newValue)")
                     }
                     .onSubmit {
-                        print("PressReturn Key")
+                        SFLogger.info("PressReturn Key")
                         currentURL = urlStr
                     }
             }
