@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 set(SOURCE_FILES
-    src/main.cpp
+    lib/main.cpp
 )
 
 # Executable

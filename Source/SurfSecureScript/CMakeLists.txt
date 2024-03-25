@@ -6,9 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 set(SOURCE_FILES
-    src/main.cpp
-    src/Lexer.cpp
-    src/Lexer.hpp
+    lib/main.cpp
+    lib/Lexer.cpp
+    lib/Lexer.hpp
 )
 
 # Executable

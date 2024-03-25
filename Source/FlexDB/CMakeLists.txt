@@ -6,11 +6,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 set(SOURCE_FILES
-    src/main.cpp
-    src/FlexDB.cpp
-    src/FlexDB.hpp
-    src/LSMTree.cpp
-    src/LSMTree.hpp
+    lib/main.cpp
+    lib/FlexDB.cpp
+    lib/FlexDB.hpp
+    lib/LSMTree.cpp
+    lib/LSMTree.hpp
 )
 
 # Executable
