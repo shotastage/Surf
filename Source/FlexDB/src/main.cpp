@@ -7,6 +7,7 @@ int main() {
     FlexDB db;
 
     db.set("key1", "value1");
+
     std::cout << "key1: " << db.get("key1") << std::endl;
 
     if (db.contains("key1")) {

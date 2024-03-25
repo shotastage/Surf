@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(SOURCE_FILES
     src/main.cpp
+    src/FlexDB.cpp
+    src/FlexDB.hpp
 )
 
 # Executable
