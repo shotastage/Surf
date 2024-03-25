@@ -38,7 +38,6 @@ struct WebKitBridgeView: NSViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        // Coordinator(owner: self)
         Coordinator()
     }
 

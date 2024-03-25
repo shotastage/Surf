@@ -19,6 +19,11 @@ struct BrowserWindowView: View {
     var body: some View {
         VStack {
             HStack {
+                Button("Home") {
+                    SFLogger.info("__HOME__")
+                    currentURL = "https://google.com"
+                    urlStr = "https://google.com"
+                }
                 Button("Back") {
                     SFLogger.info("__BACK__")
                 }
@@ -34,8 +39,13 @@ struct BrowserWindowView: View {
                         currentURL = urlStr
                     }
             }
+            .padding(.horizontal, 10.0)
             WebKitBridgeView(currentPage: $currentURL)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
+}
+
+#Preview {
+    BrowserWindowView()
 }
