@@ -6,7 +6,7 @@
 #include <string>
 #include <unordered_map>
 
-class FLexDB {
+class FlexDB {
 private:
     std::unordered_map<std::string, std::string> store;
 
