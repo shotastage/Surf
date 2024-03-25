@@ -9,6 +9,8 @@ set(SOURCE_FILES
     src/main.cpp
     src/FlexDB.cpp
     src/FlexDB.hpp
+    src/LSMTree.cpp
+    src/LSMTree.hpp
 )
 
 # Executable
