@@ -1,0 +1,35 @@
+version: 2.1
+
+jobs:
+  test:
+    macos:
+      xcode: 15.3
+    steps:
+      - checkout
+      - run:
+          name: Run Unit Tests
+          command: xcodebuild test -scheme Surf
+
+  build: 
+    macos:
+      xcode: 15.3
+    steps: 
+      - checkout
+      - run:
+          # build our application
+          name: Build Application
+          command: xcodebuild
+      - run:
+          name: Compress app for storage
+          command: zip -r Surf.zip build/Release/Surf.app
+      - store_artifacts:
+          path: Surf.zip
+          destination: Surf
+          
+workflows:
+  test_build:
+    jobs:
+      - test
+      - build:
+          requires:
+            - test
