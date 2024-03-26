@@ -8,8 +8,8 @@ tmp_dir="_cache_tmp_"
 depot_tools_dir="$HOME/.depot_tools/"
 
 if __name__ == "__main__":
-    shutil.rmtree("cef")
-    os.system("git clone https://shotastage@bitbucket.org/chromiumembedded/cef.git")
+    shutil.rmtree("Vendor/cef/")
+    os.system("git clone https://bitbucket.org/chromiumembedded/cef.git")
     try:
         with open("Vendor/cef/.gitkeep", 'w') as file:
             pass
