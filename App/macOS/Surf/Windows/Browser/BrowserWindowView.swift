@@ -25,8 +25,8 @@ import WindowManagement
 struct BrowserWindowView: View {
     @Environment(\.window) var window
 
-    @State private var currentURL = "https://github.com/shotastage/Surf"
-    @State private var urlStr = "https://github.com/shotastage/Surf"
+    @State private var currentURL = "https://shotastage.github.io/minimum-styled/"
+    @State private var urlStr = "https://shotastage.github.io/minimum-styled/"
 
     var body: some View {
         VStack {
