@@ -1,10 +1,10 @@
 .PHONY:
 build-macos:
-	@echo "macOS app target is now under construction..."
+	xcodebuild test -project ./App/macOS/Surf.xcodeproj -scheme Surf
 
 .PHONY:
 build-ios:
-	@echo "iOS app target is now under construction..."
+	xcodebuild test -project ./App/iOS/Surf.xcodeproj -scheme Surf
 
 .PHONY:
 build-android:
