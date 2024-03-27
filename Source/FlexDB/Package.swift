@@ -29,5 +29,6 @@ let package = Package(
         .testTarget(
             name: "FlexDBTests",
             dependencies: ["FlexDB"]),
-    ]
+    ],
+    cxxLanguageStandard: .cxx17
 )
