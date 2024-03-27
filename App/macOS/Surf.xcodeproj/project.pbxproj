@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
 		25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B101952BA9DEDC00263E35 /* BrowserWindow.swift */; };
+		25E0A9E72BB3B5DD0067F2C8 /* FlexDB in Frameworks */ = {isa = PBXBuildFile; productRef = 25E0A9E62BB3B5DD0067F2C8 /* FlexDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 			files = (
 				250217102BA9DF62006FE025 /* WindowManagement in Frameworks */,
 				250217242BAB34E1006FE025 /* DataLogic in Frameworks */,
+				25E0A9E72BB3B5DD0067F2C8 /* FlexDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +248,7 @@
 			packageProductDependencies = (
 				2502170F2BA9DF62006FE025 /* WindowManagement */,
 				250217232BAB34E1006FE025 /* DataLogic */,
+				25E0A9E62BB3B5DD0067F2C8 /* FlexDB */,
 			);
 			productName = Surf;
 			productReference = 2501EFA52B9760A0006326D9 /* Surf.app */;
@@ -322,6 +325,7 @@
 			packageReferences = (
 				25B101922BA9DE7E00263E35 /* XCRemoteSwiftPackageReference "SwiftUI-WindowManagement" */,
 				250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */,
+				25E0A9E52BB3B5DD0067F2C8 /* XCLocalSwiftPackageReference "../../Source/FlexDB" */,
 			);
 			productRefGroup = 2501EFA62B9760A0006326D9 /* Products */;
 			projectDirPath = "";
@@ -702,6 +706,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		25E0A9E52BB3B5DD0067F2C8 /* XCLocalSwiftPackageReference "../../Source/FlexDB" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Source/FlexDB;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -731,6 +742,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */;
 			productName = DataLogic;
+		};
+		25E0A9E62BB3B5DD0067F2C8 /* FlexDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlexDB;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

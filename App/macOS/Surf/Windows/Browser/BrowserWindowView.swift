@@ -39,8 +39,8 @@ struct BrowserWindowView: View {
                 Button("Back") {
                     SFLogger.info("__BACK__")
                 }
-                Button("Prev") {
-                    SFLogger.info("__PREV__")
+                Button("Next") {
+                    SFLogger.info("__NEXT__")
                 }
                 TextField("Paste URL here...", text: $urlStr)
                     .onChange(of: urlStr) { _, newValue in
