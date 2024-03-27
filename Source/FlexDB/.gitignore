@@ -1,2 +1,4 @@
 # Executable file name
 FlexDB
+.build/
+.swiftpm/

@@ -22,4 +22,5 @@ import WindowManagement
 
 extension SceneID {
     static let browserWindow = SceneID("browser")
+    static let settingsWindow = SceneID("settings")
 }
