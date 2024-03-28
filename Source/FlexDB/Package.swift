@@ -16,15 +16,21 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "FlexDB",
-            dependencies: ["FlexBackend"]
+            dependencies: ["FlexBackend"],
+            swiftSettings: [
+                .interoperabilityMode(.Cxx)
+            ]
         ),
         .target(
             name: "FlexBackend",
             path: "lib",
             exclude: ["main.cpp"],
-            sources: ["."],
+            sources: ["."]
             //publicHeadersPath: "../include/",
-            swiftSettings: [.interoperabilityMode(.Cxx)]
+            //swiftSettings: [.interoperabilityMode(.Cxx),
+            //swiftSettings: [
+            //    .interoperabilityMode(.Cxx)
+            //]
         ),
         .testTarget(
             name: "FlexDBTests",
