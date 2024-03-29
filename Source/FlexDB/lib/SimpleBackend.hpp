@@ -1,12 +1,11 @@
 // FlexDB.hpp
 
-#ifndef FLEX_DB_HPP
-#define FLEX_DB_HPP
+#pragma once
 
 #include <string>
 #include <unordered_map>
 
-class FlexDB {
+class SimpleBackend {
 private:
     std::unordered_map<std::string, std::string> store;
 
@@ -16,5 +15,3 @@ public:
     bool remove(const std::string& key);
     bool contains(const std::string& key);
 };
-
-#endif // FLEX_DB_HPP

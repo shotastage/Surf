@@ -2,6 +2,7 @@
 
 #include "LSMTree.hpp"
 #include <string>
+#include <iostream>
 
 LSMTree::LSMTree() {
     levels.push_back(std::map<std::string, std::string>()); // Memory level
@@ -34,4 +35,9 @@ std::string LSMTree::get(const std::string& key) {
         }
     }
     return ""; // In case the key is not found
+}
+
+
+void LSMTree::flash() {
+    std::cout << "Now under construction" << std::endl;
 }

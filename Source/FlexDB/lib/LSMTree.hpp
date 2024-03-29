@@ -1,7 +1,7 @@
-#ifndef LSM_TREE_HPP
-#define LSM_TREE_HPP
+#pragma once
 
 #include <string>
+#include <vector>
 #include <unordered_map>
 #include <map>
 
@@ -13,6 +13,5 @@ public:
     LSMTree();
     void set(const std::string& key, const std::string& value);
     std::string get(const std::string& key);
+    void flash();
 };
-
-#endif // LSM_TREE_HPP

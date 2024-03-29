@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(SOURCE_FILES
     lib/main.cpp
-    lib/FlexDB.cpp
-    lib/FlexDB.hpp
+    lib/SimpleBackend.cpp
+    lib/SimpleBackend.hpp
     lib/LSMTree.cpp
     lib/LSMTree.hpp
 )

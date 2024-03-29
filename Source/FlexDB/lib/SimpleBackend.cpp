@@ -1,14 +1,14 @@
-// FlexDB.cpp
+// SimpleBackend.cpp
 
-#include "FlexDB.hpp"
+#include "SimpleBackend.hpp"
 
 // Insert or update a value
-void FlexDB::set(const std::string& key, const std::string& value) {
+void SimpleBackend::set(const std::string& key, const std::string& value) {
     store[key] = value;
 }
 
 // Get a value
-std::string FlexDB::get(const std::string& key) {
+std::string SimpleBackend::get(const std::string& key) {
     if (store.find(key) != store.end()) {
         return store[key];
     }
@@ -16,7 +16,7 @@ std::string FlexDB::get(const std::string& key) {
 }
 
 // Delete a key
-bool FlexDB::remove(const std::string& key) {
+bool SimpleBackend::remove(const std::string& key) {
     if (store.find(key) != store.end()) {
         store.erase(key);
         return true;
@@ -25,6 +25,6 @@ bool FlexDB::remove(const std::string& key) {
 }
 
 // Check if a key exists
-bool FlexDB::contains(const std::string& key) {
+bool SimpleBackend::contains(const std::string& key) {
     return store.find(key) != store.end();
 }
