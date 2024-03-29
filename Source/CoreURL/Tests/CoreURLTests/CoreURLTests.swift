@@ -1,7 +1,7 @@
 import XCTest
-@testable import UniformIdentifier
+@testable import CoreURL
 
-final class UniformIdentifierTests: XCTestCase {
+final class CoreURLTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

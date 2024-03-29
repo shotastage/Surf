@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "UniformIdentifier",
+    name: "CoreURL",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "UniformIdentifier",
-            targets: ["UniformIdentifier"]),
+            name: "CoreURL",
+            targets: ["CoreURL"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "UniformIdentifier"),
+            name: "CoreURL"),
         .testTarget(
-            name: "UniformIdentifierTests",
-            dependencies: ["UniformIdentifier"]),
+            name: "CoreURLTests",
+            dependencies: ["CoreURL"]),
     ]
 )
