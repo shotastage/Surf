@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(SurfSecureScriptProject VERSION 1.0)
+project(OverlayScript VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -12,7 +12,7 @@ set(SOURCE_FILES
 )
 
 # Executable
-add_executable(LexerApp ${SOURCE_FILES})
+add_executable(OverlayScript ${SOURCE_FILES})
 
 # Set include dir
-target_include_directories(LexerApp PUBLIC "${PROJECT_SOURCE_DIR}/src")
+target_include_directories(OverlayScript PUBLIC "${PROJECT_SOURCE_DIR}/src")

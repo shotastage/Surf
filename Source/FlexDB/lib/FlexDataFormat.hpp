@@ -7,14 +7,19 @@
 
 #pragma once
 
-#include <iostream>
+#include <string>
 #include <vector>
-
-using namespace std;
+#include <iostream>
 
 struct Entry {
     uint8_t type;
     uint32_t key_length;
+    std::string key;
     uint32_t value_length;
-    vector<uint8_t> value;
+    std::vector<uint8_t> value;
 };
+
+void WriteEntry(const Entry& entry, std::ostream& out);
+Entry ReadEntry(std::istream& in);
+void WriteTimestamp(uint64_t timestamp, std::ostream& out);
+uint64_t ReadTimestamp(std::istream& in);
