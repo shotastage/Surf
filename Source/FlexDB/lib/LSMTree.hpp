@@ -5,13 +5,15 @@
 #include <unordered_map>
 #include <map>
 
+using namespace std;
+
 class LSMTree {
 private:
-    std::vector<std::map<std::string, std::string>> levels; // Simulates in-memory and disk levels
+    vector<map<string, string>> levels; // Simulates in-memory and disk levels
 
 public:
     LSMTree();
-    void set(const std::string& key, const std::string& value);
-    std::string get(const std::string& key);
+    void set(const string& key, const string& value);
+    string get(const string& key);
     void flash();
 };

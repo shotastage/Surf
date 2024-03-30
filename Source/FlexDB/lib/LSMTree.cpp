@@ -4,12 +4,15 @@
 #include <string>
 #include <iostream>
 
+
+using namespace std;
+
 LSMTree::LSMTree() {
-    levels.push_back(std::map<std::string, std::string>()); // Memory level
-    levels.push_back(std::map<std::string, std::string>()); // Disk level 1
+    levels.push_back(map<std::string, string>()); // Memory level
+    levels.push_back(map<std::string, string>()); // Disk level 1
 }
 
-void LSMTree::set(const std::string& key, const std::string& value) {
+void LSMTree::set(const string& key, const string& value) {
     // Insert data into the first level (memory level)
     levels[0][key] = value;
 
@@ -26,7 +29,7 @@ void LSMTree::set(const std::string& key, const std::string& value) {
 }
 
 
-std::string LSMTree::get(const std::string& key) {
+std::string LSMTree::get(const string& key) {
     // Search all levels
     for (auto& level : levels) {
         auto it = level.find(key);
@@ -39,5 +42,5 @@ std::string LSMTree::get(const std::string& key) {
 
 
 void LSMTree::flash() {
-    std::cout << "Now under construction" << std::endl;
+    cout << "Now under construction" << endl;
 }
