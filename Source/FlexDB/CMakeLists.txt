@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 set(SOURCE_FILES
+    lib/BinaryFormat.cpp
+    lib/BinaryFormat.hpp
     lib/main.cpp
     lib/LSMTree.cpp
     lib/LSMTree.hpp

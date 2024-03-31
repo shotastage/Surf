@@ -7,11 +7,12 @@
 
 #include "MemTable.hpp"
 
-void Memtable::put(const string& key, Entry& entry) {
+
+void MemTable::put(const string& key, Entry& entry) {
     table[key] = entry;
 }
 
-bool Memtable::get(const string& key, Entry& entry) {
+bool MemTable::get(const string& key, Entry& entry) {
     auto it = table.find(key);
     if (it != table.end()) {
         entry = it -> second;
