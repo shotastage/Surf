@@ -1,30 +1,52 @@
-#include "URLParser.hpp"
-#include <sstream>
+#include "URLParser.hpp" // Include the header file for the URLParser class
+#include <sstream>         // For working with string streams
 
-URLParser::URLParser(const std::string& url) {
-    parseURL(url);
+using namespace std;
+
+// **URLParser Constructor**
+// * Initializes the object by immediately parsing the provided URL.
+URLParser::URLParser(const string& url) {
+  parseURL(url);
 }
 
-std::string URLParser::getProtocol() const {
-    return protocol;
+// **getProtocol**
+// * Retrieves the previously parsed protocol of the URL.
+string URLParser::getProtocol() const {
+  return protocol;
 }
 
-std::string URLParser::getHost() const {
-    return host;
+// **getHost**
+// * Retrieves the previously parsed host of the URL.
+string URLParser::getHost() const {
+  return host;
 }
 
-std::string URLParser::getPath() const {
-    return path;
+// **getPath**
+// * Retrieves the previously parsed path component of the URL.
+string URLParser::getPath() const {
+  return path;
 }
 
-void URLParser::parseURL(const std::string& url) {
-    std::istringstream urlStream(url);
-    std::getline(urlStream, protocol, ':');
-    urlStream.ignore(2);
-    std::getline(urlStream, host, '/');
-    std::getline(urlStream, path);
+// **parseURL**
+// * Parses the given URL string, extracting protocol, host, and path.
+// * Uses a stringstream to break the URL into segments.
+void URLParser::parseURL(const string& url) {
+  istringstream urlStream(url);
 
-    if (!protocol.empty() && protocol.back() == ':') {
-        protocol.pop_back();
-    }
+  // Extract protocol (up to the colon ':')
+  getline(urlStream, protocol, ':');
+
+  // Discard "//" after the protocol
+  urlStream.ignore(2);
+
+  // Extract host (up to the next '/')
+  getline(urlStream, host, '/');
+
+  // Extract the remaining path
+  getline(urlStream, path);
+
+  //  Check if protocol accidentally ends with ':', if so, remove it
+  if (!protocol.empty() && protocol.back() == ':') {
+    protocol.pop_back();
+  }
 }
