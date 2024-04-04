@@ -28,6 +28,10 @@ struct BrowserWindowView: View {
     @State private var currentURL = "https://shotastage.github.io/minimum-styled/"
     @State private var urlStr = "https://shotastage.github.io/minimum-styled/"
 
+    @State private var history: [String] = [
+        "https://shotastage.github.io/minimum-styled/"
+    ]
+
     var body: some View {
         VStack {
             HStack {

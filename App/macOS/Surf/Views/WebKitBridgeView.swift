@@ -24,6 +24,11 @@ struct WebKitBridgeView: NSViewRepresentable {
     @Binding var currentPage: String
     @State private var isLoading: Bool = true
 
+    // Callbacks
+    var onClick: (URL) -> Void
+    
+    var goBack: (URL) -> Void
+
     func makeNSView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
         config.applicationNameForUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Srf/100.0.0.0"
@@ -50,10 +55,27 @@ struct WebKitBridgeView: NSViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(self)
     }
 
     class Coordinator: NSObject, WKNavigationDelegate {
+        var parent: WebKitBridgeView
+
+        init(_ webViewBridgeView: WebKitBridgeView) {
+            self.parent = webViewBridgeView
+        }
+
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if let url = navigationAction.request.url, navigationAction.navigationType == .linkActivated {
+                // Actions when showing URL changed
+                parent.onClick(url)
+                // If you want to block the request and perform your own processing, use .cancel.
+                decisionHandler(.cancel)
+            } else {
+                decisionHandler(.allow)
+            }
+        }
+
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
             // Handling the start of page loading
         }
