@@ -1,5 +1,4 @@
-#ifndef LEXER_HPP
-#define LEXER_HPP
+#pragma once
 
 #include <string>
 #include <vector>
@@ -21,22 +20,22 @@ enum class TokenType {
     END
 };
 
+using namespace std;
+
 struct Token {
     TokenType type;
-    std::string value;
+    string value;
 };
 
 class Lexer {
 public:
-    Lexer(const std::string& src);
-    std::vector<Token> tokenize();
+    Lexer(const string& src);
+    vector<Token> tokenize();
 
 private:
-    std::string src;
+    string src;
     size_t pos;
 
-    std::string readNumber();
-    std::string readWhile(std::function<int(int)> predicate);
+    string readNumber();
+    string readWhile(function<int(int)> predicate);
 };
-
-#endif // LEXER_HPP

@@ -34,5 +34,6 @@ let package = Package(
         .testTarget(
             name: "OverlayScriptTests",
             dependencies: ["OverlayScript"]),
-    ]
+    ],
+    cxxLanguageStandard: .cxx17
 )

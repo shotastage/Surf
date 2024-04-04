@@ -2,17 +2,20 @@
 #include <cctype>
 #include <iostream>
 
-Lexer::Lexer(const std::string& src) : src(src), pos(0) {}
 
-std::vector<Token> Lexer::tokenize() {
-    std::vector<Token> tokens;
+using namespace std;
+
+Lexer::Lexer(const string& src) : src(src), pos(0) {}
+
+vector<Token> Lexer::tokenize() {
+    vector<Token> tokens;
 
     while (pos < src.size()) {
         const char current = src[pos];
 
-        if (std::isspace(current)) {
+        if (isspace(current)) {
             pos++;
-        } else if (std::isdigit(current)) {
+        } else if (isdigit(current)) {
             tokens.push_back({TokenType::NUM, readNumber()});
         } else if (current == ':') {
             tokens.push_back({TokenType::COLON, ":"});
@@ -32,8 +35,8 @@ std::vector<Token> Lexer::tokenize() {
         } else if (current == '}') {
             tokens.push_back({TokenType::RBRACE, "}"});
             pos++;
-        } else if (std::isalpha(current)) {
-            std::string identifier = readWhile([](unsigned char c) { return std::isalnum(c); });
+        } else if (isalpha(current)) {
+            string identifier = readWhile([](unsigned char c) { return isalnum(c); });
             if (identifier == "func") {
                 tokens.push_back({TokenType::FUNC, identifier});
             } else if (identifier == "Int64") {
@@ -44,7 +47,7 @@ std::vector<Token> Lexer::tokenize() {
                 tokens.push_back({TokenType::IDENTIFIER, identifier});
             }
         } else {
-            std::cerr << "Unknown character: " << current << std::endl;
+            cerr << "Unknown character: " << current << endl;
             pos++;
         }
     }
@@ -53,14 +56,14 @@ std::vector<Token> Lexer::tokenize() {
     return tokens;
 }
 
-std::string Lexer::readNumber() {
+string Lexer::readNumber() {
     size_t start = pos;
-    while (pos < src.size() && std::isdigit(src[pos])) pos++;
+    while (pos < src.size() && isdigit(src[pos])) pos++;
     return src.substr(start, pos - start);
 }
 
-std::string Lexer::readWhile(std::function<int(int)> predicate) {
-    std::string result;
+string Lexer::readWhile(function<int(int)> predicate) {
+    string result;
     while (pos < src.size() && predicate(src[pos])) {
         result.push_back(src[pos]);
         pos++;

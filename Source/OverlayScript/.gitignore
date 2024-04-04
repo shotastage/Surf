@@ -1,2 +1,4 @@
 # Executable file name
 OverlayScript
+.build/
+.swiftpm/
