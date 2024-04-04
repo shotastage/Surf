@@ -25,9 +25,9 @@ struct WebKitBridgeView: NSViewRepresentable {
     @State private var isLoading: Bool = true
 
     // Callbacks
-    var onClick: (URL) -> Void
+    var onClick: ((URL) -> Void)?
     
-    var goBack: (URL) -> Void
+    var goBack: ((URL) -> Void)?
 
     func makeNSView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
@@ -68,7 +68,7 @@ struct WebKitBridgeView: NSViewRepresentable {
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if let url = navigationAction.request.url, navigationAction.navigationType == .linkActivated {
                 // Actions when showing URL changed
-                parent.onClick(url)
+                parent.onClick?(url)
                 // If you want to block the request and perform your own processing, use .cancel.
                 decisionHandler(.cancel)
             } else {
