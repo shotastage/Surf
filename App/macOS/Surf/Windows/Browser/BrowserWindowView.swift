@@ -29,7 +29,7 @@ struct BrowserWindowView: View {
     @State private var urlStr = "https://shotastage.github.io/minimum-styled/"
 
     @State private var history: [String] = [
-        "https://shotastage.github.io/minimum-styled/"
+        "https://shotastage.github.io/minimum-styled/",
     ]
 
     var body: some View {

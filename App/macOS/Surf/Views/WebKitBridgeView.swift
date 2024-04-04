@@ -26,7 +26,7 @@ struct WebKitBridgeView: NSViewRepresentable {
 
     // Callbacks
     var onClick: ((URL) -> Void)?
-    
+
     var goBack: ((URL) -> Void)?
 
     func makeNSView(context: Context) -> WKWebView {
@@ -62,7 +62,7 @@ struct WebKitBridgeView: NSViewRepresentable {
         var parent: WebKitBridgeView
 
         init(_ webViewBridgeView: WebKitBridgeView) {
-            self.parent = webViewBridgeView
+            parent = webViewBridgeView
         }
 
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
