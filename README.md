@@ -1,5 +1,7 @@
 # Surf
 
+![GitHub License](https://img.shields.io/github/license/shotastage/Surf)
+
 >> Now under construction...
 
 Surf is experimental web browser based on WebKit and JavaScriptCore technology.
