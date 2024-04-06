@@ -25,6 +25,7 @@
 		250217242BAB34E1006FE025 /* DataLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 250217232BAB34E1006FE025 /* DataLogic */; };
 		250217262BAB34F4006FE025 /* RandSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217252BAB34F4006FE025 /* RandSecure.swift */; };
 		250217282BAB3524006FE025 /* SUM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217272BAB3524006FE025 /* SUM.swift */; };
+		257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257BE7662BC03F8700F2F640 /* MLAdaptor.swift */; };
 		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
 		25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B101952BA9DEDC00263E35 /* BrowserWindow.swift */; };
@@ -69,6 +70,7 @@
 		250217202BAB34AD006FE025 /* Rand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rand.swift; sourceTree = "<group>"; };
 		250217252BAB34F4006FE025 /* RandSecure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandSecure.swift; sourceTree = "<group>"; };
 		250217272BAB3524006FE025 /* SUM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUM.swift; sourceTree = "<group>"; };
+		257BE7662BC03F8700F2F640 /* MLAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLAdaptor.swift; sourceTree = "<group>"; };
 		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
 		259A472E2B9AC6160062BCE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 		2501EF9C2B9760A0006326D9 = {
 			isa = PBXGroup;
 			children = (
+				257BE7652BC03F7300F2F640 /* MLAdaptor */,
 				2502171A2BAB3451006FE025 /* Tensorl */,
 				250217172BAAE7E7006FE025 /* SurfCore */,
 				2501EFA72B9760A0006326D9 /* Surf */,
@@ -202,6 +205,14 @@
 				2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		257BE7652BC03F7300F2F640 /* MLAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				257BE7662BC03F8700F2F640 /* MLAdaptor.swift */,
+			);
+			path = MLAdaptor;
 			sourceTree = "<group>";
 		};
 		259A472D2B9AC6160062BCE8 /* Frameworks */ = {
@@ -370,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */,
+				257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */,
 				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
 				250217282BAB3524006FE025 /* SUM.swift in Sources */,
 				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
