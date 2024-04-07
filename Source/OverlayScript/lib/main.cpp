@@ -1,14 +1,16 @@
-#include "Lexer.hpp"
 #include <iostream>
 
+#include "Lexer.hpp"
+
 int main() {
-    std::string input = "func functionName(message: String): Int64 { ret 1 }";
-    Lexer lexer(input);
-    auto tokens = lexer.tokenize();
+  std::string input = "func functionName(message: String): Int64 { ret 1 }";
+  Lexer lexer(input);
+  auto tokens = lexer.tokenize();
 
-    for (const auto& token : tokens) {
-        std::cout << "Token: " << static_cast<int>(token.type) << ", Value: " << token.value << std::endl;
-    }
+  for (const auto& token : tokens) {
+    std::cout << "Token: " << static_cast<int>(token.type)
+              << ", Value: " << token.value << std::endl;
+  }
 
-    return 0;
+  return 0;
 }

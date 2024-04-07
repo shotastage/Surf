@@ -1,4 +1,5 @@
-// This file defines a class `URLParser` that can be used to parse a URL into its constituent parts.
+// This file defines a class `URLParser` that can be used to parse a URL into
+// its constituent parts.
 
 #pragma once
 
@@ -7,8 +8,9 @@
 using namespace std;
 
 class URLParser {
-public:
-  // Constructor that takes a URL as a string and parses it into its constituent parts.
+ public:
+  // Constructor that takes a URL as a string and parses it into its constituent
+  // parts.
   URLParser(const string& url);
 
   // Gets the protocol of the URL.
@@ -20,7 +22,7 @@ public:
   // Gets the path of the URL.
   string getPath() const;
 
-private:
+ private:
   // The protocol of the URL.
   string protocol;
 

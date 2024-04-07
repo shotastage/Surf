@@ -1,41 +1,41 @@
 #pragma once
 
+#include <functional>
 #include <string>
 #include <vector>
-#include <functional>
 
 enum class TokenType {
-    FUNC,
-    IDENTIFIER,
-    STRING,
-    INT64,
-    COLON,
-    COMMA,
-    LPAREN,
-    RPAREN,
-    LBRACE,
-    RBRACE,
-    RET,
-    NUM,
-    END
+  FUNC,
+  IDENTIFIER,
+  STRING,
+  INT64,
+  COLON,
+  COMMA,
+  LPAREN,
+  RPAREN,
+  LBRACE,
+  RBRACE,
+  RET,
+  NUM,
+  END
 };
 
 using namespace std;
 
 struct Token {
-    TokenType type;
-    string value;
+  TokenType type;
+  string value;
 };
 
 class Lexer {
-public:
-    Lexer(const string& src);
-    vector<Token> tokenize();
+ public:
+  Lexer(const string& src);
+  vector<Token> tokenize();
 
-private:
-    string src;
-    size_t pos;
+ private:
+  string src;
+  size_t pos;
 
-    string readNumber();
-    string readWhile(function<int(int)> predicate);
+  string readNumber();
+  string readWhile(function<int(int)> predicate);
 };

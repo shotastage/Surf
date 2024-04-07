@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Surf CoreLib is now under construction..." << std::endl;
+  std::cout << "Surf CoreLib is now under construction..." << std::endl;
 
-    return 0;
+  return 0;
 }
