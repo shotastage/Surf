@@ -9,7 +9,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "CoreLib",
-            targets: ["CoreLib"]),
+            targets: ["CoreLib"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -18,22 +19,24 @@ let package = Package(
             name: "CoreLib",
             dependencies: ["CoreLibBackend"],
             swiftSettings: [
-                .interoperabilityMode(.Cxx)
-            ]),
+                .interoperabilityMode(.Cxx),
+            ]
+        ),
         .target(
             name: "CoreLibBackend",
             path: "lib",
             exclude: ["main.cpp"],
             sources: ["."]
-            //publicHeadersPath: "../include/",
-            //swiftSettings: [.interoperabilityMode(.Cxx),
-            //swiftSettings: [
+            // publicHeadersPath: "../include/",
+            // swiftSettings: [.interoperabilityMode(.Cxx),
+            // swiftSettings: [
             //    .interoperabilityMode(.Cxx)
-            //]
+            // ]
         ),
         .testTarget(
             name: "CoreLibTests",
-            dependencies: ["CoreLib"]),
+            dependencies: ["CoreLib"]
+        ),
     ],
     cxxLanguageStandard: .cxx17
 )

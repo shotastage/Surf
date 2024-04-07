@@ -9,7 +9,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "FlexDB",
-            targets: ["FlexDB"]),
+            targets: ["FlexDB"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -18,7 +19,7 @@ let package = Package(
             name: "FlexDB",
             dependencies: ["FlexBackend"],
             swiftSettings: [
-                .interoperabilityMode(.Cxx)
+                .interoperabilityMode(.Cxx),
             ]
         ),
         .target(
@@ -26,15 +27,16 @@ let package = Package(
             path: "lib",
             exclude: ["main.cpp"],
             sources: ["."]
-            //publicHeadersPath: "../include/",
-            //swiftSettings: [.interoperabilityMode(.Cxx),
-            //swiftSettings: [
+            // publicHeadersPath: "../include/",
+            // swiftSettings: [.interoperabilityMode(.Cxx),
+            // swiftSettings: [
             //    .interoperabilityMode(.Cxx)
-            //]
+            // ]
         ),
         .testTarget(
             name: "FlexDBTests",
-            dependencies: ["FlexDB"]),
+            dependencies: ["FlexDB"]
+        ),
     ],
     cxxLanguageStandard: .cxx17
 )
