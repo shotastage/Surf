@@ -1,9 +1,8 @@
-#include "ZipUtil.hpp" // Include the header file for the URLParser class
+#include "ZipUtil.hpp"  // Include the header file for the ZipUtil class
 
 using namespace std;
 
-
-string ZipUtil::extract(string &data) {
+string ZipUtil::extract(string& data) {
   gzFile file = gzopen("compressed.zip", "rb");
   if (file == NULL) {
     cerr << "Can not open file." << endl;
@@ -15,6 +14,6 @@ string ZipUtil::extract(string &data) {
   return "__HELLO_DATA__";
 }
 
-string ZipUtil::compress(string &data, const int level) {
+string ZipUtil::compress(string& data, const int level) {
   return "__HELLO_DATA__";
 }
