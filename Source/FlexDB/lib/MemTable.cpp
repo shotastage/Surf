@@ -7,7 +7,9 @@
 
 #include "MemTable.hpp"
 
-void MemTable::put(const string& key, Entry& entry) { table[key] = entry; }
+void MemTable::put(const string& key, Entry& entry) {
+  table[key] = entry;
+}
 
 bool MemTable::get(const string& key, Entry& entry) {
   auto it = table.find(key);

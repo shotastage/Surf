@@ -40,4 +40,6 @@ std::string LSMTree::get(const string& key) {
   return "";  // In case the key is not found
 }
 
-void LSMTree::flash() { cout << "Now under construction" << endl; }
+void LSMTree::flash() {
+  cout << "Now under construction" << endl;
+}

@@ -1,4 +1,4 @@
-BasedOnStyle: Google
+BasedOnStyle: Chromium
 Language: Cpp
 DerivePointerAlignment: false
 PointerAlignment: Left

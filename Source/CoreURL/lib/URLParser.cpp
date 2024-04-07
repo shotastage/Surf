@@ -6,19 +6,27 @@ using namespace std;
 
 // **URLParser Constructor**
 // * Initializes the object by immediately parsing the provided URL.
-URLParser::URLParser(const string& url) { parseURL(url); }
+URLParser::URLParser(const string& url) {
+  parseURL(url);
+}
 
 // **getProtocol**
 // * Retrieves the previously parsed protocol of the URL.
-string URLParser::getProtocol() const { return protocol; }
+string URLParser::getProtocol() const {
+  return protocol;
+}
 
 // **getHost**
 // * Retrieves the previously parsed host of the URL.
-string URLParser::getHost() const { return host; }
+string URLParser::getHost() const {
+  return host;
+}
 
 // **getPath**
 // * Retrieves the previously parsed path component of the URL.
-string URLParser::getPath() const { return path; }
+string URLParser::getPath() const {
+  return path;
+}
 
 // **parseURL**
 // * Parses the given URL string, extracting protocol, host, and path.
