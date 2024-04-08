@@ -46,13 +46,13 @@ struct BrowserWindowView: View {
                 Button("Next") {
                     SFLogger.info("__NEXT__")
                 }
-                TextField("Paste URL here...", text: $urlStr)
-                    .onChange(of: urlStr) { _, newValue in
-                        SFLogger.info("Url bar string changed: \(newValue)")
-                    }
-                    .onSubmit {
+                SFAddressBar(text: $urlStr)
+                    .onReturn {
                         SFLogger.info("PressReturn Key")
                         currentURL = urlStr
+                    }
+                    .onChange(of: urlStr) { _, newValue in
+                        SFLogger.info("Url bar string changed: \(newValue)")
                     }
             }
             .padding(.horizontal, 10.0)
