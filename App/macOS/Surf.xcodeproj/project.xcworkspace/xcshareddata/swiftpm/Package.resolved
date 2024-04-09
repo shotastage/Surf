@@ -1,5 +1,5 @@
 {
-  "originHash" : "31d724bc73e827e72e565effb8e93208d1a5abe83ec20b1cf8a4f08d0dd02062",
+  "originHash" : "582e28745b4992c6bd0801de4eacca77f9f8665f75532bb1a1b2b1e7d464af5b",
   "pins" : [
     {
       "identity" : "datalogic.swift",
@@ -8,6 +8,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "464e7c92edb00384a66e8e944196b9be1c46474a"
+      }
+    },
+    {
+      "identity" : "llama.cpp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ensan-hcl/llama.cpp",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8a5be3bd5885d79ad84aadf32bb8c1a67bd43c19"
       }
     },
     {
