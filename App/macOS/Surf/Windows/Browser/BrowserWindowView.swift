@@ -32,8 +32,11 @@ struct BrowserWindowView: View {
         "https://shotastage.github.io/minimum-styled/",
     ]
 
+    @State private var selectedTabIndex = 0
+
     var body: some View {
         VStack {
+            SFBrowserTab(selectedTabIndex: $selectedTabIndex)
             HStack {
                 Button("Home") {
                     SFLogger.info("__HOME__")
@@ -55,10 +58,26 @@ struct BrowserWindowView: View {
                         SFLogger.info("Url bar string changed: \(newValue)")
                     }
             }
-            .padding(.horizontal, 10.0)
-            WebKitBridgeView(currentPage: $currentURL)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.leading, 80.0)
+            .padding(.top, 10.0)
+            .padding(.trailing, 10.0)
+            VStack {
+                switch selectedTabIndex {
+                    case 0:
+                        WebKitBridgeView(currentPage: $currentURL)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    case 1:
+                        WebKitBridgeView(currentPage: $currentURL)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    default:
+                        WebKitBridgeView(currentPage: $currentURL)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+            }
+            // WebKitBridgeView(currentPage: $currentURL)
+            //    .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
