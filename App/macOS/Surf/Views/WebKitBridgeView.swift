@@ -40,7 +40,6 @@ struct WebKitBridgeView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
-        // currentPageが更新されたら、新しいURLを読み込む
         loadRequest(in: nsView)
     }
 
@@ -51,6 +50,7 @@ struct WebKitBridgeView: NSViewRepresentable {
         }
 
         let request = URLRequest(url: url)
+
         webView.load(request)
     }
 
@@ -70,7 +70,8 @@ struct WebKitBridgeView: NSViewRepresentable {
                 // Actions when showing URL changed
                 parent.onClick?(url)
                 // If you want to block the request and perform your own processing, use .cancel.
-                decisionHandler(.cancel)
+                // decisionHandler(.cancel)
+                decisionHandler(.allow)
             } else {
                 decisionHandler(.allow)
             }
@@ -93,5 +94,5 @@ struct WebKitBridgeView: NSViewRepresentable {
 
 // Preview Provider if needed
 #Preview("WebKit Bridge View") {
-    WebKitBridgeView(currentPage: .constant("https://yahoo.co.jp"))
+    WebKitBridgeView(currentPage: .constant("https://google.com"))
 }
