@@ -52,6 +52,8 @@ def add_license_to_dir(directory):
     extensions = ('.hpp', '.cpp')
 
     for root, dirs, files in os.walk(directory):
+        dirs[:] = [d for d in dirs if not d.startswith('.')]
+
         for file in files:
             if file.endswith(extensions):
                 _add_license_to_file(os.path.join(root, file))
