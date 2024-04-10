@@ -34,7 +34,7 @@ struct GlassmorphicButton<Content: View>: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25.0)
                     .fill(colorScheme == .light ? Color.white.opacity(0.6) : Color.gray.opacity(0.4))
-                    .frame(width: 300, height: 200)
+                    .frame(width: 150, height: 60)
                     .overlay(
                         RoundedRectangle(cornerRadius: 25.0)
                             .stroke(Color.white, lineWidth: 2)
@@ -58,8 +58,10 @@ struct GlassmorphicButton<Content: View>: View {
             print("Tap button!")
         }, content: {
             Text("Tap This Button")
+                .fontWeight(.bold)
                 .foregroundColor(.black)
-                .font(.title)
+                .font(.callout)
+                .lineLimit(1)
         })
     }
     .background(Color(NSColor.quaternarySystemFill))
@@ -72,8 +74,10 @@ struct GlassmorphicButton<Content: View>: View {
             print("Tap button!")
         }, content: {
             Text("Tap This Button")
+                .fontWeight(.bold)
                 .foregroundColor(.white)
-                .font(.title)
+                .font(.callout)
+                .lineLimit(1)
         })
     }
     .background(Color.black)

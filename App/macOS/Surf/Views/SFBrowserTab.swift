@@ -39,14 +39,14 @@ struct SFBrowserTab: View {
     var body: some View {
         HStack {
             ForEach(0 ..< 5) { index in
-                Text("Tab \(index + 1)")
-                    .frame(height: 5)
-                    .padding()
-                    .background(selectedTabIndex == index ? Color.blue : Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                    .onTapGesture {
-                        selectedTabIndex = index
-                    }
+                GlassmorphicButton(action: {
+                    selectedTabIndex = index
+                }, content: {
+                    Text("Tab \(index + 1)")
+
+                        .foregroundColor(.black)
+                        .font(.title)
+                })
             }
         }
         .padding()
