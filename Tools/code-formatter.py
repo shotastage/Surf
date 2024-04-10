@@ -31,7 +31,7 @@ def _get_license_text(file_name):
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-
+\n
 """
 
 def _add_license_to_file(file_path):
