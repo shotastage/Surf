@@ -1,8 +1,6 @@
 //
 // ContentView.swift
-//
 // Copyright © 2024 Shota Shimazu. All rights reserved.
-// Created by Shota Shimazu on 2023/05/23.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
