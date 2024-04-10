@@ -19,6 +19,20 @@
 
 import SwiftUI
 
+struct SFTabView: View {
+    var body: some View {
+        HStack {
+            Text("_TAB_VIEW_")
+            Text("_TAB_VIEW_")
+        }
+        .background(Color.blue)
+        .frame(height: 60)
+        .cornerRadius(10)
+        .padding(.all, 5.0)
+        .cornerRadius(10)
+    }
+}
+
 struct SFBrowserTab: View {
     @Binding var selectedTabIndex: Int
 
@@ -26,6 +40,7 @@ struct SFBrowserTab: View {
         HStack {
             ForEach(0 ..< 5) { index in
                 Text("Tab \(index + 1)")
+                    .frame(height: 5)
                     .padding()
                     .background(selectedTabIndex == index ? Color.blue : Color.gray.opacity(0.2))
                     .cornerRadius(10)
@@ -36,4 +51,12 @@ struct SFBrowserTab: View {
         }
         .padding()
     }
+}
+
+#Preview("Tab View") {
+    SFTabView()
+}
+
+#Preview("Gathered Tab View") {
+    SFBrowserTab(selectedTabIndex: .constant(0))
 }

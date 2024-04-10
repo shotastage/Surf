@@ -37,6 +37,7 @@ struct BrowserWindowView: View {
     var body: some View {
         VStack {
             SFBrowserTab(selectedTabIndex: $selectedTabIndex)
+                .frame(height: 80)
             HStack {
                 Button("Home") {
                     SFLogger.info("__HOME__")
