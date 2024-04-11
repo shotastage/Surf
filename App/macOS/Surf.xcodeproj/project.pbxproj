@@ -36,11 +36,6 @@
 		259C54102BC5155B00D5B9D2 /* SFBrowserTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259C540F2BC5155B00D5B9D2 /* SFBrowserTab.swift */; };
 		25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B101952BA9DEDC00263E35 /* BrowserWindow.swift */; };
 		25E0A9E72BB3B5DD0067F2C8 /* FlexDB in Frameworks */ = {isa = PBXBuildFile; productRef = 25E0A9E62BB3B5DD0067F2C8 /* FlexDB */; };
-		25FF99322BC6E1380084289B /* LibLlama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF99312BC6E1380084289B /* LibLlama.swift */; };
-		25FF99342BC6E18A0084289B /* LoadCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF99332BC6E18A0084289B /* LoadCustomButton.swift */; };
-		25FF99362BC6E1AA0084289B /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF99352BC6E1AA0084289B /* InputButton.swift */; };
-		25FF99382BC6E1C70084289B /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF99372BC6E1C70084289B /* DownloadButton.swift */; };
-		25FF993A2BC6E1E20084289B /* LLAMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF99392BC6E1E20084289B /* LLAMAView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,11 +86,6 @@
 		259C540A2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLAMAAdaptor.swift; sourceTree = "<group>"; };
 		259C540F2BC5155B00D5B9D2 /* SFBrowserTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFBrowserTab.swift; sourceTree = "<group>"; };
 		25B101952BA9DEDC00263E35 /* BrowserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindow.swift; sourceTree = "<group>"; };
-		25FF99312BC6E1380084289B /* LibLlama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibLlama.swift; sourceTree = "<group>"; };
-		25FF99332BC6E18A0084289B /* LoadCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCustomButton.swift; sourceTree = "<group>"; };
-		25FF99352BC6E1AA0084289B /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
-		25FF99372BC6E1C70084289B /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
-		25FF99392BC6E1E20084289B /* LLAMAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLAMAView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +120,7 @@
 		2501EF9C2B9760A0006326D9 = {
 			isa = PBXGroup;
 			children = (
-				257BE7652BC03F7300F2F640 /* Bloom */,
+				257BE7652BC03F7300F2F640 /* Boom */,
 				2502171A2BAB3451006FE025 /* Tensorl */,
 				250217172BAAE7E7006FE025 /* SurfCore */,
 				2501EFA72B9760A0006326D9 /* Surf */,
@@ -233,18 +223,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		257BE7652BC03F7300F2F640 /* Bloom */ = {
+		257BE7652BC03F7300F2F640 /* Boom */ = {
 			isa = PBXGroup;
 			children = (
 				257BE7662BC03F8700F2F640 /* MLAdaptor.swift */,
 				259C540A2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift */,
-				25FF99312BC6E1380084289B /* LibLlama.swift */,
-				25FF99332BC6E18A0084289B /* LoadCustomButton.swift */,
-				25FF99352BC6E1AA0084289B /* InputButton.swift */,
-				25FF99372BC6E1C70084289B /* DownloadButton.swift */,
-				25FF99392BC6E1E20084289B /* LLAMAView.swift */,
 			);
-			path = Bloom;
+			path = Boom;
 			sourceTree = "<group>";
 		};
 		259A472D2B9AC6160062BCE8 /* Frameworks */ = {
@@ -416,25 +401,20 @@
 			files = (
 				259C540B2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift in Sources */,
 				250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */,
-				25FF99322BC6E1380084289B /* LibLlama.swift in Sources */,
 				259C54092BC3EFB100D5B9D2 /* SFAddressBar.swift in Sources */,
 				259C54102BC5155B00D5B9D2 /* SFBrowserTab.swift in Sources */,
 				257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */,
-				25FF99342BC6E18A0084289B /* LoadCustomButton.swift in Sources */,
 				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
 				250217282BAB3524006FE025 /* SUM.swift in Sources */,
 				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
 				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
-				25FF993A2BC6E1E20084289B /* LLAMAView.swift in Sources */,
 				250217262BAB34F4006FE025 /* RandSecure.swift in Sources */,
 				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
 				2502171C2BAB346F006FE025 /* DataTypes.swift in Sources */,
 				250217212BAB34AD006FE025 /* Rand.swift in Sources */,
-				25FF99362BC6E1AA0084289B /* InputButton.swift in Sources */,
 				25B101962BA9DEDC00263E35 /* BrowserWindow.swift in Sources */,
 				2529E8F52BC527E400CA4B70 /* SFGlassView.swift in Sources */,
 				250217162BAAE6DB006FE025 /* AppDelegate.swift in Sources */,
-				25FF99382BC6E1C70084289B /* DownloadButton.swift in Sources */,
 				2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */,
 				2529E8F72BC656C100CA4B70 /* SFGlassButton.swift in Sources */,
 				250217142BA9DFED006FE025 /* SceneID.swift in Sources */,
