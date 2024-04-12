@@ -61,17 +61,14 @@ struct BrowserWindowView: View {
             .padding(.top, 10.0)
             .padding(.trailing, 10.0)
             VStack {
-                switch selectedTabIndex {
-                    case 0:
-                        WebKitBridgeView(currentPage: $currentURL)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    case 1:
-                        WebKitBridgeView(currentPage: $currentURL)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    default:
-                        WebKitBridgeView(currentPage: $currentURL)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                }
+                WebKitBridgeView(currentPage: $currentURL)
+                    .onBack { url in
+                        print("Back to \(url)")
+                    }
+                    .onNext { url in
+                        print("Go forward to \(url)")
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             // WebKitBridgeView(currentPage: $currentURL)
             //    .frame(maxWidth: .infinity, maxHeight: .infinity)

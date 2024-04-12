@@ -27,6 +27,8 @@
 		250217282BAB3524006FE025 /* SUM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250217272BAB3524006FE025 /* SUM.swift */; };
 		2529E8F52BC527E400CA4B70 /* SFGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529E8F42BC527E400CA4B70 /* SFGlassView.swift */; };
 		2529E8F72BC656C100CA4B70 /* SFGlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529E8F62BC656C100CA4B70 /* SFGlassButton.swift */; };
+		252B7F4C2BC90C9400493E09 /* TabSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B7F4B2BC90C9400493E09 /* TabSession.swift */; };
+		252B7F4E2BC90CD900493E09 /* BrowserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B7F4D2BC90CD900493E09 /* BrowserViewModel.swift */; };
 		257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257BE7662BC03F8700F2F640 /* MLAdaptor.swift */; };
 		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
@@ -78,6 +80,8 @@
 		250217272BAB3524006FE025 /* SUM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUM.swift; sourceTree = "<group>"; };
 		2529E8F42BC527E400CA4B70 /* SFGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFGlassView.swift; sourceTree = "<group>"; };
 		2529E8F62BC656C100CA4B70 /* SFGlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFGlassButton.swift; sourceTree = "<group>"; };
+		252B7F4B2BC90C9400493E09 /* TabSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSession.swift; sourceTree = "<group>"; };
+		252B7F4D2BC90CD900493E09 /* BrowserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewModel.swift; sourceTree = "<group>"; };
 		257BE7662BC03F8700F2F640 /* MLAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLAdaptor.swift; sourceTree = "<group>"; };
 		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
@@ -223,6 +227,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		252B7F4A2BC90C8600493E09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				252B7F4B2BC90C9400493E09 /* TabSession.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		257BE7652BC03F7300F2F640 /* Boom */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +263,10 @@
 		25B101942BA9DEC500263E35 /* Browser */ = {
 			isa = PBXGroup;
 			children = (
+				252B7F4A2BC90C8600493E09 /* Models */,
 				25B101952BA9DEDC00263E35 /* BrowserWindow.swift */,
 				250217112BA9DF97006FE025 /* BrowserWindowView.swift */,
+				252B7F4D2BC90CD900493E09 /* BrowserViewModel.swift */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -402,6 +416,7 @@
 				259C540B2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift in Sources */,
 				250217122BA9DF97006FE025 /* BrowserWindowView.swift in Sources */,
 				259C54092BC3EFB100D5B9D2 /* SFAddressBar.swift in Sources */,
+				252B7F4E2BC90CD900493E09 /* BrowserViewModel.swift in Sources */,
 				259C54102BC5155B00D5B9D2 /* SFBrowserTab.swift in Sources */,
 				257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */,
 				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
@@ -409,6 +424,7 @@
 				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
 				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
 				250217262BAB34F4006FE025 /* RandSecure.swift in Sources */,
+				252B7F4C2BC90C9400493E09 /* TabSession.swift in Sources */,
 				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
 				2502171C2BAB346F006FE025 /* DataTypes.swift in Sources */,
 				250217212BAB34AD006FE025 /* Rand.swift in Sources */,

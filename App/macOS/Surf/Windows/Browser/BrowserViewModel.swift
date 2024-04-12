@@ -1,5 +1,5 @@
 //
-// Boom.swift
+// BrowserViewModel.swift
 // Copyright © 2024 Shota Shimazu. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,5 +15,18 @@
 // limitations under the License.
 //
 
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+import Foundation
+
+class UserViewModel: ObservableObject {
+    @Published var tabSessions: [TabSession] = []
+
+    init(initialSession: TabSession) {
+        tabSessions.append(initialSession)
+    }
+
+    func addSession(session: TabSession) {
+        tabSessions.append(session)
+    }
+
+    func closeSession(sessionId: UUID) {}
+}

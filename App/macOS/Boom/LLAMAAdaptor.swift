@@ -24,4 +24,3 @@ struct LlamaModel: Identifiable {
     var filename: String
     var status: String?
 }
-

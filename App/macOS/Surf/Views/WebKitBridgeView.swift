@@ -27,13 +27,20 @@ struct WebKitBridgeView: NSViewRepresentable {
 
     var goBack: ((URL) -> Void)?
 
+    var goNext: ((URL) -> Void)?
+
     func makeNSView(context: Context) -> WKWebView {
+        let preferences = WKPreferences()
+        preferences.javaScriptCanOpenWindowsAutomatically = true
+
         let config = WKWebViewConfiguration()
+        config.preferences = preferences
         config.applicationNameForUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Srf/100.0.0.0"
 
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
         loadRequest(in: webView)
+        webView.allowsBackForwardNavigationGestures = true
         return webView
     }
 
@@ -87,6 +94,20 @@ struct WebKitBridgeView: NSViewRepresentable {
             // Error handler
             SFLogger.info("Failed to load with error: \(error.localizedDescription)")
         }
+    }
+}
+
+extension WebKitBridgeView {
+    func onBack(perform action: @escaping (URL) -> Void) -> Self {
+        var updatedView = self
+        updatedView.goBack = action
+        return updatedView
+    }
+
+    func onNext(perform action: @escaping (URL) -> Void) -> Self {
+        var updatedView = self
+        updatedView.goNext = action
+        return updatedView
     }
 }
 

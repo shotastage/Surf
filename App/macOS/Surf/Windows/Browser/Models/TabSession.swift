@@ -1,5 +1,5 @@
 //
-// Boom.swift
+// TabSession.swift
 // Copyright © 2024 Shota Shimazu. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,5 +15,10 @@
 // limitations under the License.
 //
 
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+import Foundation
+
+struct TabSession {
+    let id: UUID
+    let history: [URL]
+    let currentPage: URL
+}
