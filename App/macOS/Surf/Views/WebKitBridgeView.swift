@@ -19,15 +19,17 @@ import SwiftUI
 import WebKit
 
 struct WebKitBridgeView: NSViewRepresentable {
-    @Binding var currentPage: String
-    @State private var isLoading: Bool = true
+    @Binding var currentPage: URL
+    @Binding var isLoading: Bool
 
     // Callbacks
     var onClick: ((URL) -> Void)?
+    var onNavigate: ((Bool) -> Void)?
+    var onError: ((Error) -> Void)?
+    var goBack: (() -> Void)?
+    var goNext: (() -> Void)?
 
-    var goBack: ((URL) -> Void)?
-
-    var goNext: ((URL) -> Void)?
+    var userAgent: String = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Srf/100.0.0.0"
 
     func makeNSView(context: Context) -> WKWebView {
         let preferences = WKPreferences()
@@ -35,7 +37,7 @@ struct WebKitBridgeView: NSViewRepresentable {
 
         let config = WKWebViewConfiguration()
         config.preferences = preferences
-        config.applicationNameForUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Srf/100.0.0.0"
+        config.applicationNameForUserAgent = userAgent
 
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
@@ -45,17 +47,15 @@ struct WebKitBridgeView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
-        loadRequest(in: nsView)
+        SFLogger.info("Update WebKit View Change")
+
+        if nsView.url != currentPage {
+            loadRequest(in: nsView)
+        }
     }
 
     private func loadRequest(in webView: WKWebView) {
-        guard let url = URL(string: currentPage) else {
-            SFLogger.info("Invalid URL")
-            return
-        }
-
-        let request = URLRequest(url: url)
-
+        let request = URLRequest(url: currentPage)
         webView.load(request)
     }
 
@@ -72,39 +72,48 @@ struct WebKitBridgeView: NSViewRepresentable {
 
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if let url = navigationAction.request.url, navigationAction.navigationType == .linkActivated {
-                // Actions when showing URL changed
                 parent.onClick?(url)
-                // If you want to block the request and perform your own processing, use .cancel.
-                // decisionHandler(.cancel)
-                decisionHandler(.allow)
-            } else {
-                decisionHandler(.allow)
             }
+            decisionHandler(.allow)
         }
 
+        /*
+         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+             if let url = navigationAction.request.url, navigationAction.navigationType == .linkActivated {
+                 parent.onClick?(url)
+                 decisionHandler(.allow)
+             } else {
+                 decisionHandler(.allow)
+             }
+         }
+         */
+
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            // Handling the start of page loading
+            parent.isLoading = true
+            parent.onNavigate?(true)
         }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            // Handling page load completion
+            parent.isLoading = false
+            parent.onNavigate?(false)
         }
 
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-            // Error handler
+            parent.isLoading = false
+            parent.onError?(error)
             SFLogger.info("Failed to load with error: \(error.localizedDescription)")
         }
     }
 }
 
 extension WebKitBridgeView {
-    func onBack(perform action: @escaping (URL) -> Void) -> Self {
+    func onBack(perform action: @escaping () -> Void) -> Self {
         var updatedView = self
         updatedView.goBack = action
         return updatedView
     }
 
-    func onNext(perform action: @escaping (URL) -> Void) -> Self {
+    func onNext(perform action: @escaping () -> Void) -> Self {
         var updatedView = self
         updatedView.goNext = action
         return updatedView
@@ -112,6 +121,26 @@ extension WebKitBridgeView {
 }
 
 // Preview Provider if needed
-#Preview("WebKit Bridge View") {
-    WebKitBridgeView(currentPage: .constant("https://google.com"))
+struct WebKitBridgeView_Previews: PreviewProvider {
+    static var previews: some View {
+        // Dummy data or states
+        let initialURL = URL(string: "https://magicalsoft.app")!
+        @State var currentPage: URL = initialURL
+        @State var isLoading = false
+
+        WebKitBridgeView(
+            currentPage: $currentPage,
+            isLoading: $isLoading,
+            onClick: { url in
+                print("Web page clicked: \(url)")
+            },
+            onNavigate: { isStarting in
+                print(isStarting ? "Navigation has been started." : "Navigation has been ended")
+            },
+            onError: { error in
+                print("Error has been occured: \(error.localizedDescription)")
+            }
+        )
+        .frame(width: 800, height: 600)
+    }
 }

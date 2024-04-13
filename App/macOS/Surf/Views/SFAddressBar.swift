@@ -19,7 +19,7 @@ import AppKit
 import SwiftUI
 
 struct SFAddressBar: NSViewRepresentable {
-    @Binding var text: String
+    @State var text: String
     var onCommit: (() -> Void)? = nil
 
     func makeNSView(context: Context) -> NSTextField {

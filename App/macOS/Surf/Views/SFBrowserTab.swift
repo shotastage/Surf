@@ -32,7 +32,7 @@ struct SFTabView: View {
 }
 
 struct SFBrowserTab: View {
-    @Binding var selectedTabIndex: Int
+    @State var selectedTabIndex: Int
 
     var body: some View {
         HStack {
@@ -56,5 +56,5 @@ struct SFBrowserTab: View {
 }
 
 #Preview("Gathered Tab View") {
-    SFBrowserTab(selectedTabIndex: .constant(0))
+    SFBrowserTab(selectedTabIndex: 0)
 }

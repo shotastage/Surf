@@ -22,58 +22,65 @@ import WindowManagement
 
 struct BrowserWindowView: View {
     @Environment(\.window) var window
-
-    @State private var currentURL = "https://shotastage.github.io/minimum-styled/"
-    @State private var urlStr = "https://shotastage.github.io/minimum-styled/"
-
-    @State private var history: [String] = [
-        "https://shotastage.github.io/minimum-styled/",
-    ]
-
-    @State private var selectedTabIndex = 0
+    @State var model = BrowserViewModel(initPage: URL(string: "https://google.com")!)
 
     var body: some View {
         VStack {
-            SFBrowserTab(selectedTabIndex: $selectedTabIndex)
+            SFBrowserTab(selectedTabIndex: model.tabIndex)
                 .frame(height: 80)
             HStack {
                 Button("Home") {
-                    SFLogger.info("__HOME__")
-                    currentURL = "https://google.com"
-                    urlStr = "https://google.com"
+                    navigateToHome()
                 }
                 Button("Back") {
-                    SFLogger.info("__BACK__")
+                    navigatoToBack()
                 }
                 Button("Next") {
-                    SFLogger.info("__NEXT__")
+                    navigateToNext()
                 }
-                SFAddressBar(text: $urlStr)
+                SFAddressBar(text: model.changingUrl)
                     .onReturn {
                         SFLogger.info("PressReturn Key")
-                        currentURL = urlStr
+                        let newPage = URL(string: model.changingUrl)!
+                        model.updateTab(page: newPage)
                     }
-                    .onChange(of: urlStr) { _, newValue in
+                    .onChange(of: model.changingUrl) { _, newValue in
                         SFLogger.info("Url bar string changed: \(newValue)")
                     }
             }
             .padding(.leading, 80.0)
             .padding(.top, 10.0)
             .padding(.trailing, 10.0)
-            VStack {
-                WebKitBridgeView(currentPage: $currentURL)
-                    .onBack { url in
-                        print("Back to \(url)")
-                    }
-                    .onNext { url in
-                        print("Go forward to \(url)")
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
-            // WebKitBridgeView(currentPage: $currentURL)
-            //    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            WebKitBridgeView(
+                currentPage: $model.currentPage,
+                isLoading: $model.isLoading,
+                onClick: { url in
+                    print("Web page clicked: \(url)")
+                },
+                onNavigate: { isStarting in
+                    print(isStarting ? "Navigation has been started." : "Navigation has been ended")
+                },
+                onError: { error in
+                    print("Error has been occured: \(error.localizedDescription)")
+                }
+            )
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .edgesIgnoringSafeArea(.top)
+    }
+
+    private func navigateToHome() {
+        SFLogger.info("__HOME__")
+        model.tabSessions[model.tabIndex] = TabSession(initPage: URL(string: "https://google.com")!)
+        // model.updateTab(page: URL(string: "https://google.com") ?? URL(fileURLWithPath: ""))
+    }
+
+    private func navigatoToBack() {
+        SFLogger.info("__BACK__")
+    }
+
+    private func navigateToNext() {
+        SFLogger.info("__NEXT__")
     }
 }
 

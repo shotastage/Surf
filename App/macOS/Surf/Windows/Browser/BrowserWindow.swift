@@ -21,9 +21,12 @@ import SwiftUI
 import WindowManagement
 
 struct BrowserWindow: Scene {
+    // @State private var model: BrowserViewModel = .init(initPage: URL(string: "https://google.com")!)
+
     var body: some Scene {
         Window("Browser", id: SceneID.browserWindow.id) {
             BrowserWindowView()
+            // .environment(model)
         }
         .windowStyle(.hiddenTitleBar)
         .windowResizability(.automatic)

@@ -19,6 +19,13 @@ import Foundation
 
 struct TabSession {
     let id: UUID
-    let history: [URL]
-    let currentPage: URL
+    var history: [URL]
+    var currentPage: URL
+
+    init(initPage: URL) {
+        id = UUID()
+        history = []
+        history.append(initPage)
+        currentPage = initPage
+    }
 }

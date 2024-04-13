@@ -16,17 +16,40 @@
 //
 
 import Foundation
+import Observation
 
-class UserViewModel: ObservableObject {
-    @Published var tabSessions: [TabSession] = []
+@Observable
+final class BrowserViewModel {
+    var tabSessions: [TabSession] = []
+    var tabIndex: Int
+    var changingUrl: String
+    var currentPage: URL
+    var isLoading: Bool
 
-    init(initialSession: TabSession) {
-        tabSessions.append(initialSession)
+    init(initPage: URL) {
+        let initTab = TabSession(initPage: initPage)
+        tabSessions = [initTab]
+        tabIndex = 0
+        changingUrl = initPage.description
+        currentPage = initPage
+        isLoading = true
     }
 
-    func addSession(session: TabSession) {
+    func addTab(session: TabSession) {
         tabSessions.append(session)
     }
 
-    func closeSession(sessionId: UUID) {}
+    func activateTab(idx: Int) {
+        tabIndex = idx
+    }
+
+    func updateTab(page: URL) {
+        tabSessions[tabIndex].history.append(page)
+        tabSessions[tabIndex].currentPage = page
+        currentPage = page
+    }
+
+    func closeTab(idx: Int) {
+        tabSessions.remove(at: idx)
+    }
 }
