@@ -40,12 +40,12 @@ struct BrowserWindowView: View {
                 }
                 SFAddressBar(text: $model.changingUrl)
                     .onReturn {
-                        SFLogger.info("PressReturn Key")
+                        SFLogger.debug("PressReturn Key")
                         let newPage = URL(string: model.changingUrl)!
                         model.updateTab(page: newPage)
                     }
                     .onChange(of: model.changingUrl) { _, newValue in
-                        SFLogger.info("Url bar string changed: \(newValue)")
+                        SFLogger.debug("Url bar string changed: \(newValue)")
                     }
             }
             .padding(.leading, 80.0)
@@ -54,13 +54,14 @@ struct BrowserWindowView: View {
             WebKitBridgeView(
                 currentPage: $model.currentPage,
                 onClick: { url in
-                    SFLogger.info("Web page clicked: \(url)")
+                    SFLogger.debug("Web page clicked: \(url)")
+                    model.changingUrl = url.absoluteString
                 },
                 onNavigate: { isStarting in
-                    SFLogger.info(isStarting ? "Navigation has been started." : "Navigation has been ended")
+                    SFLogger.debug(isStarting ? "Navigation has been started." : "Navigation has been ended")
                 },
                 onError: { error in
-                    print("Error has been occured: \(error.localizedDescription)")
+                    SFLogger.error("Error has been occured: \(error.localizedDescription)")
                 }
             )
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -69,16 +70,16 @@ struct BrowserWindowView: View {
     }
 
     private func navigateToHome() {
-        SFLogger.info("__HOME__")
+        SFLogger.debug("Back to homepage")
         model.updateTab(page: URL(string: "https://google.com")!)
     }
 
     private func navigatoToBack() {
-        SFLogger.info("__BACK__")
+        SFLogger.info("BACK NAVIGATION IS NOT IMPLEMENTED")
     }
 
     private func navigateToNext() {
-        SFLogger.info("__NEXT__")
+        SFLogger.info("NEXT NAVIGATION IS NOT IMPLEMENTED")
     }
 }
 

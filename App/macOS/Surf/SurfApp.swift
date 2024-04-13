@@ -24,7 +24,7 @@ struct SurfApp: App {
     @NSApplicationDelegateAdaptor var delegate: AppDelegate
 
     init() {
-        // - enableWindowSizeSaveOnQuit(true)
+        enableWindowSizeSaveOnQuit(true)
     }
 
     var body: some Scene {

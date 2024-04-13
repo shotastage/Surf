@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2501EFA92B9760A0006326D9 /* SurfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFA82B9760A0006326D9 /* SurfApp.swift */; };
-		2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFAA2B9760A0006326D9 /* ContentView.swift */; };
 		2501EFAD2B9760A1006326D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2501EFAC2B9760A1006326D9 /* Assets.xcassets */; };
 		2501EFB02B9760A1006326D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2501EFAF2B9760A1006326D9 /* Preview Assets.xcassets */; };
 		2501EFBB2B9760A1006326D9 /* SurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501EFBA2B9760A1006326D9 /* SurfTests.swift */; };
@@ -60,7 +59,6 @@
 /* Begin PBXFileReference section */
 		2501EFA52B9760A0006326D9 /* Surf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2501EFA82B9760A0006326D9 /* SurfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfApp.swift; sourceTree = "<group>"; };
-		2501EFAA2B9760A0006326D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2501EFAC2B9760A1006326D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2501EFAF2B9760A1006326D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2501EFB12B9760A1006326D9 /* Surf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Surf.entitlements; sourceTree = "<group>"; };
@@ -125,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				257BE7652BC03F7300F2F640 /* Boom */,
-				2502171A2BAB3451006FE025 /* Tensorl */,
+				2502171A2BAB3451006FE025 /* SFTensorl */,
 				250217172BAAE7E7006FE025 /* SurfCore */,
 				2501EFA72B9760A0006326D9 /* Surf */,
 				2501EFB92B9760A1006326D9 /* SurfTests */,
@@ -151,7 +149,6 @@
 				250217292BAC384F006FE025 /* Views */,
 				25B101932BA9DEB700263E35 /* Windows */,
 				2501EFA82B9760A0006326D9 /* SurfApp.swift */,
-				2501EFAA2B9760A0006326D9 /* ContentView.swift */,
 				2501EFAC2B9760A1006326D9 /* Assets.xcassets */,
 				2501EFB12B9760A1006326D9 /* Surf.entitlements */,
 				2501EFAE2B9760A1006326D9 /* Preview Content */,
@@ -194,14 +191,14 @@
 			path = SurfCore;
 			sourceTree = "<group>";
 		};
-		2502171A2BAB3451006FE025 /* Tensorl */ = {
+		2502171A2BAB3451006FE025 /* SFTensorl */ = {
 			isa = PBXGroup;
 			children = (
 				2502171F2BAB3497006FE025 /* Functions */,
 				2502171B2BAB346F006FE025 /* DataTypes.swift */,
 				2502171D2BAB3484006FE025 /* FXAdoptor.swift */,
 			);
-			path = Tensorl;
+			path = SFTensorl;
 			sourceTree = "<group>";
 		};
 		2502171F2BAB3497006FE025 /* Functions */ = {
@@ -422,7 +419,6 @@
 				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
 				250217282BAB3524006FE025 /* SUM.swift in Sources */,
 				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
-				2501EFAB2B9760A0006326D9 /* ContentView.swift in Sources */,
 				250217262BAB34F4006FE025 /* RandSecure.swift in Sources */,
 				252B7F4C2BC90C9400493E09 /* TabSession.swift in Sources */,
 				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
