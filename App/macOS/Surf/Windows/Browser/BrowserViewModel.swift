@@ -24,7 +24,6 @@ final class BrowserViewModel {
     var tabIndex: Int
     var changingUrl: String
     var currentPage: URL
-    var isLoading: Bool
 
     init(initPage: URL) {
         let initTab = TabSession(initPage: initPage)
@@ -32,7 +31,6 @@ final class BrowserViewModel {
         tabIndex = 0
         changingUrl = initPage.description
         currentPage = initPage
-        isLoading = true
     }
 
     func addTab(session: TabSession) {

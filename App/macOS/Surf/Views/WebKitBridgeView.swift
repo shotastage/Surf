@@ -20,7 +20,6 @@ import WebKit
 
 struct WebKitBridgeView: NSViewRepresentable {
     @Binding var currentPage: URL
-    @Binding var isLoading: Bool
 
     // Callbacks
     var onClick: ((URL) -> Void)?
@@ -77,29 +76,15 @@ struct WebKitBridgeView: NSViewRepresentable {
             decisionHandler(.allow)
         }
 
-        /*
-         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-             if let url = navigationAction.request.url, navigationAction.navigationType == .linkActivated {
-                 parent.onClick?(url)
-                 decisionHandler(.allow)
-             } else {
-                 decisionHandler(.allow)
-             }
-         }
-         */
-
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            parent.isLoading = true
             parent.onNavigate?(true)
         }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            parent.isLoading = false
             parent.onNavigate?(false)
         }
 
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-            parent.isLoading = false
             parent.onError?(error)
             SFLogger.info("Failed to load with error: \(error.localizedDescription)")
         }
@@ -126,11 +111,9 @@ struct WebKitBridgeView_Previews: PreviewProvider {
         // Dummy data or states
         let initialURL = URL(string: "https://magicalsoft.app")!
         @State var currentPage: URL = initialURL
-        @State var isLoading = false
 
         WebKitBridgeView(
             currentPage: $currentPage,
-            isLoading: $isLoading,
             onClick: { url in
                 print("Web page clicked: \(url)")
             },

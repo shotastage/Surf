@@ -19,13 +19,12 @@ import AppKit
 import SwiftUI
 
 struct SFAddressBar: NSViewRepresentable {
-    @State var text: String
-    var onCommit: (() -> Void)? = nil
+    @Binding var text: String
+    var onReturn: (() -> Void)? = nil
 
     func makeNSView(context: Context) -> NSTextField {
         let textField = NSTextField()
         textField.delegate = context.coordinator
-
         textField.focusRingType = .none
         return textField
     }
@@ -53,7 +52,7 @@ struct SFAddressBar: NSViewRepresentable {
 
         func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
             if commandSelector == #selector(NSResponder.insertNewline(_:)) {
-                self.parent.onCommit?()
+                parent.onReturn?()
                 return true
             }
             return false
@@ -64,7 +63,7 @@ struct SFAddressBar: NSViewRepresentable {
 extension SFAddressBar {
     func onReturn(_ action: @escaping () -> Void) -> SFAddressBar {
         var copy = self
-        copy.onCommit = action
+        copy.onReturn = action
         return copy
     }
 }

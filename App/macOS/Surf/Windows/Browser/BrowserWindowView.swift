@@ -22,7 +22,7 @@ import WindowManagement
 
 struct BrowserWindowView: View {
     @Environment(\.window) var window
-    @State var model = BrowserViewModel(initPage: URL(string: "https://google.com")!)
+    @State var model = BrowserViewModel(initPage: URL(string: "https://magicalsoft.app")!)
 
     var body: some View {
         VStack {
@@ -38,7 +38,7 @@ struct BrowserWindowView: View {
                 Button("Next") {
                     navigateToNext()
                 }
-                SFAddressBar(text: model.changingUrl)
+                SFAddressBar(text: $model.changingUrl)
                     .onReturn {
                         SFLogger.info("PressReturn Key")
                         let newPage = URL(string: model.changingUrl)!
@@ -53,12 +53,11 @@ struct BrowserWindowView: View {
             .padding(.trailing, 10.0)
             WebKitBridgeView(
                 currentPage: $model.currentPage,
-                isLoading: $model.isLoading,
                 onClick: { url in
-                    print("Web page clicked: \(url)")
+                    SFLogger.info("Web page clicked: \(url)")
                 },
                 onNavigate: { isStarting in
-                    print(isStarting ? "Navigation has been started." : "Navigation has been ended")
+                    SFLogger.info(isStarting ? "Navigation has been started." : "Navigation has been ended")
                 },
                 onError: { error in
                     print("Error has been occured: \(error.localizedDescription)")
@@ -71,8 +70,7 @@ struct BrowserWindowView: View {
 
     private func navigateToHome() {
         SFLogger.info("__HOME__")
-        model.tabSessions[model.tabIndex] = TabSession(initPage: URL(string: "https://google.com")!)
-        // model.updateTab(page: URL(string: "https://google.com") ?? URL(fileURLWithPath: ""))
+        model.updateTab(page: URL(string: "https://google.com")!)
     }
 
     private func navigatoToBack() {
