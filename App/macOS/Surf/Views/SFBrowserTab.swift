@@ -54,15 +54,17 @@ struct SFBrowserTab: View {
     }
 }
 
-#Preview("Gathered Tab View") {
-    let tabSessions = [
+struct SFBrowserTab_Previews: PreviewProvider {
+    static let tabSessions = [
         TabSession(initPage: URL(string: "https://magicalsoft.apps")!),
         TabSession(initPage: URL(string: "https://shotach.com")!),
         TabSession(initPage: URL(string: "https://github.com/shotastage/")!),
         TabSession(initPage: URL(string: "https://google.com")!),
     ]
 
-    SFBrowserTab(selectedTabIndex: .constant(0), tabSessions: .constant(tabSessions))
+    static var previews: some View {
+        SFBrowserTab(selectedTabIndex: .constant(0), tabSessions: .constant(tabSessions))
+    }
 }
 
 #Preview("Tab View") {

@@ -27,6 +27,7 @@ struct WebKitBridgeView: NSViewRepresentable {
     var onError: ((Error) -> Void)?
     var goBack: (() -> Void)?
     var goNext: (() -> Void)?
+    var onSiteChanges: ((URL) -> Void)?
 
     var userAgent: String = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Srf/100.0.0.0"
 
@@ -46,8 +47,6 @@ struct WebKitBridgeView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
-        SFLogger.info("Update WebKit View Change")
-
         if nsView.url != currentPage {
             loadRequest(in: nsView)
         }
@@ -81,16 +80,14 @@ struct WebKitBridgeView: NSViewRepresentable {
         }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            if let title = webView.title {
-                // self.parent.pageTitle = title // ページのタイトルを直接取得
+            if let url = webView.url {
+                parent.onSiteChanges?(url) // URLが変更されたときにコールバックを実行
             }
-
             parent.onNavigate?(false)
         }
 
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             parent.onError?(error)
-            SFLogger.info("Failed to load with error: \(error.localizedDescription)")
         }
     }
 }

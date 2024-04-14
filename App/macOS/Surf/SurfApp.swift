@@ -31,5 +31,15 @@ struct SurfApp: App {
         Group {
             BrowserWindow()
         }
+        .commands {
+            CommandGroup(replacing: .appVisibility) {
+                Button(action: {
+                    print("Command + R was pressed")
+                }) {
+                    Text("Reload page")
+                }
+                .keyboardShortcut("r", modifiers: [.command])
+            }
+        }
     }
 }

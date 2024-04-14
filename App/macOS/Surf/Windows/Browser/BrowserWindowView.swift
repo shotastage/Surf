@@ -26,7 +26,7 @@ struct BrowserWindowView: View {
 
     var body: some View {
         VStack {
-            SFBrowserTab(selectedTabIndex: $model.tabIndex)
+            SFBrowserTab(selectedTabIndex: $model.tabIndex, tabSessions: $model.tabSessions)
                 .frame(height: 80)
             HStack {
                 Button("Home") {
@@ -62,6 +62,10 @@ struct BrowserWindowView: View {
                 },
                 onError: { error in
                     SFLogger.error("Error has been occured: \(error.localizedDescription)")
+                },
+                onSiteChanges: { url in
+                    SFLogger.debug("URL destination has been changed.")
+                    model.changingUrl = url.description
                 }
             )
             .frame(maxWidth: .infinity, maxHeight: .infinity)
