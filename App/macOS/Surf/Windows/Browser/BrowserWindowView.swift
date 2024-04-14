@@ -26,7 +26,7 @@ struct BrowserWindowView: View {
 
     var body: some View {
         VStack {
-            SFBrowserTab(selectedTabIndex: model.tabIndex)
+            SFBrowserTab(selectedTabIndex: $model.tabIndex)
                 .frame(height: 80)
             HStack {
                 Button("Home") {

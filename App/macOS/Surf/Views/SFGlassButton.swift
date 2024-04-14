@@ -20,9 +20,15 @@ import SwiftUI
 struct GlassmorphicButton<Content: View>: View {
     let action: () -> Void
     let content: Content
+    var cornerRadius: CGFloat
+    var width: CGFloat
+    var height: CGFloat
     @Environment(\.colorScheme) var colorScheme
 
-    init(action: @escaping () -> Void, @ViewBuilder content: () -> Content) {
+    init(cornerRadius: CGFloat = 25.0, width: CGFloat = 140, height: CGFloat = 40, action: @escaping () -> Void, @ViewBuilder content: () -> Content) {
+        self.cornerRadius = cornerRadius
+        self.width = width
+        self.height = height
         self.action = action
         self.content = content()
     }
@@ -30,11 +36,11 @@ struct GlassmorphicButton<Content: View>: View {
     var body: some View {
         Button(action: action) {
             ZStack {
-                RoundedRectangle(cornerRadius: 25.0)
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(colorScheme == .light ? Color.white.opacity(0.6) : Color.gray.opacity(0.4))
-                    .frame(width: 150, height: 60)
+                    .frame(width: width, height: height)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 25.0)
+                        RoundedRectangle(cornerRadius: cornerRadius)
                             .stroke(Color.white, lineWidth: 2)
                             .shadow(radius: 10)
                             .blur(radius: 5)

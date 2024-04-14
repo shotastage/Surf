@@ -18,43 +18,53 @@
 import SwiftUI
 
 struct SFTabView: View {
+    @Binding var text: String
+    @Binding var imgUrl: String
+
     var body: some View {
         HStack {
-            Text("_TAB_VIEW_")
-            Text("_TAB_VIEW_")
+            Text(text)
+                .foregroundColor(.black)
+                .font(.system(size: 15))
         }
-        .background(Color.blue)
-        .frame(height: 60)
-        .cornerRadius(10)
-        .padding(.all, 5.0)
-        .cornerRadius(10)
     }
 }
 
 struct SFBrowserTab: View {
-    @State var selectedTabIndex: Int
+    @Binding var selectedTabIndex: Int
+    @Binding var tabSessions: [TabSession]
 
     var body: some View {
         HStack {
             ForEach(0 ..< 5) { index in
-                GlassmorphicButton(action: {
+                GlassmorphicButton(cornerRadius: 13, width: 150, height: 40, action: {
                     selectedTabIndex = index
                 }, content: {
-                    Text("Tab \(index + 1)")
-
+                    Text("Web Site \(index + 1)")
                         .foregroundColor(.black)
-                        .font(.title)
+                        .font(.system(size: 15))
                 })
             }
         }
         .padding()
     }
-}
 
-#Preview("Tab View") {
-    SFTabView()
+    private func extractTabInfo(idx: Int) -> (String, String) {
+        (tabSessions[idx].currentPage.description, tabSessions[idx].currentPage.absoluteString)
+    }
 }
 
 #Preview("Gathered Tab View") {
-    SFBrowserTab(selectedTabIndex: 0)
+    let tabSessions = [
+        TabSession(initPage: URL(string: "https://magicalsoft.apps")!),
+        TabSession(initPage: URL(string: "https://shotach.com")!),
+        TabSession(initPage: URL(string: "https://github.com/shotastage/")!),
+        TabSession(initPage: URL(string: "https://google.com")!),
+    ]
+
+    SFBrowserTab(selectedTabIndex: .constant(0), tabSessions: .constant(tabSessions))
+}
+
+#Preview("Tab View") {
+    SFTabView(text: .constant("Tab Title"), imgUrl: .constant("IMG"))
 }

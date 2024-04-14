@@ -81,6 +81,10 @@ struct WebKitBridgeView: NSViewRepresentable {
         }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            if let title = webView.title {
+                // self.parent.pageTitle = title // ページのタイトルを直接取得
+            }
+
             parent.onNavigate?(false)
         }
 
