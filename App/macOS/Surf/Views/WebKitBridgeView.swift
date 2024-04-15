@@ -60,7 +60,7 @@ struct WebKitBridgeView: NSViewRepresentable {
         }
     }
 
-    fileprivate func loadRequest(in webView: WKWebView) {
+    private func loadRequest(in webView: WKWebView) {
         let request = URLRequest(url: currentPage)
         webView.load(request)
     }

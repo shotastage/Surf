@@ -18,13 +18,26 @@
 import AppKit
 import SwiftUI
 
+final class PaddedTextField: NSTextField {
+    func textRect(forBounds rect: NSRect) -> NSRect {
+        rect.insetBy(dx: 50, dy: 0)
+    }
+
+    func editingRect(forBounds rect: NSRect) -> NSRect {
+        rect.insetBy(dx: 50, dy: 0)
+    }
+}
+
 struct SFAddressBar: NSViewRepresentable {
     @Binding var text: String
     var onReturn: (() -> Void)? = nil
 
     func makeNSView(context: Context) -> NSTextField {
-        let textField = NSTextField()
+        let textField = PaddedTextField()
         textField.delegate = context.coordinator
+        textField.wantsLayer = true
+        textField.layer?.cornerRadius = 10
+        textField.layer?.masksToBounds = true
         textField.focusRingType = .none
         return textField
     }
@@ -65,5 +78,15 @@ extension SFAddressBar {
         var copy = self
         copy.onReturn = action
         return copy
+    }
+}
+
+// Preview Provider if needed
+struct SFAddressBar_Previews: PreviewProvider {
+    static var previews: some View {
+        @State var previewURL = "https://magicalsoft.app"
+
+        SFAddressBar(text: $previewURL)
+            .padding()
     }
 }
