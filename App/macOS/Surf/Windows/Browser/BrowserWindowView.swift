@@ -23,6 +23,7 @@ import WindowManagement
 struct BrowserWindowView: View {
     @Environment(\.window) var window
     @State var model = BrowserViewModel(initPage: URL(string: "https://magicalsoft.app")!)
+    @State private var shouldReload: Bool = false
 
     var body: some View {
         VStack {
@@ -38,6 +39,9 @@ struct BrowserWindowView: View {
                 Button("Next") {
                     navigateToNext()
                 }
+                Button("Reload") {
+                    shouldReload = true
+                }
                 SFAddressBar(text: $model.changingUrl)
                     .onReturn {
                         SFLogger.debug("PressReturn Key")
@@ -52,7 +56,7 @@ struct BrowserWindowView: View {
             .padding(.top, 10.0)
             .padding(.trailing, 10.0)
             WebKitBridgeView(
-                currentPage: $model.currentPage,
+                currentPage: $model.currentPage, shouldReload: $shouldReload,
                 onClick: { url in
                     SFLogger.debug("Web page clicked: \(url)")
                     model.changingUrl = url.absoluteString

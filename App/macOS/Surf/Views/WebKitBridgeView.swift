@@ -19,7 +19,11 @@ import SwiftUI
 import WebKit
 
 struct WebKitBridgeView: NSViewRepresentable {
+    // The state
     @Binding var currentPage: URL
+
+    // The flag for reloading
+    @Binding var shouldReload: Bool
 
     // Callbacks
     var onClick: ((URL) -> Void)?
@@ -50,9 +54,13 @@ struct WebKitBridgeView: NSViewRepresentable {
         if nsView.url != currentPage {
             loadRequest(in: nsView)
         }
+        if shouldReload {
+            nsView.reload()
+            shouldReload = false
+        }
     }
 
-    private func loadRequest(in webView: WKWebView) {
+    fileprivate func loadRequest(in webView: WKWebView) {
         let request = URLRequest(url: currentPage)
         webView.load(request)
     }
@@ -81,7 +89,7 @@ struct WebKitBridgeView: NSViewRepresentable {
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             if let url = webView.url {
-                parent.onSiteChanges?(url) // URLが変更されたときにコールバックを実行
+                parent.onSiteChanges?(url)
             }
             parent.onNavigate?(false)
         }
@@ -112,9 +120,10 @@ struct WebKitBridgeView_Previews: PreviewProvider {
         // Dummy data or states
         let initialURL = URL(string: "https://magicalsoft.app")!
         @State var currentPage: URL = initialURL
+        @State var isReloadRequired = false
 
         WebKitBridgeView(
-            currentPage: $currentPage,
+            currentPage: $currentPage, shouldReload: $isReloadRequired,
             onClick: { url in
                 print("Web page clicked: \(url)")
             },
