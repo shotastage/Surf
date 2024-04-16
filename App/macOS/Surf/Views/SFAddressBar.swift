@@ -15,16 +15,17 @@
 // limitations under the License.
 //
 
-import AppKit
+import Cocoa
 import SwiftUI
 
-final class PaddedTextField: NSTextField {
-    func textRect(forBounds rect: NSRect) -> NSRect {
-        rect.insetBy(dx: 50, dy: 0)
+class PaddedTextField: NSTextField {
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
     }
 
-    func editingRect(forBounds rect: NSRect) -> NSRect {
-        rect.insetBy(dx: 50, dy: 0)
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -34,11 +35,19 @@ struct SFAddressBar: NSViewRepresentable {
 
     func makeNSView(context: Context) -> NSTextField {
         let textField = PaddedTextField()
+        let textFieldLayer = CALayer()
+
         textField.delegate = context.coordinator
         textField.wantsLayer = true
-        textField.layer?.cornerRadius = 10
+        textField.layer = textFieldLayer
+        textField.layer?.backgroundColor = Color.blue.cgColor
+        textField.layer?.borderColor = Color.red.cgColor
+        textField.layer?.borderWidth = 1
+        textField.layer?.cornerRadius = 5
         textField.layer?.masksToBounds = true
-        textField.focusRingType = .none
+        textField.textColor = NSColor.black
+        textField.layer?.masksToBounds = true
+
         return textField
     }
 
@@ -74,7 +83,7 @@ struct SFAddressBar: NSViewRepresentable {
 }
 
 extension SFAddressBar {
-    func onReturn(_ action: @escaping () -> Void) -> SFAddressBar {
+    func onReturn(_ action: @escaping () -> Void) -> some View {
         var copy = self
         copy.onReturn = action
         return copy
