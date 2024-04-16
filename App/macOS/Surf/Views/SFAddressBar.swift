@@ -18,35 +18,55 @@
 import Cocoa
 import SwiftUI
 
-class PaddedTextField: NSTextField {
-    override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-    }
+struct SFAddressBar: View {
+    let placeholder: String
+    @Binding var text: String
+    @State private var isFocus: Bool = false
 
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(isFocus ? .white : .gray)
+                .frame(height: 50)
+                .cornerRadius(20)
+            VanilaTextFieldBridge(placeholder: placeholder, text: $text, isFocus: $isFocus)
+                .frame(height: 40)
+                .padding(.horizontal, 20)
+        }
     }
 }
 
-struct SFAddressBar: NSViewRepresentable {
+final class FocusableTextField: NSTextField {
+    var onFocusChange: (Bool) -> Void = { _ in }
+
+    override func becomeFirstResponder() -> Bool {
+        let textView = window?.fieldEditor(true, for: nil) as? NSTextView
+        textView?.insertionPointColor = NSColor(Color.black)
+        onFocusChange(true)
+        return super.becomeFirstResponder()
+    }
+}
+
+struct VanilaTextFieldBridge: NSViewRepresentable {
+    let placeholder: String
     @Binding var text: String
-    var onReturn: (() -> Void)? = nil
+    @Binding var isFocus: Bool
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
 
     func makeNSView(context: Context) -> NSTextField {
-        let textField = PaddedTextField()
-        let textFieldLayer = CALayer()
-
+        let textField = FocusableTextField()
+        textField.placeholderString = placeholder
+        textField.isBordered = false
         textField.delegate = context.coordinator
-        textField.wantsLayer = true
-        textField.layer = textFieldLayer
-        textField.layer?.backgroundColor = Color.blue.cgColor
-        textField.layer?.borderColor = Color.red.cgColor
-        textField.layer?.borderWidth = 1
-        textField.layer?.cornerRadius = 5
-        textField.layer?.masksToBounds = true
-        textField.textColor = NSColor.black
-        textField.layer?.masksToBounds = true
+        textField.backgroundColor = .clear
+        textField.textColor = .black
+        textField.focusRingType = .none
+        textField.onFocusChange = { isFocus in
+            self.isFocus = isFocus
+        }
 
         return textField
     }
@@ -55,47 +75,39 @@ struct SFAddressBar: NSViewRepresentable {
         nsView.stringValue = text
     }
 
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-
     class Coordinator: NSObject, NSTextFieldDelegate {
-        var parent: SFAddressBar
+        let parent: VanilaTextFieldBridge
 
-        init(_ textField: SFAddressBar) {
+        init(_ textField: VanilaTextFieldBridge) {
             parent = textField
         }
 
+        func controlTextDidEndEditing(_ obj: Notification) {
+            parent.isFocus = false
+        }
+
         func controlTextDidChange(_ obj: Notification) {
-            if let textField = obj.object as? NSTextField {
-                parent.text = textField.stringValue
-            }
+            guard let textField = obj.object as? NSTextField else { return }
+            parent.text = textField.stringValue
         }
-
-        func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-            if commandSelector == #selector(NSResponder.insertNewline(_:)) {
-                parent.onReturn?()
-                return true
-            }
-            return false
-        }
-    }
-}
-
-extension SFAddressBar {
-    func onReturn(_ action: @escaping () -> Void) -> some View {
-        var copy = self
-        copy.onReturn = action
-        return copy
     }
 }
 
 // Preview Provider if needed
+#if DEBUG
 struct SFAddressBar_Previews: PreviewProvider {
     static var previews: some View {
         @State var previewURL = "https://magicalsoft.app"
 
-        SFAddressBar(text: $previewURL)
-            .padding()
+        Group {
+            SFAddressBar(placeholder: "Search bar", text: $previewURL)
+                .padding()
+                .colorScheme(.light)
+            SFAddressBar(placeholder: "Search bar", text: $previewURL)
+                .padding()
+                .colorScheme(.dark)
+        }
+        .previewDisplayName("SFSearchBar Preview")
     }
 }
+#endif

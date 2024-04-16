@@ -42,15 +42,18 @@ struct BrowserWindowView: View {
                 Button("Reload") {
                     shouldReload = true
                 }
-                SFAddressBar(text: $model.changingUrl)
-                    .onReturn {
+                SFAddressBar(placeholder: "Address Bar", text: $model.changingUrl)
+                    .onKeyPress(.return) {
                         SFLogger.debug("PressReturn Key")
                         let newPage = URL(string: model.changingUrl)!
                         model.updateTab(page: newPage)
+                        
+                        return .handled
                     }
                     .onChange(of: model.changingUrl) { _, newValue in
                         SFLogger.debug("Url bar string changed: \(newValue)")
                     }
+                    
             }
             .padding(.leading, 80.0)
             .padding(.top, 10.0)
