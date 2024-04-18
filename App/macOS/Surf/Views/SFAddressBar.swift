@@ -19,20 +19,26 @@ import Cocoa
 import SwiftUI
 
 struct SFAddressBar: View {
-    let placeholder: String
-    @Binding var text: String
+    @Binding var currentPage: URL
+    @State private var urlText: String
     @State private var isFocus: Bool = false
+
+    init(currentPage: Binding<URL>) {
+        _currentPage = currentPage
+        _urlText = State(initialValue: currentPage.wrappedValue.absoluteString)
+    }
 
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(isFocus ? .white : .gray)
-                .frame(height: 50)
+                .foregroundColor(.white)
                 .cornerRadius(20)
-            VanilaTextFieldBridge(placeholder: placeholder, text: $text, isFocus: $isFocus)
-                .frame(height: 40)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            VanillaTextFieldBridge(placeholder: $urlText, text: $urlText, isFocus: $isFocus) // Bindingを渡す
+                .frame(maxHeight: .infinity)
                 .padding(.horizontal, 20)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -47,8 +53,8 @@ final class FocusableTextField: NSTextField {
     }
 }
 
-struct VanilaTextFieldBridge: NSViewRepresentable {
-    let placeholder: String
+struct VanillaTextFieldBridge: NSViewRepresentable {
+    @Binding var placeholder: String
     @Binding var text: String
     @Binding var isFocus: Bool
 
@@ -65,6 +71,7 @@ struct VanilaTextFieldBridge: NSViewRepresentable {
         textField.textColor = .black
         textField.focusRingType = .none
         textField.onFocusChange = { isFocus in
+            SFLogger.debug("On focus changed")
             self.isFocus = isFocus
         }
 
@@ -76,9 +83,9 @@ struct VanilaTextFieldBridge: NSViewRepresentable {
     }
 
     class Coordinator: NSObject, NSTextFieldDelegate {
-        let parent: VanilaTextFieldBridge
+        let parent: VanillaTextFieldBridge
 
-        init(_ textField: VanilaTextFieldBridge) {
+        init(_ textField: VanillaTextFieldBridge) {
             parent = textField
         }
 
@@ -97,13 +104,15 @@ struct VanilaTextFieldBridge: NSViewRepresentable {
 #if DEBUG
 struct SFAddressBar_Previews: PreviewProvider {
     static var previews: some View {
-        @State var previewURL = "https://magicalsoft.app"
-
+        @State var previewURL = URL(string: "https://magicalsoft.app")!
+        @State var changingURL = ""
         Group {
-            SFAddressBar(placeholder: "Search bar", text: $previewURL)
+            SFAddressBar(currentPage: $previewURL)
+                .frame(height: 40)
                 .padding()
                 .colorScheme(.light)
-            SFAddressBar(placeholder: "Search bar", text: $previewURL)
+            SFAddressBar(currentPage: $previewURL)
+                .frame(height: 40)
                 .padding()
                 .colorScheme(.dark)
         }

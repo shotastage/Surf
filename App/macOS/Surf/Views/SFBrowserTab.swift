@@ -34,15 +34,23 @@ struct SFBrowserTab: View {
     @Binding var selectedTabIndex: Int
     @Binding var tabSessions: [TabSession]
 
+    let tabMaxWidth: CGFloat = 150
     var body: some View {
         HStack {
             ForEach(0 ..< 5) { index in
-                GlassmorphicButton(cornerRadius: 13, width: 150, height: 40, action: {
+                GlassmorphicButton(cornerRadius: 13, width: tabMaxWidth, height: 40, action: {
                     selectedTabIndex = index
                 }, content: {
-                    Text("Web Site \(index + 1)")
-                        .foregroundColor(.black)
-                        .font(.system(size: 15))
+                    HStack {
+                        Text("F")
+                            .foregroundColor(.black)
+                            .bold()
+                        Text("Web Site \(index + 1)")
+                            .foregroundColor(.black)
+                            .font(.system(size: 13))
+                        Spacer()
+                    }
+                    .frame(maxWidth: tabMaxWidth - 25)
                 })
             }
         }
@@ -54,6 +62,7 @@ struct SFBrowserTab: View {
     }
 }
 
+#if DEBUG
 struct SFBrowserTab_Previews: PreviewProvider {
     static let tabSessions = [
         TabSession(initPage: URL(string: "https://magicalsoft.apps")!),
@@ -66,6 +75,7 @@ struct SFBrowserTab_Previews: PreviewProvider {
         SFBrowserTab(selectedTabIndex: .constant(0), tabSessions: .constant(tabSessions))
     }
 }
+#endif
 
 #Preview("Tab View") {
     SFTabView(text: .constant("Tab Title"), imgUrl: .constant("IMG"))

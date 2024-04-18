@@ -115,6 +115,7 @@ extension WebKitBridgeView {
 }
 
 // Preview Provider if needed
+#if DEBUG
 struct WebKitBridgeView_Previews: PreviewProvider {
     static var previews: some View {
         // Dummy data or states
@@ -137,3 +138,4 @@ struct WebKitBridgeView_Previews: PreviewProvider {
         .frame(width: 800, height: 600)
     }
 }
+#endif
