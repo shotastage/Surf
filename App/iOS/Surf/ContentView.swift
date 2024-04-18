@@ -18,19 +18,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentPage: URL = .init(string: "https://magicalsoft.app")!
+    @State private var shouldReload = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        WebKitBridgeView(
+            currentPage: $currentPage, shouldReload: $shouldReload,
+            onClick: { url in
+                print("Web page clicked: \(url)")
+            },
+            onNavigate: { _ in
+            },
+            onError: { error in
+                print("Error has been occured: \(error.localizedDescription)")
+            },
+            onSiteChanges: { _ in
+                print("URL destination has been changed.")
+            }
+        )
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+#endif
