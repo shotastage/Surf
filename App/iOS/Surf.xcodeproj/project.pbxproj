@@ -14,6 +14,7 @@
 		258966B52A1CEBC400551D2E /* SurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966B42A1CEBC400551D2E /* SurfTests.swift */; };
 		258966BF2A1CEBC400551D2E /* SurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966BE2A1CEBC400551D2E /* SurfUITests.swift */; };
 		258966C12A1CEBC400551D2E /* SurfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966C02A1CEBC400551D2E /* SurfUITestsLaunchTests.swift */; };
+		25A817532BD0E7A200B4B05E /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A817522BD0E7A200B4B05E /* WebKitBridgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		258966BA2A1CEBC400551D2E /* SurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		258966BE2A1CEBC400551D2E /* SurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITests.swift; sourceTree = "<group>"; };
 		258966C02A1CEBC400551D2E /* SurfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25A817522BD0E7A200B4B05E /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		258966A22A1CEBC300551D2E /* Surf */ = {
 			isa = PBXGroup;
 			children = (
+				25A817512BD0E79000B4B05E /* Views */,
 				258966A32A1CEBC300551D2E /* SurfApp.swift */,
 				258966A52A1CEBC300551D2E /* ContentView.swift */,
 				258966A72A1CEBC400551D2E /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				258966C02A1CEBC400551D2E /* SurfUITestsLaunchTests.swift */,
 			);
 			path = SurfUITests;
+			sourceTree = "<group>";
+		};
+		25A817512BD0E79000B4B05E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25A817522BD0E7A200B4B05E /* WebKitBridgeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				258966A62A1CEBC300551D2E /* ContentView.swift in Sources */,
+				25A817532BD0E7A200B4B05E /* WebKitBridgeView.swift in Sources */,
 				258966A42A1CEBC300551D2E /* SurfApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

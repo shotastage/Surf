@@ -34,9 +34,14 @@ struct SFAddressBar: View {
                 .foregroundColor(.white)
                 .cornerRadius(20)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-            VanillaTextFieldBridge(placeholder: $urlText, text: $urlText, isFocus: $isFocus) // Bindingを渡す
-                .frame(maxHeight: .infinity)
-                .padding(.horizontal, 20)
+                .onTapGesture {
+                    isFocus = true
+                }
+            if isFocus {
+                VanillaTextFieldBridge(placeholder: $urlText, text: $urlText, isFocus: $isFocus)
+                    .frame(maxHeight: .infinity)
+                    .padding(.horizontal, 20)
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
