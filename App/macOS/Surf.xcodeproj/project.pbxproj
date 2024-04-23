@@ -28,6 +28,7 @@
 		2529E8F72BC656C100CA4B70 /* SFGlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529E8F62BC656C100CA4B70 /* SFGlassButton.swift */; };
 		252B7F4C2BC90C9400493E09 /* TabSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B7F4B2BC90C9400493E09 /* TabSession.swift */; };
 		252B7F4E2BC90CD900493E09 /* BrowserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B7F4D2BC90CD900493E09 /* BrowserViewModel.swift */; };
+		254355A32BD8088800AE82D7 /* ChromeBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254355A22BD8088800AE82D7 /* ChromeBridgeView.swift */; };
 		257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257BE7662BC03F8700F2F640 /* MLAdaptor.swift */; };
 		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
@@ -80,6 +81,8 @@
 		2529E8F62BC656C100CA4B70 /* SFGlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFGlassButton.swift; sourceTree = "<group>"; };
 		252B7F4B2BC90C9400493E09 /* TabSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSession.swift; sourceTree = "<group>"; };
 		252B7F4D2BC90CD900493E09 /* BrowserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewModel.swift; sourceTree = "<group>"; };
+		2543559E2BD8086E00AE82D7 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Chromium Embedded Framework.framework"; path = "../../../../Downloads/cef_binary_123.0.13+gfc703fb+chromium-123.0.6312.124_macosarm64/Release/Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
+		254355A22BD8088800AE82D7 /* ChromeBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromeBridgeView.swift; sourceTree = "<group>"; };
 		257BE7662BC03F8700F2F640 /* MLAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLAdaptor.swift; sourceTree = "<group>"; };
 		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
@@ -220,6 +223,7 @@
 				259C540F2BC5155B00D5B9D2 /* SFBrowserTab.swift */,
 				2529E8F42BC527E400CA4B70 /* SFGlassView.swift */,
 				2529E8F62BC656C100CA4B70 /* SFGlassButton.swift */,
+				254355A22BD8088800AE82D7 /* ChromeBridgeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +248,7 @@
 		259A472D2B9AC6160062BCE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2543559E2BD8086E00AE82D7 /* Chromium Embedded Framework.framework */,
 				259A472E2B9AC6160062BCE8 /* WebKit.framework */,
 			);
 			name = Frameworks;
@@ -417,6 +422,7 @@
 				259C54102BC5155B00D5B9D2 /* SFBrowserTab.swift in Sources */,
 				257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */,
 				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
+				254355A32BD8088800AE82D7 /* ChromeBridgeView.swift in Sources */,
 				250217282BAB3524006FE025 /* SUM.swift in Sources */,
 				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
 				250217262BAB34F4006FE025 /* RandSecure.swift in Sources */,
