@@ -31,6 +31,8 @@
 		254355A32BD8088800AE82D7 /* ChromeBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254355A22BD8088800AE82D7 /* ChromeBridgeView.swift */; };
 		257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257BE7662BC03F8700F2F640 /* MLAdaptor.swift */; };
 		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
+		258DBF402BDDC7B50059560B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258DBF3F2BDDC7B50059560B /* ViewModel.swift */; };
+		258DBF422BDDC7E70059560B /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 258DBF412BDDC7E70059560B /* Sparkle */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
 		259C54092BC3EFB100D5B9D2 /* SFAddressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259C54082BC3EFB100D5B9D2 /* SFAddressBar.swift */; };
 		259C540B2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259C540A2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift */; };
@@ -85,6 +87,7 @@
 		254355A22BD8088800AE82D7 /* ChromeBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromeBridgeView.swift; sourceTree = "<group>"; };
 		257BE7662BC03F8700F2F640 /* MLAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLAdaptor.swift; sourceTree = "<group>"; };
 		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
+		258DBF3F2BDDC7B50059560B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
 		259A472E2B9AC6160062BCE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		259C54082BC3EFB100D5B9D2 /* SFAddressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFAddressBar.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258DBF422BDDC7E70059560B /* Sparkle in Frameworks */,
 				259C540E2BC50FF600D5B9D2 /* llama in Frameworks */,
 				250217102BA9DF62006FE025 /* WindowManagement in Frameworks */,
 				250217242BAB34E1006FE025 /* DataLogic in Frameworks */,
@@ -149,6 +153,7 @@
 		2501EFA72B9760A0006326D9 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
+				258DBF3E2BDDC7A50059560B /* Updater */,
 				250217292BAC384F006FE025 /* Views */,
 				25B101932BA9DEB700263E35 /* Windows */,
 				2501EFA82B9760A0006326D9 /* SurfApp.swift */,
@@ -245,6 +250,14 @@
 			path = Boom;
 			sourceTree = "<group>";
 		};
+		258DBF3E2BDDC7A50059560B /* Updater */ = {
+			isa = PBXGroup;
+			children = (
+				258DBF3F2BDDC7B50059560B /* ViewModel.swift */,
+			);
+			path = Updater;
+			sourceTree = "<group>";
+		};
 		259A472D2B9AC6160062BCE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +307,7 @@
 				250217232BAB34E1006FE025 /* DataLogic */,
 				25E0A9E62BB3B5DD0067F2C8 /* FlexDB */,
 				259C540D2BC50FF600D5B9D2 /* llama */,
+				258DBF412BDDC7E70059560B /* Sparkle */,
 			);
 			productName = Surf;
 			productReference = 2501EFA52B9760A0006326D9 /* Surf.app */;
@@ -372,6 +386,7 @@
 				250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */,
 				25E0A9E52BB3B5DD0067F2C8 /* XCLocalSwiftPackageReference "../../Source/FlexDB" */,
 				259C540C2BC50FF600D5B9D2 /* XCRemoteSwiftPackageReference "llama" */,
+				258DBF3D2BDDC6DD0059560B /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 2501EFA62B9760A0006326D9 /* Products */;
 			projectDirPath = "";
@@ -420,6 +435,7 @@
 				259C54092BC3EFB100D5B9D2 /* SFAddressBar.swift in Sources */,
 				252B7F4E2BC90CD900493E09 /* BrowserViewModel.swift in Sources */,
 				259C54102BC5155B00D5B9D2 /* SFBrowserTab.swift in Sources */,
+				258DBF402BDDC7B50059560B /* ViewModel.swift in Sources */,
 				257BE7672BC03F8700F2F640 /* MLAdaptor.swift in Sources */,
 				2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */,
 				254355A32BD8088800AE82D7 /* ChromeBridgeView.swift in Sources */,
@@ -776,6 +792,14 @@
 				kind = branch;
 			};
 		};
+		258DBF3D2BDDC6DD0059560B /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
 		259C540C2BC50FF600D5B9D2 /* XCRemoteSwiftPackageReference "llama" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ensan-hcl/llama.cpp";
@@ -804,6 +828,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 250217222BAB34E1006FE025 /* XCRemoteSwiftPackageReference "DataLogic.swift" */;
 			productName = DataLogic;
+		};
+		258DBF412BDDC7E70059560B /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 258DBF3D2BDDC6DD0059560B /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
 		};
 		259C540D2BC50FF600D5B9D2 /* llama */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,5 +1,5 @@
 {
-  "originHash" : "4d34cc95a942254676217ee9df5f03cbd7d2701680eb35888a689b104da12754",
+  "originHash" : "047ccd3b700f90f9581d35c214e9f4b7dcba04eae7d5af5060ce108aa02bf7ea",
   "pins" : [
     {
       "identity" : "datalogic.swift",
@@ -17,6 +17,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "8a5be3bd5885d79ad84aadf32bb8c1a67bd43c19"
+      }
+    },
+    {
+      "identity" : "sparkle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparkle-project/Sparkle",
+      "state" : {
+        "revision" : "0a4caaf7a81eea2cece651ef4b17331fa0634dff",
+        "version" : "2.6.0"
       }
     },
     {
