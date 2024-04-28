@@ -33,6 +33,7 @@
 		2586A8012BADCDAD00115136 /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */; };
 		258DBF402BDDC7B50059560B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258DBF3F2BDDC7B50059560B /* ViewModel.swift */; };
 		258DBF422BDDC7E70059560B /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 258DBF412BDDC7E70059560B /* Sparkle */; };
+		258DBF442BDDC94F0059560B /* UpdaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258DBF432BDDC94F0059560B /* UpdaterView.swift */; };
 		259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */; };
 		259C54092BC3EFB100D5B9D2 /* SFAddressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259C54082BC3EFB100D5B9D2 /* SFAddressBar.swift */; };
 		259C540B2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259C540A2BC4E6E100D5B9D2 /* LLAMAAdaptor.swift */; };
@@ -88,6 +89,7 @@
 		257BE7662BC03F8700F2F640 /* MLAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLAdaptor.swift; sourceTree = "<group>"; };
 		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 		258DBF3F2BDDC7B50059560B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		258DBF432BDDC94F0059560B /* UpdaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterView.swift; sourceTree = "<group>"; };
 		259613D02B9A20AB00BE6DA4 /* SFWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWebKit.swift; sourceTree = "<group>"; };
 		259A472E2B9AC6160062BCE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		259C54082BC3EFB100D5B9D2 /* SFAddressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFAddressBar.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				258DBF3F2BDDC7B50059560B /* ViewModel.swift */,
+				258DBF432BDDC94F0059560B /* UpdaterView.swift */,
 			);
 			path = Updater;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				250217282BAB3524006FE025 /* SUM.swift in Sources */,
 				2502171E2BAB3484006FE025 /* FXAdoptor.swift in Sources */,
 				250217262BAB34F4006FE025 /* RandSecure.swift in Sources */,
+				258DBF442BDDC94F0059560B /* UpdaterView.swift in Sources */,
 				252B7F4C2BC90C9400493E09 /* TabSession.swift in Sources */,
 				259613D12B9A20AB00BE6DA4 /* SFWebKit.swift in Sources */,
 				2502171C2BAB346F006FE025 /* DataTypes.swift in Sources */,

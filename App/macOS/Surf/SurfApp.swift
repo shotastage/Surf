@@ -16,14 +16,18 @@
 //
 
 import AppKit
+import Sparkle
 import SwiftUI
 import WindowManagement
 
 @main
 struct SurfApp: App {
     @NSApplicationDelegateAdaptor var delegate: AppDelegate
+    private let updaterController: SPUStandardUpdaterController
 
     init() {
+        updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+
         enableWindowSizeSaveOnQuit(true)
     }
 
@@ -39,6 +43,9 @@ struct SurfApp: App {
                     Text("Reload page")
                 }
                 .keyboardShortcut("r", modifiers: [.command])
+            }
+            CommandGroup(after: .appInfo) {
+                CheckForUpdatesView(updater: updaterController.updater)
             }
         }
     }
