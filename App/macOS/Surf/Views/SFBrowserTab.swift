@@ -17,6 +17,44 @@
 
 import SwiftUI
 
+struct TabAppearanceView<Content: View>: View {
+    let action: () -> Void
+    let content: Content
+    var cornerRadius: CGFloat
+    var width: CGFloat
+    var height: CGFloat
+    @Environment(\.colorScheme) var colorScheme
+
+    init(cornerRadius: CGFloat = 25.0, width: CGFloat = 140, height: CGFloat = 40, action: @escaping () -> Void, @ViewBuilder content: () -> Content) {
+        self.cornerRadius = cornerRadius
+        self.width = width
+        self.height = height
+        self.action = action
+        self.content = content()
+    }
+
+    var body: some View {
+        Button(action: action) {
+            ZStack {
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .fill(colorScheme == .light ? Color.white.opacity(0.6) : Color.gray.opacity(0.4))
+                    .frame(width: width, height: height)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: cornerRadius)
+                            .stroke(Color(red: 0.878, green: 0.878, blue: 0.878), lineWidth: 0.5)
+                            .shadow(radius: 10)
+                            .opacity(0.8)
+                    )
+                    .padding()
+
+                content
+                    .foregroundColor(.white)
+            }
+        }
+        .buttonStyle(PlainButtonStyle()) // Remove default button styling
+    }
+}
+
 struct SFTabView: View {
     @Binding var text: String
     @Binding var imgUrl: String
@@ -38,7 +76,7 @@ struct SFBrowserTab: View {
     var body: some View {
         HStack {
             ForEach(0 ..< 5) { index in
-                GlassmorphicButton(cornerRadius: 13, width: tabMaxWidth, height: 40, action: {
+                TabAppearanceView(cornerRadius: 13, width: tabMaxWidth, height: 40, action: {
                     selectedTabIndex = index
                 }, content: {
                     HStack {
@@ -76,6 +114,22 @@ struct SFBrowserTab_Previews: PreviewProvider {
     }
 }
 #endif
+
+#Preview("Light View Glass Button") {
+    ZStack {
+        TabAppearanceView(action: {
+            print("Tap button!")
+        }, content: {
+            Text("Tap This Button")
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+                .font(.callout)
+                .lineLimit(1)
+        })
+    }
+    .background(Color(NSColor.quaternarySystemFill))
+    .preferredColorScheme(.light)
+}
 
 #Preview("Tab View") {
     SFTabView(text: .constant("Tab Title"), imgUrl: .constant("IMG"))
