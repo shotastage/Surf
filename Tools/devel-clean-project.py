@@ -41,6 +41,12 @@ if __name__ == "__main__":
     cef_components = ['Vendor/cef']
     clean_paths(cef_components)
 
+    # Sparkle toolchain
+    sparkle_toolchains = [
+        '.local/sparkle/',
+    ]
+    clean_paths(sparkle_toolchains)
+
     # Cleaning generated config files
     generated_configs = [
         "./App/macOS/project.yml"
