@@ -39,10 +39,10 @@ def _add_license_to_file(file_path):
     print("Formatting " + file_name + "...")
     with open(file_path, 'r+') as file:
         original_content = file.read()
-        
+
         if "Licensed under the Apache License" in original_content:
             return
-        
+
         license_text = _get_license_text(file_name)
         file.seek(0, 0)
         file.write(license_text.rstrip('\r\n') + '\n' + original_content)

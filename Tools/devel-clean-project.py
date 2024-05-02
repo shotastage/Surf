@@ -2,7 +2,6 @@
 
 import shutil
 import os
-import sys
 
 def rm(path):
     """
