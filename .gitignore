@@ -84,3 +84,6 @@ _deps
 
 build/
 .local/
+
+
+*.xcarchive

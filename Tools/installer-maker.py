@@ -19,3 +19,6 @@ if __name__ == "__main__":
 
     os.system("xcodebuild -project ./App/macOS/Surf.xcodeproj -scheme Surf -configuration Release -exportArchive -exportPath ./Surf.app")
     #zip_directory("./App/macOS/Surf.xcodeproj", PROJ_BACKUP_FOLDER + "Surf_macOS_Profile")
+
+    # MEMO
+    # xcodebuild archive -project ./App/macOS/Surf.xcodeproj -scheme Surf -configuration Release -archivePath ./App/macOS/Surf.xcodeproj/project.xcworkspace
