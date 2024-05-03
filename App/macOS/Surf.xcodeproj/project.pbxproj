@@ -87,6 +87,7 @@
 		2543559E2BD8086E00AE82D7 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Chromium Embedded Framework.framework"; path = "../../../../Downloads/cef_binary_123.0.13+gfc703fb+chromium-123.0.6312.124_macosarm64/Release/Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
 		254355A22BD8088800AE82D7 /* ChromeBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromeBridgeView.swift; sourceTree = "<group>"; };
 		257BE7662BC03F8700F2F640 /* MLAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLAdaptor.swift; sourceTree = "<group>"; };
+		2580D6952BE468240051254A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2586A8002BADCDAD00115136 /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
 		258DBF3F2BDDC7B50059560B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		258DBF432BDDC94F0059560B /* UpdaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterView.swift; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 		2501EFA72B9760A0006326D9 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
+				2580D6952BE468240051254A /* Info.plist */,
 				258DBF3E2BDDC7A50059560B /* Updater */,
 				250217292BAC384F006FE025 /* Views */,
 				25B101932BA9DEB700263E35 /* Windows */,
@@ -625,6 +627,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Surf/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -653,6 +656,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Surf/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
