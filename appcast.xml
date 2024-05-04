@@ -3,12 +3,12 @@
     <channel>
         <title>Surf</title>
         <item>
-            <title>1.0.001</title>
-            <pubDate>Sat, 04 May 2024 11:08:55 +0900</pubDate>
+            <title>0.1.001.003</title>
+            <pubDate>Sun, 05 May 2024 00:36:24 +0900</pubDate>
             <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0.001</sparkle:shortVersionString>
+            <sparkle:shortVersionString>0.1.001.003</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/shotastage/Surf/releases/download/1.0.001.test/Surf.zip" length="2356101" type="application/octet-stream" sparkle:edSignature="zHQAl0uJmFt7QXddfvoDxvm8Ho+r2Qiq/n+NYhE77mNhp3qDZM4w4IxxsQo+HFt1ZrGWytmEZwCzp9yn67h6BQ=="/>
+            <enclosure url="https://github.com/shotastage/Surf/releases/download/0.1.001.003/Surf.zip" length="2356118" type="application/octet-stream" sparkle:edSignature="L1C2XWceLy0HzbA14NrJv/xFLZTHOdIGnJZov6Vy0Kq8tNnL0F+glZrXmkPp1bMjW5pXNkH5+yO7o5TUKCVnDg=="/>
         </item>
     </channel>
 </rss>
