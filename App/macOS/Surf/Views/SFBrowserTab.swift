@@ -72,21 +72,24 @@ struct SFBrowserTab: View {
     @Binding var selectedTabIndex: Int
     @Binding var tabSessions: [TabSession]
 
-    let tabMaxWidth: CGFloat = 150
+    let tabMaxWidth: CGFloat = 110
+
     var body: some View {
         HStack {
             ForEach(0 ..< 5) { index in
-                TabAppearanceView(cornerRadius: 13, width: tabMaxWidth, height: 40, action: {
+                TabAppearanceView(cornerRadius: 12, width: tabMaxWidth, height: 40, action: {
                     selectedTabIndex = index
                 }, content: {
                     HStack {
-                        Text("F")
-                            .foregroundColor(.black)
-                            .bold()
-                        Text("Web Site \(index + 1)")
-                            .foregroundColor(.black)
-                            .font(.system(size: 13))
-                        Spacer()
+                        Image("Pictograms")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                        // Text("F")
+                        //    .foregroundColor(.black)
+                        //    .bold()
+                        // Text("Web Site \(index + 1)")
+                        //    .foregroundColor(.black)
+                        //    .font(.system(size: 13))
                     }
                     .frame(maxWidth: tabMaxWidth - 25)
                 })
@@ -117,7 +120,7 @@ struct SFBrowserTab_Previews: PreviewProvider {
 
 #Preview("Light View Glass Button") {
     ZStack {
-        TabAppearanceView(action: {
+        TabAppearanceView(cornerRadius: 12.0, action: {
             print("Tap button!")
         }, content: {
             Text("Tap This Button")
