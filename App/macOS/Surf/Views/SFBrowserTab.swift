@@ -72,7 +72,7 @@ struct SFBrowserTab: View {
     @Binding var selectedTabIndex: Int
     @Binding var tabSessions: [TabSession]
 
-    let tabMaxWidth: CGFloat = 110
+    let tabMaxWidth: CGFloat = 100
 
     var body: some View {
         HStack {

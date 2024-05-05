@@ -3,12 +3,23 @@
     <channel>
         <title>Surf</title>
         <item>
-            <title>0.1.0.101</title>
-            <pubDate>Sun, 05 May 2024 00:53:59 +0900</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>0.1.0.101</sparkle:shortVersionString>
+            <title>0.1.0.103</title>
+            <pubDate>Mon, 06 May 2024 02:03:32 +0900</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.1.0.103</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/shotastage/Surf/main/Surf.zip" length="2356108" type="application/octet-stream" sparkle:edSignature="ynuAeDwySkQ+cU68TcxDt9xOGI1yqw6NDCGFqjbFALrm8G1hpIr0vnzhCFhlxSylGs4YaVO0yHCjag1bHIRzAw=="/>
+            <enclosure url="https://github.com/shotastage/Surf/releases/download/0.1.0.103/Surf_vb3.zip" length="2356085" type="application/octet-stream" sparkle:edSignature="D+RXq3iHe6HKlG1y1h6JCmCKBoHDpkld9G3Rp1sxJqBgCqf5XfoQ+cmoqXZvC2CMq85D9AqdS4SYzBDPusP8Cg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/shotastage/Surf/releases/download/0.1.0.103/Surf3-2.delta" sparkle:deltaFrom="2" length="10518" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="863184" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="kcg4F3PnyKWX2BNO/zwmZquRL+WTXJnu9B5hDog+EnQX+oFwtVPmcI/6KC95mVFXDL7xuk4kn6ImarxQLXXtBA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.0.102</title>
+            <pubDate>Mon, 06 May 2024 01:57:49 +0900</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.1.0.102</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/shotastage/Surf/releases/download/0.1.0.102/Surf_vb2.zip" length="2356102" type="application/octet-stream" sparkle:edSignature="CUzf/1Lc2BLtQ/5Ox9YTdMFRtZLW9JJvERWQmbrUGQvCy5yxwq6vWR3EL0JJSKbQILN0av60pAh17f5pxAZIDQ=="/>
         </item>
     </channel>
 </rss>
