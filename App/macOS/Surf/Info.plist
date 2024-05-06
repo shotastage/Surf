@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/shotastage/mg-freeware-metas/main/surf/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>uIZUPk7NE0MOMzB+kvx1RRw2WWv+npKXBEYXW0ll43E=</string>
-    <key>SUFeedURL</key>
-    <string>https://raw.githubusercontent.com/shotastage/Surf/main/appcast.xml</string>
 </dict>
 </plist>
