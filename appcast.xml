@@ -9,9 +9,6 @@
             <sparkle:shortVersionString>0.1.0.103</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/shotastage/Surf/releases/download/0.1.0.103/Surf_vb3.zip" length="2356085" type="application/octet-stream" sparkle:edSignature="D+RXq3iHe6HKlG1y1h6JCmCKBoHDpkld9G3Rp1sxJqBgCqf5XfoQ+cmoqXZvC2CMq85D9AqdS4SYzBDPusP8Cg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://github.com/shotastage/Surf/releases/download/0.1.0.103/Surf3-2.delta" sparkle:deltaFrom="2" length="10518" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="863184" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="kcg4F3PnyKWX2BNO/zwmZquRL+WTXJnu9B5hDog+EnQX+oFwtVPmcI/6KC95mVFXDL7xuk4kn6ImarxQLXXtBA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.1.0.102</title>
