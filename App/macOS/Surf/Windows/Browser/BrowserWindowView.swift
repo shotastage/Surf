@@ -22,7 +22,7 @@ import WindowManagement
 
 struct BrowserWindowView: View {
     @Environment(\.window) var window
-    @State var model = BrowserViewModel(initPage: URL(string: "https://magicalsoft.app")!)
+    @State var model = BrowserViewModel(initPage: URL(string: "https://github.com/shotastage/")!)
     @State private var shouldReload: Bool = false
 
     var body: some View {

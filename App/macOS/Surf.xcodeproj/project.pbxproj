@@ -621,7 +621,7 @@
 				CODE_SIGN_ENTITLEMENTS = Surf/Surf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Surf/Preview Content\"";
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -634,7 +634,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0.103;
+				MARKETING_VERSION = 0.1.0.104;
 				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.Surf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -650,7 +650,7 @@
 				CODE_SIGN_ENTITLEMENTS = Surf/Surf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Surf/Preview Content\"";
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -663,7 +663,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0.103;
+				MARKETING_VERSION = 0.1.0.104;
 				PRODUCT_BUNDLE_IDENTIFIER = app.magicalsoft.Surf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

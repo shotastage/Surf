@@ -14,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-
 import SwiftUI
 import WebKit
 
@@ -33,7 +32,7 @@ struct WebKitBridgeView: UIViewRepresentable {
     var goNext: (() -> Void)?
     var onSiteChanges: ((URL) -> Void)?
 
-    var userAgent: String = "Mozilla/5.0 (iPhone; CPU iPhone OS 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Srf/100.0.0.0"
+    var userAgent: String = "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
 
     func makeUIView(context: Context) -> WKWebView {
         let preferences = WKPreferences()
@@ -113,3 +112,29 @@ extension WebKitBridgeView {
         return updatedView
     }
 }
+
+// Preview Provider if needed
+#if DEBUG
+struct WebKitBridgeView_Previews: PreviewProvider {
+    static var previews: some View {
+        // Dummy data or states
+        let initialURL = URL(string: "https://magicalsoft.app")!
+        @State var currentPage: URL = initialURL
+        @State var isReloadRequired = false
+
+        WebKitBridgeView(
+            currentPage: $currentPage, shouldReload: $isReloadRequired,
+            onClick: { url in
+                print("Web page clicked: \(url)")
+            },
+            onNavigate: { isStarting in
+                print(isStarting ? "Navigation has been started." : "Navigation has been ended")
+            },
+            onError: { error in
+                print("Error has been occured: \(error.localizedDescription)")
+            }
+        )
+        .frame(width: 400, height: 600)
+    }
+}
+#endif
