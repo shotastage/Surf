@@ -27,37 +27,24 @@ struct BrowserWindowView: View {
 
     var body: some View {
         VStack {
-            SFBrowserTab(selectedTabIndex: $model.tabIndex, tabSessions: $model.tabSessions)
-                .frame(height: 80)
             HStack {
-                Button("Home") {
-                    navigateToHome()
-                }
-                Button("Back") {
-                    navigatoToBack()
-                }
-                Button("Next") {
-                    navigateToNext()
-                }
-                Button("Reload") {
-                    shouldReload = true
-                }
-                SFAddressBar(currentPage: $model.currentPage)
-                    .frame(height: 40)
-                    .onKeyPress(.return) {
-                        SFLogger.debug("PressReturn Key")
-                        let newPage = URL(string: model.changingUrl)!
-                        model.updateTab(page: newPage)
-
-                        return .handled
+                HStack {
+                    Button("Home") {
+                        navigateToHome()
                     }
-                    .onChange(of: model.changingUrl) { _, newValue in
-                        SFLogger.debug("Url bar string changed: \(newValue)")
+                    Button("Back") {
+                        navigatoToBack()
                     }
+                    Button("Next") {
+                        navigateToNext()
+                    }
+                    Button("Reload") {
+                        shouldReload = true
+                    }
+                }
+                SFBrowserTab(selectedTabIndex: $model.tabIndex, tabSessions: $model.tabSessions)
+                    .frame(height: 80)
             }
-            .padding(.leading, 80.0)
-            .padding(.top, 10.0)
-            .padding(.trailing, 10.0)
             WebKitBridgeView(
                 currentPage: $model.currentPage, shouldReload: $shouldReload,
                 onClick: { url in
