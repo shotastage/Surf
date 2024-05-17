@@ -1,5 +1,5 @@
 //
-// NavigationPill.swift
+// ExpandablePill.swift
 // Copyright © 2024 Shota Shimazu. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,40 +17,35 @@
 
 import SwiftUI
 
-struct NavigationPill: View {
+struct ExpandablePill: View {
     var body: some View {
-        HStack(spacing: 20) {
-            NavigationButton(label: "A")
-            NavigationButton(label: "B")
-            NavigationButton(label: "C")
-        }
-        .padding(.vertical, 10)
-        .padding(.horizontal, 20)
-        .background(Color.gray.opacity(0.2))
-        .cornerRadius(30)
-        .shadow(radius: 5)
-    }
-}
-
-struct NavigationButton: View {
-    let label: String
-
-    var body: some View {
-        Button(action: {
-            print("Hello")
-        }) {
-            Text(label)
-                .font(.system(size: 18, weight: .bold))
+        HStack(spacing: 16) {
+            Text("Tap to view more")
+                .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.black)
-                .frame(width: 40, height: 40)
-                .background(Color.white)
-                .clipShape(Circle())
-                .shadow(radius: 3)
+
+            Button(action: {
+                print("Hello")
+            }) {
+                Image(systemName: "plus.circle.fill")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+                    .foregroundColor(.blue)
+            }
         }
+        .padding(.vertical, 12)
+        .padding(.horizontal, 20)
+        .background(Color.white)
+        .cornerRadius(30)
+        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 30)
+                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+        )
     }
 }
 
-struct NavigationPill_Previews: PreviewProvider {
+struct ExpandablePill_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
@@ -61,12 +56,10 @@ struct NavigationPill_Previews: PreviewProvider {
                 HStack {
                     Spacer()
 
-                    NavigationPill()
-                        .padding(.bottom, 16)
-
-                    Spacer()
+                    ExpandablePill()
+                        .padding(.bottom, 32)
                 }
-                .padding(.horizontal, 16)
+                .padding(.horizontal, 32)
             }
         }
     }
