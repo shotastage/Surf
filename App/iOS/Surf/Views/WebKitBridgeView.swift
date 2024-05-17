@@ -26,6 +26,7 @@ struct WebKitBridgeView: UIViewRepresentable {
     @Binding var shouldReload: Bool
 
     // Callbacks
+
     var onClick: ((URL) -> Void)?
     var onNavigate: ((Bool) -> Void)?
     var onError: ((Error) -> Void)?

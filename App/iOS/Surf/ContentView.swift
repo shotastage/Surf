@@ -35,6 +35,7 @@ struct ContentView: View {
                 print("URL destination has been changed.")
             }
         )
+        .ignoresSafeArea()
     }
 }
 
