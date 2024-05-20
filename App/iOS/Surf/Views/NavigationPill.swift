@@ -24,12 +24,26 @@ struct NavigationPill: View {
             NavigationButton(label: "B")
             NavigationButton(label: "C")
         }
-        .padding(.vertical, 10)
+        .padding(.vertical, 12)
         .padding(.horizontal, 20)
-        .background(Color.gray.opacity(0.2))
+        .background(BlurView(style: .systemMaterial))
         .cornerRadius(30)
-        .shadow(radius: 5)
+        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 30)
+                .stroke(Color.white.opacity(0.3), lineWidth: 1)
+        )
     }
+}
+
+struct BlurView: UIViewRepresentable {
+    var style: UIBlurEffect.Style
+
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        UIVisualEffectView(effect: UIBlurEffect(style: style))
+    }
+
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {}
 }
 
 struct NavigationButton: View {
@@ -43,9 +57,9 @@ struct NavigationButton: View {
                 .font(.system(size: 18, weight: .bold))
                 .foregroundColor(.black)
                 .frame(width: 40, height: 40)
-                .background(Color.white)
+                .background(Color.white.opacity(0.3))
                 .clipShape(Circle())
-                .shadow(radius: 3)
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
         }
     }
 }
