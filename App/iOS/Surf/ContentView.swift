@@ -21,20 +21,27 @@ struct ContentView: View {
     @State private var currentPage: URL = .init(string: "https://magicalsoft.app")!
     @State private var shouldReload = false
     var body: some View {
-        WebKitBridgeView(
-            currentPage: $currentPage, shouldReload: $shouldReload,
-            onClick: { url in
-                print("Web page clicked: \(url)")
-            },
-            onNavigate: { _ in
-            },
-            onError: { error in
-                print("Error has been occured: \(error.localizedDescription)")
-            },
-            onSiteChanges: { _ in
-                print("URL destination has been changed.")
+        ZStack {
+            WebKitBridgeView(
+                currentPage: $currentPage, shouldReload: $shouldReload,
+                onClick: { url in
+                    print("Web page clicked: \(url)")
+                },
+                onNavigate: { _ in
+                },
+                onError: { error in
+                    print("Error has been occured: \(error.localizedDescription)")
+                },
+                onSiteChanges: { _ in
+                    print("URL destination has been changed.")
+                }
+            )
+            VStack {
+                Spacer()
+                NavigationPill()
+                    .padding(.bottom, 26)
             }
-        )
+        }
         .ignoresSafeArea()
     }
 }

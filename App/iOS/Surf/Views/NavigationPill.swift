@@ -54,16 +54,12 @@ struct NavigationPill_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
-
             VStack {
                 Spacer()
-
                 HStack {
                     Spacer()
-
                     NavigationPill()
                         .padding(.bottom, 16)
-
                     Spacer()
                 }
                 .padding(.horizontal, 16)
