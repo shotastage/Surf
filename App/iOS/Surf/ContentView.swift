@@ -20,6 +20,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var currentPage: URL = .init(string: "https://magicalsoft.app")!
     @State private var shouldReload = false
+    @State private var showSearch = false
+
     var body: some View {
         ZStack {
             WebKitBridgeView(
@@ -38,10 +40,30 @@ struct ContentView: View {
             )
             VStack {
                 Spacer()
-                NavigationPill()
-                    .padding(.bottom, 26)
+                NavigationPill(actionA: {
+                    print("Hello A!")
+                }, actionB: {
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        showSearch = true
+                    }
+
+                }, actionC: {
+                    print("Hello C!")
+                })
+                .padding(.bottom, 26)
+            }
+
+            if showSearch {
+                Color.black.opacity(0.4) // Overlay background
+                    .edgesIgnoringSafeArea(.all)
+                    .transition(.opacity)
+
+                SearchView(showSearch: $showSearch)
+                    .transition(.asymmetric(insertion: .scale(scale: 1.2).combined(with: .opacity), removal: .opacity))
+                    .zIndex(2)
             }
         }
+
         .ignoresSafeArea()
     }
 }

@@ -18,11 +18,15 @@
 import SwiftUI
 
 struct NavigationPill: View {
+    var actionA: () -> Void
+    var actionB: () -> Void
+    var actionC: () -> Void
+
     var body: some View {
         HStack(spacing: 20) {
-            NavigationButton(label: "A")
-            NavigationButton(label: "B")
-            NavigationButton(label: "C")
+            NavigationButton(label: "A", action: actionA)
+            NavigationButton(label: "B", action: actionB)
+            NavigationButton(label: "C", action: actionC)
         }
         .padding(.vertical, 12)
         .padding(.horizontal, 20)
@@ -48,11 +52,10 @@ struct BlurView: UIViewRepresentable {
 
 struct NavigationButton: View {
     let label: String
+    let action: () -> Void
 
     var body: some View {
-        Button(action: {
-            print("Hello")
-        }) {
+        Button(action: action) {
             Text(label)
                 .font(.system(size: 18, weight: .bold))
                 .foregroundColor(.black)
@@ -72,8 +75,16 @@ struct NavigationPill_Previews: PreviewProvider {
                 Spacer()
                 HStack {
                     Spacer()
-                    NavigationPill()
-                        .padding(.bottom, 16)
+                    NavigationPill(actionA: {
+                        print("Hello A!")
+                    }, actionB: {
+                        print("Hello B!")
+
+                    }, actionC: {
+                        print("Hello C!")
+
+                    })
+                    .padding(.bottom, 16)
                     Spacer()
                 }
                 .padding(.horizontal, 16)
