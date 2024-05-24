@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254BD12F2BFDD4F900244377 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BD12E2BFDD4F900244377 /* SearchView.swift */; };
+		25656C212BF7BA3C006ED87C /* ExpandablePill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25656C202BF7BA3C006ED87C /* ExpandablePill.swift */; };
 		258966A42A1CEBC300551D2E /* SurfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966A32A1CEBC300551D2E /* SurfApp.swift */; };
 		258966A62A1CEBC300551D2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966A52A1CEBC300551D2E /* ContentView.swift */; };
 		258966A82A1CEBC400551D2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258966A72A1CEBC400551D2E /* Assets.xcassets */; };
@@ -14,7 +16,9 @@
 		258966B52A1CEBC400551D2E /* SurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966B42A1CEBC400551D2E /* SurfTests.swift */; };
 		258966BF2A1CEBC400551D2E /* SurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966BE2A1CEBC400551D2E /* SurfUITests.swift */; };
 		258966C12A1CEBC400551D2E /* SurfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258966C02A1CEBC400551D2E /* SurfUITestsLaunchTests.swift */; };
+		25A220572BFE4BFB007C1D55 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A220562BFE4BFB007C1D55 /* SearchBarView.swift */; };
 		25A817532BD0E7A200B4B05E /* WebKitBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A817522BD0E7A200B4B05E /* WebKitBridgeView.swift */; };
+		25B48A2A2BF774DD0005EFB2 /* NavigationPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B48A292BF774DD0005EFB2 /* NavigationPill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		254BD12E2BFDD4F900244377 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		25656C202BF7BA3C006ED87C /* ExpandablePill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandablePill.swift; sourceTree = "<group>"; };
 		258966A02A1CEBC300551D2E /* Surf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258966A32A1CEBC300551D2E /* SurfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfApp.swift; sourceTree = "<group>"; };
 		258966A52A1CEBC300551D2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,7 +51,9 @@
 		258966BA2A1CEBC400551D2E /* SurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		258966BE2A1CEBC400551D2E /* SurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITests.swift; sourceTree = "<group>"; };
 		258966C02A1CEBC400551D2E /* SurfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25A220562BFE4BFB007C1D55 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		25A817522BD0E7A200B4B05E /* WebKitBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitBridgeView.swift; sourceTree = "<group>"; };
+		25B48A292BF774DD0005EFB2 /* NavigationPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 				258966A52A1CEBC300551D2E /* ContentView.swift */,
 				258966A72A1CEBC400551D2E /* Assets.xcassets */,
 				258966A92A1CEBC400551D2E /* Preview Content */,
+				254BD12E2BFDD4F900244377 /* SearchView.swift */,
 			);
 			path = Surf;
 			sourceTree = "<group>";
@@ -134,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				25A817522BD0E7A200B4B05E /* WebKitBridgeView.swift */,
+				25B48A292BF774DD0005EFB2 /* NavigationPill.swift */,
+				25656C202BF7BA3C006ED87C /* ExpandablePill.swift */,
+				25A220562BFE4BFB007C1D55 /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,7 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				258966A62A1CEBC300551D2E /* ContentView.swift in Sources */,
+				25656C212BF7BA3C006ED87C /* ExpandablePill.swift in Sources */,
 				25A817532BD0E7A200B4B05E /* WebKitBridgeView.swift in Sources */,
+				25A220572BFE4BFB007C1D55 /* SearchBarView.swift in Sources */,
+				25B48A2A2BF774DD0005EFB2 /* NavigationPill.swift in Sources */,
+				254BD12F2BFDD4F900244377 /* SearchView.swift in Sources */,
 				258966A42A1CEBC300551D2E /* SurfApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
