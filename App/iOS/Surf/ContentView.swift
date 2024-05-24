@@ -58,7 +58,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                     .transition(.opacity)
 
-                SearchView(showSearch: $showSearch)
+                SearchView(showSearch: $showSearch, currentPage: $currentPage)
                     .transition(.asymmetric(insertion: .scale(scale: 1.2).combined(with: .opacity), removal: .opacity))
                     .zIndex(2)
             }

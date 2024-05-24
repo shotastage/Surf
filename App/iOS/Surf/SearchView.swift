@@ -19,6 +19,7 @@ import SwiftUI
 
 struct SearchView: View {
     @Binding var showSearch: Bool
+    @Binding var currentPage: URL
 
     var body: some View {
         VStack {
@@ -50,6 +51,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(showSearch: .constant(true))
+        SearchView(showSearch: .constant(true), currentPage: .constant(URL(string: "https://google.com")!))
     }
 }
