@@ -12,7 +12,7 @@ Surf is experimental web browser based on WebKit and JavaScriptCore technology.
 |:--------------|:-------------------|:----------|
 | macOS         | ➡️ On Going         | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/shotastage/Surf/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/shotastage/Surf/tree/main) |
 | iOS / iPad OS | ➡️ Launching Now    | CI is now under configuration |
-| Windows 11    | 🛑 Suspended        | CI is now under configuration |
+| Windows 11    | 🛑 Suspended       | -                             |
 | Ubuntu        | 📅 Planned         | CI is now under configuration |
 
 
