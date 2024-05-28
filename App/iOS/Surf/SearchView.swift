@@ -42,7 +42,7 @@ struct SearchView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white.opacity(0.8))
+        .background(BlurBackgroundView(style: .regular))
         .cornerRadius(20)
         .shadow(radius: 10)
         .ignoresSafeArea()
