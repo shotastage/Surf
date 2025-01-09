@@ -40,10 +40,10 @@ final class ModelManager {
                 return
             }
 
-            // ダウンロードしたファイルを解凍
+            // Unzip the downloaded file
             do {
                 // try fileManager.unzipItem(at: tempURL, to: modelPath.deletingLastPathComponent())
-                // 解凍が成功したら、モデルをロードして完了
+                // If unzipping is successful, load the model and complete
                 let model = try? MLModel(contentsOf: modelPath)
                 completion(model, nil)
             } catch {
