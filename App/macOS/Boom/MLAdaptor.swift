@@ -19,7 +19,7 @@ import CoreML
 import Foundation
 
 final class ModelManager {
-    static let shared = ModelManager()
+    @MainActor static let shared = ModelManager()
 
     private let modelUrl = URL(string: "https://google.com")
     private let modelFileName = "gemma.mlmodel"

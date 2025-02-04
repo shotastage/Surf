@@ -16,7 +16,7 @@
 //
 
 import Foundation
-import WindowManagement
+@preconcurrency import WindowManagement
 
 extension SceneID {
     static let browserWindow = SceneID("browser")
